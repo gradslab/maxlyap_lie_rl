@@ -1,0 +1,80 @@
+{
+ "group": "SO3",
+ "dir": "sac_SO3_ls-1.5",
+ "seed": 0,
+ "suffix": "_final5",
+ "gamma": 2.748893571891069,
+ "alpha_max": 0.3141592653589793,
+ "eps_ball": 0.1,
+ "offset_norm": 0.045877193153406715,
+ "anchor": 0.5351756977750541,
+ "rho_max_ball": 35.4609510411373,
+ "rho_stage1": 35.4609510411373,
+ "rho_stage2": 35.4609510411373,
+ "rho": 35.4609510411373,
+ "rho_shell": 33.912928558922346,
+ "level_lowered_by_check": false,
+ "level_lowered_by_adversarial": false,
+ "adversarial_rounds": [
+  {
+   "rho": 35.4609510411373,
+   "found": 0,
+   "worst_score": -0.010188701507860692
+  }
+ ],
+ "n_samples_Z1": 800000,
+ "n_samples_Z2": 400000,
+ "n_Z1_in_region": 800000,
+ "n_Z2_in_region": 400000,
+ "n_decrease_violations_in_region": 0,
+ "n_containment_violations_in_region": 0,
+ "frac_decrease_violation_ball": 0.0,
+ "roa_true_haar": 1.0,
+ "roa_est_haar": 0.75372,
+ "ball_measure_mu0": 0.75372,
+ "coverage": 0.75372,
+ "false_inclusions": 0,
+ "est_chart_fraction": 1.0,
+ "entry_samples": 100000,
+ "entry_violations": 0,
+ "entry_maxV_over_rho": 2.246398413943724e-05,
+ "entry_rollout_nonconverged": 0,
+ "fit_out_median": 0.0028200413286629733,
+ "fit_out_p99": 0.024042525251182025,
+ "fit_out_max": 0.25238417960444,
+ "fixed_points": {
+  "rho_goal": 0.12334234457660158,
+  "index_goal": -1,
+  "n_other_zeros": 9,
+  "nearest_other": 3.0601550274051488,
+  "rho_other": 43.64852563547436,
+  "index_other": 1
+ },
+ "dist_radius": 2.748893571891069,
+ "dist_adversarial_rounds": [
+  {
+   "r_d": 2.748893571891069,
+   "found": 0,
+   "worst_score": -0.054907177813328836
+  }
+ ],
+ "dist_entry_violations": 0,
+ "dist_violations": 0,
+ "dist_region_measure": 0.75372,
+ "dist_region_ball_fraction": 1.0,
+ "wall_s": 204.46802687644958,
+ "quad_available": true,
+ "quad_spr": 0.12334234457660158,
+ "quad_level": 7.677986146850538,
+ "quad_rounds": [
+  {
+   "level": 7.677986146850538,
+   "found": 0
+  }
+ ],
+ "quad_converged": true,
+ "quad_region_measure": 0.75372,
+ "quad_region_ball_fraction": 1.0,
+ "timing_V_per_point_s": 3.965729003539309e-07,
+ "timing_Vm_per_point_s": 0.0007922131604500464
+}

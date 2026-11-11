@@ -1,0 +1,8 @@
+{
+ "group": "SO2",
+ "dir": "ppo_SO2_ls-1.5",
+ "seed": 0,
+ "spr": 0.08275441794644528,
+ "offset_norm": 0.007040177254156321,
+ "passes": true
+}

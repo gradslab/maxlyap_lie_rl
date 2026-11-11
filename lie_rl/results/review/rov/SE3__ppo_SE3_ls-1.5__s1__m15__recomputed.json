@@ -1,0 +1,34 @@
+{
+ "seed": 1,
+ "variant": "m15",
+ "which_cert": "recomputed",
+ "cert": "results/review/pert36/cert/SE3__ppo_SE3_ls-1.5__s1__m15__final.pkl",
+ "eval": "results/review/pert36/eval/SE3__ppo_SE3_ls-1.5__s1__m15__final.json",
+ "rho": 26.689736410801714,
+ "gamma": 2.748893571891069,
+ "alpha_max": 0.35124073655203636,
+ "episodes": 200,
+ "steps": 40,
+ "dt_outer": 2.0,
+ "kp_pos": 400.0,
+ "kd_pos": 160.0,
+ "control": {
+  "exits": 0,
+  "rises": 0,
+  "rises_above_floor": 0,
+  "worst_rise": 0.0,
+  "final_cost_median": 1.2329757217727954e-16,
+  "executed_median": null,
+  "executed_p5": null
+ },
+ "plant": {
+  "exits": 0,
+  "rises": 0,
+  "rises_above_floor": 0,
+  "worst_rise": 0.0,
+  "final_cost_median": 2.1630478388781233e-16,
+  "executed_median": 1.0004889799712375,
+  "executed_p5": 0.997773637943069,
+  "saturated_substep_fraction": 0.004959125
+ }
+}

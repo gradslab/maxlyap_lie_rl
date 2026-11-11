@@ -1,0 +1,16 @@
+train__ppo_SO2	results/ppo_SO2_ls-1.5/summary.json	$PY scripts/train_algo.py ppo SO2 3 -1.5
+train__ppo_SO3	results/ppo_SO3_ls-1.5/summary.json	$PY scripts/train_algo.py ppo SO3 3 -1.5
+train__ppo_SE2	results/ppo_SE2_ls-1.5/summary.json	$PY scripts/train_algo.py ppo SE2 3 -1.5
+train__ppo_SE3	results/ppo_SE3_ls-1.5/summary.json	$PY scripts/train_algo.py ppo SE3 3 -1.5
+train__trpo_SO2	results/trpo_SO2_ls-1.5/summary.json	$PY scripts/train_algo.py trpo SO2 3 -1.5
+train__trpo_SO3	results/trpo_SO3_ls-1.5/summary.json	$PY scripts/train_algo.py trpo SO3 3 -1.5
+train__trpo_SE2	results/trpo_SE2_ls-1.5/summary.json	$PY scripts/train_algo.py trpo SE2 3 -1.5
+train__trpo_SE3	results/trpo_SE3_ls-1.5/summary.json	$PY scripts/train_algo.py trpo SE3 3 -1.5
+train__sac_SO2	results/sac_SO2_ls-1.5/summary.json	$PY scripts/train_algo.py sac SO2 3 -1.5
+train__sac_SO3	results/sac_SO3_ls-1.5/summary.json	$PY scripts/train_algo.py sac SO3 3 -1.5
+train__sac_SE2	results/sac_SE2_ls-1.5/summary.json	$PY scripts/train_algo.py sac SE2 3 -1.5
+train__sac_SE3	results/sac_SE3_ls-1.5/summary.json	$PY scripts/train_algo.py sac SE3 3 -1.5
+train__td3_SO2	results/td3_SO2_ls-1.5/summary.json	$PY scripts/train_algo.py td3 SO2 3 -1.5
+train__td3_SO3	results/td3_SO3_ls-1.5/summary.json	$PY scripts/train_algo.py td3 SO3 3 -1.5
+train__td3_SE2	results/td3_SE2_ls-1.5/summary.json	$PY scripts/train_algo.py td3 SE2 3 -1.5
+train__td3_SE3	results/td3_SE3_ls-1.5/summary.json	$PY scripts/train_algo.py td3 SE3 3 -1.5

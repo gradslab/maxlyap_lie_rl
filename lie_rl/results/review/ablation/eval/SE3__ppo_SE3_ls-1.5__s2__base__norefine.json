@@ -1,0 +1,101 @@
+{
+ "group": "SE3",
+ "dir": "ppo_SE3_ls-1.5",
+ "seed": 2,
+ "variant": "base",
+ "cert": "results/final/cert/SE3__ppo_SE3_ls-1.5__s2__base__trained.pkl",
+ "fns_evaluated": [
+  "V"
+ ],
+ "gamma": 2.748893571891069,
+ "eps_ball": 0.1,
+ "spr": 0.10157159237464784,
+ "passes_stability": true,
+ "n_roll": 600,
+ "adv_rounds_cap": 50,
+ "anchored": true,
+ "anchor": 0.3426172407262148,
+ "true_mu0": 1.0,
+ "ball_mu0": 0.65149,
+ "true_in_ball_mu0": 0.65149,
+ "true_ball_fraction": 1.0,
+ "nb_samples": 33064,
+ "nb_nonconverged_all": 0,
+ "fns": {
+  "V": {
+   "frac_decrease_violation_ball": 7.5e-06,
+   "level_sampled": 109.70708342744355,
+   "level": 26.86434840878603,
+   "adversarial_rounds": [
+    {
+     "rho": 109.70708342744355,
+     "found": 1226,
+     "worst_score": 2.338398732181595
+    },
+    {
+     "rho": 31.560961457333683,
+     "found": 228,
+     "worst_score": 0.7390735023247146
+    },
+    {
+     "rho": 29.931339138999157,
+     "found": 195,
+     "worst_score": 0.5039657385556033
+    },
+    {
+     "rho": 27.43194821174961,
+     "found": 65,
+     "worst_score": 0.10226074367734483
+    },
+    {
+     "rho": 26.86434840878603,
+     "found": 0,
+     "worst_score": -0.0016182767868855308
+    }
+   ],
+   "adversarial_converged": true,
+   "lowered_by_search": true,
+   "region_mu0": 0.511705,
+   "region_ball_fraction": 0.6999,
+   "false_inclusions_mu0": 0,
+   "false_inclusions_ball": 0,
+   "entry_samples": 33064,
+   "entry_violations": 0,
+   "nb_nonconverged": 0,
+   "wall_s": 5829.838395118713
+  }
+ },
+ "unions": {
+  "V|Vd": {
+   "members": [
+    "V"
+   ],
+   "region_mu0": 0.511705,
+   "region_ball_fraction": 0.6999,
+   "false_inclusions_mu0": 0
+  },
+  "V|Vd|VP": {
+   "members": [
+    "V"
+   ],
+   "region_mu0": 0.511705,
+   "region_ball_fraction": 0.6999,
+   "false_inclusions_mu0": 0
+  },
+  "Vd|VP": null,
+  "Vd|VP|Vv": null,
+  "all": {
+   "members": [
+    "V"
+   ],
+   "region_mu0": 0.511705,
+   "region_ball_fraction": 0.6999,
+   "false_inclusions_mu0": 0
+  }
+ },
+ "fit_median": 0.03579647138903455,
+ "fit_p90": 0.11604649254632422,
+ "fit_p99": 0.27561556914864677,
+ "cert_wall_s": 2788.783749103546,
+ "eval_wall_s": 6224.586604118347
+}

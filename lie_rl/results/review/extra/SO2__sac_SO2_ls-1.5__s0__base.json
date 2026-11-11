@@ -1,0 +1,66 @@
+{
+ "group": "SO2",
+ "dir": "sac_SO2_ls-1.5",
+ "seed": 0,
+ "variant": "base",
+ "cert": "results/final/cert/SO2__sac_SO2_ls-1.5__s0__base.pkl",
+ "eval": "results/final/eval/SO2__sac_SO2_ls-1.5__s0__base.json",
+ "level": 34.62745487773421,
+ "anchored": true,
+ "region_mu0_eval": 0.875575,
+ "heldout": {
+  "n": 1000000,
+  "key": 20261017,
+  "law": "uniform in the ball",
+  "n_in_region": 999999,
+  "n_in_region_outside_Nb": 974138,
+  "decrease_violations": 0,
+  "containment_violations": 0,
+  "beta": 1e-06,
+  "bound_ball_fraction": 1.3815510557964274e-05,
+  "worst_relative_increase": -0.22327133425844722
+ },
+ "offset": {
+  "bias_norm": 0.008029966481641254,
+  "bias_max_abs": 0.008029966481641254,
+  "alpha_max": 0.3141592653589793,
+  "max_increment_change": 0.0025226883707296643,
+  "median_increment_change": 0.002522688370729609,
+  "max_increment_change_over_alpha_max": 0.008029966481641318
+ },
+ "spr": {
+  "values": {
+   "0.0001": 0.21090546449346034,
+   "1e-05": 0.21104533151894816,
+   "1e-06": 0.21104673040624147,
+   "1e-07": 0.2110467443650727
+  },
+  "used": 0.21104673040624147,
+  "max_abs_deviation_from_used": 0.00014126591278113,
+  "eval_json_spr": 0.21104673040624147
+ },
+ "fit": {
+  "600": {
+   "median": 0.0008418283101346536,
+   "p90": 0.004639414964731397,
+   "p99": 0.013452205392081038,
+   "n": 19459,
+   "n_nonfinite": 0
+  },
+  "3000": {
+   "median": 0.0008418283101346536,
+   "p90": 0.004639414964731397,
+   "p99": 0.013452205392081038,
+   "n": 19459,
+   "n_nonfinite": 0
+  }
+ },
+ "fit_eval_json_median": 0.0008418283101346536,
+ "timing": {
+  "V_s_per_point": 1.6908197402954102e-06,
+  "Vm600_s_per_point": 0.0006381879091262818,
+  "Vm3000_s_per_point": 0.0029780205011367797,
+  "threads": "2"
+ },
+ "wall_s": 175.71137118339539
+}

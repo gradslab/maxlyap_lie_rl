@@ -1,0 +1,53 @@
+[
+  {
+    "group": "SO2",
+    "seed": 0,
+    "n_total_steps": 400000,
+    "geodesic_ceiling": -1.4271001815795898,
+    "eval_return_mean": -1.609178066253662,
+    "eval_return_std": 1.6216273307800293,
+    "final_angle_mean": 0.002041494008153677,
+    "final_angle_median": 0.0020414935424923897,
+    "final_trans_mean": 0.0,
+    "final_trans_median": 0.0,
+    "success_rate": 1.0,
+    "success_rate_loose": 1.0,
+    "logstd_init": -1.5,
+    "frac_angle_gt_half_pi": 0.0,
+    "wall_s": 21.54434108734131
+  },
+  {
+    "group": "SO2",
+    "seed": 1,
+    "n_total_steps": 400000,
+    "geodesic_ceiling": -1.4271001815795898,
+    "eval_return_mean": -1.4888488054275513,
+    "eval_return_std": 1.472965955734253,
+    "final_angle_mean": 0.0012798425741493702,
+    "final_angle_median": 0.0012798404786735773,
+    "final_trans_mean": 0.0,
+    "final_trans_median": 0.0,
+    "success_rate": 1.0,
+    "success_rate_loose": 1.0,
+    "logstd_init": -1.5,
+    "frac_angle_gt_half_pi": 0.0,
+    "wall_s": 20.756031036376953
+  },
+  {
+    "group": "SO2",
+    "seed": 2,
+    "n_total_steps": 400000,
+    "geodesic_ceiling": -1.4271001815795898,
+    "eval_return_mean": -1.55013906955719,
+    "eval_return_std": 1.5101337432861328,
+    "final_angle_mean": 0.0023135538212955,
+    "final_angle_median": 0.0023135575465857983,
+    "final_trans_mean": 0.0,
+    "final_trans_median": 0.0,
+    "success_rate": 1.0,
+    "success_rate_loose": 1.0,
+    "logstd_init": -1.5,
+    "frac_angle_gt_half_pi": 0.0,
+    "wall_s": 20.238396883010864
+  }
+]

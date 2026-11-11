@@ -1,0 +1,56 @@
+=== rx certificate SE3 ppo_SE3_ls-1.5 seed 2 variant base: iters 4000, cfg {'m': 6, 'hidden': (256, 256), 'feat_out': 16, 'alpha_floor': 0.05, 'alpha_init': 0.3, 'eps_init': 0.2, 'radius': 2.748893571891069, 'eps_ball': 0.1, 'zeta_train': 0.01, 'alpha_max': 0.35124073655203636, 'iters': 4000, 'batch': 4096, 'lr': 0.001, 'buffer_size': 32768, 'resample_every': 200, 'pgd_every': 10, 'pgd_batch': 1024, 'pgd_steps': 30, 'ce_batch': 1024, 'mine_batch': 262144, 'mine_keep': 2048, 'ce_buffer_max': 16384, 'w_ce': 5.0, 'lam_lr': 0.02, 'lam_max': 50.0, 'w_data': 1.0, 'eps_l2': 0.001, 'spec_target': 2.0, 'w_spec': 0.001, 'w_shell': 0.3, 'shell_batch': 2048, 'mine_scoped': False, 'mine_exit': True, 'w_exit': 1.0, 'exit_margin': 1.2, 'rho_refresh_every': 200, 'shell_probe': 16384, 'rollout_len': 600, 'seed': 2, 'cost_power': 2, 'data_mode': 'log', 'zubov_mode': 'V', 'dec_mode': 'abs', 'zeta_rel': 0.05, 'eps_fixed': 1.0, 'use_bnd': False, 'input_mode': 'chart', 'obs_dim': 9, 'exclude_center': (), 'exclude_chord': 0.0, 'radial_frac': 0.5}, knobs {'w_rec': 0.0, 'data_fixed': 1.0, 'n_data': 16384, 'eps_auto': False, 'rec_rel': False}
+    it     0  rho_cur inf  dec 1.461e-07  ce 0.000e+00  zubov 2.468e+01  bnd 0.000e+00  data 2.736e+00  shell 2.743e-02  exit 4.160e-01  |ce| 303  |exit| 2
+    it   500  rho_cur inf  dec 0.000e+00  ce 2.062e-03  zubov 2.873e+00  bnd 0.000e+00  data 4.092e-02  shell 8.295e-03  exit 5.717e-03  |ce| 3013  |exit| 75
+    it  1000  rho_cur inf  dec 0.000e+00  ce 5.326e-03  zubov 3.562e+01  bnd 0.000e+00  data 8.759e-02  shell 1.439e-02  exit 2.702e-02  |ce| 3423  |exit| 145
+    it  1500  rho_cur inf  dec 0.000e+00  ce 1.541e-07  zubov 4.719e+01  bnd 0.000e+00  data 7.176e-02  shell 1.268e-02  exit 1.050e-01  |ce| 9935  |exit| 225
+    it  2000  rho_cur inf  dec 0.000e+00  ce 3.205e-06  zubov 1.010e+02  bnd 0.000e+00  data 5.755e-02  shell 9.257e-03  exit 2.329e-02  |ce| 11448  |exit| 302
+    it  2500  rho_cur inf  dec 0.000e+00  ce 2.782e-04  zubov 2.737e+02  bnd 0.000e+00  data 7.256e-02  shell 1.060e-02  exit 1.403e-01  |ce| 12868  |exit| 397
+    it  3000  rho_cur inf  dec 5.683e-08  ce 5.975e-06  zubov 1.357e+03  bnd 0.000e+00  data 1.042e-01  shell 1.123e-02  exit 6.880e-02  |ce| 13838  |exit| 485
+    it  3500  rho_cur inf  dec 5.215e-09  ce 2.352e-06  zubov 6.972e+03  bnd 0.000e+00  data 2.233e-01  shell 1.074e-02  exit 2.338e-01  |ce| 14845  |exit| 573
+    sampled decrease outside N_b: 100.000%   ==> wrote results/review/ablation/cert/SE3__ppo_SE3_ls-1.5__s2__base__regress__trained.pkl (4471s)
+{"level": 5.51538259635119, "level_sampled": 10131.115813098351, "search_lowered": true, "vmax": 13608.400897873005, "region": 0.07312, "n_dec": 6, "n_cont": 1, "n_dec_below_level_sampled": 0, "round": 0, "wall_s": 1748.8419408798218}
+{"level": 4.8446289948779455, "level_sampled": 3703.1448057397724, "search_lowered": true, "vmax": 6701.981584794409, "region": 0.05878, "n_dec": 9, "n_cont": 2, "n_dec_below_level_sampled": 0, "round": 1, "wall_s": 5313.409871816635}
+{"level": 1.8488874673857627, "level_sampled": 1505.3924843218806, "search_lowered": true, "vmax": 8246.601739118181, "region": 0.01228, "n_dec": 11, "n_cont": 4, "n_dec_below_level_sampled": 0, "round": 2, "wall_s": 9122.578373670578}
+{"level": 0.7969570838676447, "level_sampled": 4847.549543404371, "search_lowered": true, "vmax": 9207.56091640486, "region": 0.0013, "n_dec": 19, "n_cont": 6, "n_dec_below_level_sampled": 0, "round": 3, "wall_s": 13595.164188861847}
+    it   881  non-finite loss, step skipped (1 so far)
+    it   882  non-finite loss, step skipped (2 so far)
+    it   883  non-finite loss, step skipped (3 so far)
+    it   884  non-finite loss, step skipped (4 so far)
+    it   885  non-finite loss, step skipped (5 so far)
+    it   980  non-finite loss, step skipped (100 so far)
+{"level": 2.0118158681577616, "level_sampled": 3.8484747469998597, "search_lowered": true, "vmax": 8422.345262530522, "region": 0.01136, "n_dec": 8, "n_cont": 1, "n_dec_below_level_sampled": 5, "round": 4, "wall_s": 17537.255341768265}
+    it     0  non-finite loss, step skipped (1 so far)
+    it     1  non-finite loss, step skipped (2 so far)
+    it     2  non-finite loss, step skipped (3 so far)
+    it     3  non-finite loss, step skipped (4 so far)
+    it     4  non-finite loss, step skipped (5 so far)
+    it    99  non-finite loss, step skipped (100 so far)
+    it   199  non-finite loss, step skipped (200 so far)
+    it   299  non-finite loss, step skipped (300 so far)
+    it   399  non-finite loss, step skipped (400 so far)
+    it   499  non-finite loss, step skipped (500 so far)
+    it   599  non-finite loss, step skipped (600 so far)
+    it   699  non-finite loss, step skipped (700 so far)
+    it   799  non-finite loss, step skipped (800 so far)
+    it   899  non-finite loss, step skipped (900 so far)
+    it   999  non-finite loss, step skipped (1000 so far)
+{"level": 1.956553299146048, "level_sampled": 22.755492561206736, "search_lowered": true, "vmax": 7779.378957700966, "region": 0.0105, "n_dec": 8, "n_cont": 0, "n_dec_below_level_sampled": 1, "round": 5, "wall_s": 21956.193833827972}
+    it     0  non-finite loss, step skipped (1 so far)
+    it     1  non-finite loss, step skipped (2 so far)
+    it     2  non-finite loss, step skipped (3 so far)
+    it     3  non-finite loss, step skipped (4 so far)
+    it     4  non-finite loss, step skipped (5 so far)
+    it    99  non-finite loss, step skipped (100 so far)
+    it   199  non-finite loss, step skipped (200 so far)
+    it   299  non-finite loss, step skipped (300 so far)
+    it   399  non-finite loss, step skipped (400 so far)
+    it   499  non-finite loss, step skipped (500 so far)
+    it   599  non-finite loss, step skipped (600 so far)
+    it   699  non-finite loss, step skipped (700 so far)
+    it   799  non-finite loss, step skipped (800 so far)
+    it   899  non-finite loss, step skipped (900 so far)
+    it   999  non-finite loss, step skipped (1000 so far)
+{"level": 1.9290112255585894, "level_sampled": 16.476565767208434, "search_lowered": true, "vmax": 8843.219354470551, "region": 0.01008, "n_dec": 18, "n_cont": 3, "n_dec_below_level_sampled": 4, "round": 6, "wall_s": 25755.67932367325}
+best round 0 estimated region 0.07312 wrote results/review/ablation/cert/SE3__ppo_SE3_ls-1.5__s2__base__regress.pkl (25756s)
+V {"frac_decrease_violation_ball": 7.5e-06, "level_sampled": 7058.548878798463, "level": 5.435833096447503, "adversarial_converged": true, "lowered_by_search": true, "region_mu0": 0.071455, "region_ball_fraction": 0.0202, "false_inclusions_mu0": 0, "false_inclusions_ball": 0, "entry_samples": 33064, "entry_violations": 0, "nb_nonconverged": 0, "wall_s": 5359.792376995087}
+wrote results/review/ablation/eval/SE3__ppo_SE3_ls-1.5__s2__base__regress.json true_in_ball 0.65149 unions {"V|Vd": {"members": ["V"], "region_mu0": 0.071455, "region_ball_fraction": 0.0202, "false_inclusions_mu0": 0}, "V|Vd|VP": {"members": ["V"], "region_mu0": 0.071455, "region_ball_fraction": 0.0202, "false_inclusions_mu0": 0}, "Vd|VP": null, "Vd|VP|Vv": null, "all": {"members": ["V"], "region_mu0": 0.071455, "region_ball_fraction": 0.0202, "false_inclusions_mu0": 0}} 5841s

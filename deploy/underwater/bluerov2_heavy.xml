@@ -1,0 +1,94 @@
+<!--
+  BlueROV2 HEAVY configuration — MuJoCo model.
+
+  EVERY parameter below is taken from the peer-reviewed, experimentally-validated
+  benchmark of von Benzon, Sorensen, Uth, Jouffroy, Liniger & Pedersen,
+  "An Open-Source Benchmark Simulator: Control of a BlueROV2 Underwater Robot",
+  J. Mar. Sci. Eng. 2022, 10, 1898 — Table A1 (parameters), Table 4 (maximum
+  forces/torques), Table 5 (dimensions). Nothing here is invented.
+
+  FRAME CONVENTION. The paper uses the Fossen/SNAME body frame with z DOWN (NED).
+  MuJoCo uses z UP. Every z has therefore been negated relative to the paper:
+    paper (x_b,y_b,z_b) = (0,0,-0.01) m   ->   MuJoCo (0,0,+0.01) m
+  i.e. the centre of BUOYANCY sits 1 cm ABOVE the centre of mass, which is what
+  produces the passive righting moment. This offset is the single most important
+  parameter for our purposes and is varied deliberately in the experiments.
+
+  ADDED MASS. MuJoCo has no added-mass model. The paper's ROTATIONAL added-mass
+  terms (K_pdot, M_qdot, N_rdot) = (0.189, 0.135, 0.222) kg m^2 are folded into
+  the rigid-body inertia, which is exact for rotational added mass about the
+  principal axes:
+      Ix = 0.26 + 0.189 = 0.449      Iy = 0.23 + 0.135 = 0.365
+      Iz = 0.37 + 0.222 = 0.592      (kg m^2)
+  TRANSLATIONAL added mass (6.36, 7.12, 18.68) kg is anisotropic and cannot be
+  folded into MuJoCo's scalar body mass; it is applied as a force in hydro.py.
+  This is a documented deviation — see DEVIATIONS in that module.
+
+  BUOYANCY AND DAMPING are NOT in this file. MuJoCo models neither: its fluid
+  model provides drag/added-mass but no buoyant force (verified empirically —
+  a body displacing exactly its own mass still sinks). Both are applied in
+  hydro.py from the paper's coefficients. We therefore do NOT enable MuJoCo's
+  own `density`/`viscosity` fluid model, so as not to double-count drag.
+
+  THRUSTER GEOMETRY, reconstructed from Table A1's r_i and eps_i and VALIDATED
+  against Table 4's published maxima at 30 N per T200 thruster:
+      surge  84.85 N   vs 85 N     roll   26.16 Nm  vs 26 Nm
+      sway   84.85 N   vs 85 N     pitch  14.40 Nm  vs 14 Nm
+      heave 120.00 N   vs 120 N    yaw    22.66 Nm  vs 22 Nm
+  All six within 3%. That agreement is the evidence the layout is right.
+-->
+<mujoco model="bluerov2_heavy">
+  <compiler angle="radian" coordinate="local"/>
+
+  <!-- g = 9.82 m/s^2 per Table A1 (not MuJoCo's default 9.81) -->
+  <option timestep="0.002" gravity="0 0 -9.82" integrator="implicitfast"/>
+
+  <default>
+    <site size="0.012" rgba="0.9 0.4 0.1 1"/>
+  </default>
+
+  <worldbody>
+    <light pos="0 0 2" dir="0 0 -1"/>
+    <body name="rov" pos="0 0 0">
+      <freejoint name="rov_free"/>
+
+      <!-- mass 13.5 kg (experimental); inertia = CAD + rotational added mass -->
+      <inertial pos="0 0 0" mass="13.5" diaginertia="0.449 0.365 0.592"/>
+
+      <!-- hull, sized to Table 5: L x H x W = 0.46 x 0.38 x 0.58 m -->
+      <geom name="hull" type="box" size="0.230 0.290 0.190" rgba="0.15 0.35 0.55 0.55"
+            contype="0" conaffinity="0" mass="0"/>
+
+      <!-- centre of buoyancy, 1 cm above CoM (paper z_b = -0.01 in NED) -->
+      <site name="cob" pos="0 0 0.01" rgba="0.2 0.9 0.2 1" size="0.02"/>
+
+      <!-- ================= VERTICAL THRUSTERS T5..T8 ================= -->
+      <!-- corners (+-0.120, +-0.218, 0), thrust along +z. Give roll, pitch, heave -->
+      <site name="t5" pos=" 0.120  0.218 0"/>
+      <site name="t6" pos=" 0.120 -0.218 0"/>
+      <site name="t7" pos="-0.120  0.218 0"/>
+      <site name="t8" pos="-0.120 -0.218 0"/>
+
+      <!-- ================ HORIZONTAL THRUSTERS T1..T4 ================ -->
+      <!-- corners (+-0.156, +-0.111, 0), X-vectored at 45 deg in the xy plane.
+           Give surge, sway, yaw. -->
+      <site name="t1" pos=" 0.156  0.111 0"/>
+      <site name="t2" pos="-0.156  0.111 0"/>
+      <site name="t3" pos=" 0.156 -0.111 0"/>
+      <site name="t4" pos="-0.156 -0.111 0"/>
+    </body>
+  </worldbody>
+
+  <actuator>
+    <!-- One T200 per site. ctrlrange +-30 N reproduces every published maximum
+         in Table 4 (see header). gear = the thrust direction in the body frame. -->
+    <general name="T5" site="t5" ctrlrange="-30 30" gear="0 0 1 0 0 0"/>
+    <general name="T6" site="t6" ctrlrange="-30 30" gear="0 0 1 0 0 0"/>
+    <general name="T7" site="t7" ctrlrange="-30 30" gear="0 0 1 0 0 0"/>
+    <general name="T8" site="t8" ctrlrange="-30 30" gear="0 0 1 0 0 0"/>
+    <general name="T1" site="t1" ctrlrange="-30 30" gear=" 0.7071068 -0.7071068 0 0 0 0"/>
+    <general name="T2" site="t2" ctrlrange="-30 30" gear=" 0.7071068  0.7071068 0 0 0 0"/>
+    <general name="T3" site="t3" ctrlrange="-30 30" gear="-0.7071068 -0.7071068 0 0 0 0"/>
+    <general name="T4" site="t4" ctrlrange="-30 30" gear="-0.7071068  0.7071068 0 0 0 0"/>
+  </actuator>
+</mujoco>

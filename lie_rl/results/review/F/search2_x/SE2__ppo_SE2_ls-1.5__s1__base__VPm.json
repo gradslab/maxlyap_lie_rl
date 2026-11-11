@@ -1,0 +1,46 @@
+{
+ "group": "SE2",
+ "dir": "ppo_SE2_ls-1.5",
+ "seed": 1,
+ "variant": "base",
+ "cert": "results/final/cert/SE2__ppo_SE2_ls-1.5__s1__base.pkl",
+ "eval": "results/review/eval_VPm/SE2__ppo_SE2_ls-1.5__s1__base.json",
+ "search": 1,
+ "rng_seed": 1018,
+ "r_b": 0.1,
+ "gamma": 2.748893571891069,
+ "spr": 0.08054493394120754,
+ "n_roll": 600,
+ "adv_rounds_cap": 50,
+ "adv_n": 32768,
+ "adv_steps": 1000,
+ "sample_scale": 1,
+ "fns": {
+  "VPm": {
+   "level_reported": 3.7658496750034747,
+   "level": 3.7658496750034747,
+   "lowered": false,
+   "known_points": null,
+   "adversarial_rounds": [
+    {
+     "rho": 3.7658496750034747,
+     "found": 0,
+     "worst_score": -0.0001514598881722229,
+     "least_f_found": null
+    }
+   ],
+   "adversarial_converged": true,
+   "region_mu0_reported": 0.39838,
+   "region_mu0": 0.39838,
+   "region_ball_fraction": 0.2469,
+   "false_inclusions_mu0": 0,
+   "false_inclusions_ball": 0,
+   "entry_samples": 100000,
+   "entry_violations": 0,
+   "nb_nonconverged": 0,
+   "wall_s": 209.51399898529053,
+   "checks_pass": true
+  }
+ },
+ "wall_s": 526.0731329917908
+}

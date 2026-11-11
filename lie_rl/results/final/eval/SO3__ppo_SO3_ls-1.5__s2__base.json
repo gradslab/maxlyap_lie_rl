@@ -1,0 +1,173 @@
+{
+ "group": "SO3",
+ "dir": "ppo_SO3_ls-1.5",
+ "seed": 2,
+ "variant": "base",
+ "cert": "results/final/cert/SO3__ppo_SO3_ls-1.5__s2__base.pkl",
+ "gamma": 2.748893571891069,
+ "eps_ball": 0.1,
+ "spr": 0.08802532148283815,
+ "passes_stability": true,
+ "n_roll": 600,
+ "adv_rounds_cap": 50,
+ "anchored": true,
+ "anchor": 0.3188379804908243,
+ "true_mu0": 1.0,
+ "ball_mu0": 0.75372,
+ "true_in_ball_mu0": 0.75372,
+ "true_ball_fraction": 1.0,
+ "nb_samples": 88577,
+ "nb_nonconverged_all": 0,
+ "fns": {
+  "V": {
+   "frac_decrease_violation_ball": 0.0,
+   "level_sampled": 41.813175997843146,
+   "level": 41.813175997843146,
+   "adversarial_rounds": [
+    {
+     "rho": 41.813175997843146,
+     "found": 0,
+     "worst_score": -0.01004167594081918
+    }
+   ],
+   "adversarial_converged": true,
+   "lowered_by_search": false,
+   "region_mu0": 0.75372,
+   "region_ball_fraction": 1.0,
+   "false_inclusions_mu0": 0,
+   "false_inclusions_ball": 0,
+   "entry_samples": 88577,
+   "entry_violations": 0,
+   "nb_nonconverged": 0,
+   "wall_s": 618.8885061740875
+  },
+  "Vd": {
+   "frac_decrease_violation_ball": 0.0,
+   "level_sampled": 7.556401167575535,
+   "level": 7.556401167575535,
+   "adversarial_rounds": [
+    {
+     "rho": 7.556401167575535,
+     "found": 0,
+     "worst_score": -0.0049257985695460044
+    }
+   ],
+   "adversarial_converged": true,
+   "lowered_by_search": false,
+   "region_mu0": 0.75372,
+   "region_ball_fraction": 1.0,
+   "false_inclusions_mu0": 0,
+   "false_inclusions_ball": 0,
+   "entry_samples": 88577,
+   "entry_violations": 0,
+   "nb_nonconverged": 0,
+   "wall_s": 132.4142668247223
+  },
+  "VP": {
+   "frac_decrease_violation_ball": 0.0,
+   "level_sampled": 7.65619989605942,
+   "level": 7.65619989605942,
+   "adversarial_rounds": [
+    {
+     "rho": 7.65619989605942,
+     "found": 0,
+     "worst_score": -0.004975011636265365
+    }
+   ],
+   "adversarial_converged": true,
+   "lowered_by_search": false,
+   "region_mu0": 0.75372,
+   "region_ball_fraction": 0.999995,
+   "false_inclusions_mu0": 0,
+   "false_inclusions_ball": 0,
+   "entry_samples": 88577,
+   "entry_violations": 0,
+   "nb_nonconverged": 0,
+   "wall_s": 130.46649289131165
+  },
+  "Vv": {
+   "frac_decrease_violation_ball": 0.00111252781319533,
+   "level_sampled": -0.031599922948381785,
+   "level": -0.03167196327446129,
+   "adversarial_rounds": [
+    {
+     "rho": -0.031599922948381785,
+     "found": 40,
+     "worst_score": 0.03670791761111919
+    },
+    {
+     "rho": -0.03167196327446129,
+     "found": 0,
+     "worst_score": null,
+     "empty_region": true
+    }
+   ],
+   "adversarial_converged": true,
+   "lowered_by_search": true,
+   "region_mu0": 0.0,
+   "region_ball_fraction": 0.0,
+   "false_inclusions_mu0": 0,
+   "false_inclusions_ball": 0,
+   "entry_samples": 0,
+   "entry_violations": 0,
+   "nb_nonconverged": 0,
+   "wall_s": 4.93629002571106
+  }
+ },
+ "unions": {
+  "V|Vd": {
+   "members": [
+    "V",
+    "Vd"
+   ],
+   "region_mu0": 0.75372,
+   "region_ball_fraction": 1.0,
+   "false_inclusions_mu0": 0
+  },
+  "V|Vd|VP": {
+   "members": [
+    "V",
+    "Vd",
+    "VP"
+   ],
+   "region_mu0": 0.75372,
+   "region_ball_fraction": 1.0,
+   "false_inclusions_mu0": 0
+  },
+  "Vd|VP": {
+   "members": [
+    "Vd",
+    "VP"
+   ],
+   "region_mu0": 0.75372,
+   "region_ball_fraction": 1.0,
+   "false_inclusions_mu0": 0
+  },
+  "Vd|VP|Vv": {
+   "members": [
+    "Vd",
+    "VP",
+    "Vv"
+   ],
+   "region_mu0": 0.75372,
+   "region_ball_fraction": 1.0,
+   "false_inclusions_mu0": 0
+  },
+  "all": {
+   "members": [
+    "V",
+    "Vd",
+    "VP",
+    "Vv"
+   ],
+   "region_mu0": 0.75372,
+   "region_ball_fraction": 1.0,
+   "false_inclusions_mu0": 0
+  }
+ },
+ "fit_median": 0.004526124461533018,
+ "fit_p90": 0.007717298786309675,
+ "fit_p99": 0.013822843218942811,
+ "cert_wall_s": 3540.359350204468,
+ "eval_wall_s": 1081.4058890342712
+}

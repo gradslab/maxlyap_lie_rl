@@ -1,0 +1,91 @@
+{
+ "group": "SE3",
+ "dir": "ppo_SE3_ls-1.5",
+ "seed": 0,
+ "variant": "m15",
+ "cert": "results/review/hinge_base/cert/SE3__ppo_SE3_ls-1.5__s0__m15__hinge.pkl",
+ "fns_evaluated": [
+  "V"
+ ],
+ "gamma": 2.748893571891069,
+ "eps_ball": 0.1,
+ "spr": 0.32403951969479583,
+ "passes_stability": true,
+ "n_roll": 600,
+ "adv_rounds_cap": 50,
+ "anchored": true,
+ "anchor": 0.30425610731913494,
+ "true_mu0": 0.999825,
+ "ball_mu0": 0.65149,
+ "true_in_ball_mu0": 0.65149,
+ "true_ball_fraction": 1.0,
+ "nb_samples": 33064,
+ "nb_nonconverged_all": 0,
+ "fns": {
+  "V": {
+   "frac_decrease_violation_ball": 1.5e-05,
+   "level_sampled": 1299188.5667051692,
+   "level": 1125080.5819952441,
+   "adversarial_rounds": [
+    {
+     "rho": 1299188.5667051692,
+     "found": 201,
+     "worst_score": 0.04738861325690902
+    },
+    {
+     "rho": 1130999.9471039209,
+     "found": 4,
+     "worst_score": 0.003008954391625185
+    },
+    {
+     "rho": 1125080.5819952441,
+     "found": 0,
+     "worst_score": -0.013539982763050684
+    }
+   ],
+   "adversarial_converged": true,
+   "lowered_by_search": true,
+   "region_mu0": 0.37478,
+   "region_ball_fraction": 0.46688,
+   "false_inclusions_mu0": 0,
+   "false_inclusions_ball": 0,
+   "entry_samples": 33064,
+   "entry_violations": 0,
+   "nb_nonconverged": 0,
+   "wall_s": 3459.8488109111786
+  }
+ },
+ "unions": {
+  "V|Vd": {
+   "members": [
+    "V"
+   ],
+   "region_mu0": 0.37478,
+   "region_ball_fraction": 0.46688,
+   "false_inclusions_mu0": 0
+  },
+  "V|Vd|VP": {
+   "members": [
+    "V"
+   ],
+   "region_mu0": 0.37478,
+   "region_ball_fraction": 0.46688,
+   "false_inclusions_mu0": 0
+  },
+  "Vd|VP": null,
+  "Vd|VP|Vv": null,
+  "all": {
+   "members": [
+    "V"
+   ],
+   "region_mu0": 0.37478,
+   "region_ball_fraction": 0.46688,
+   "false_inclusions_mu0": 0
+  }
+ },
+ "fit_median": 50490.62811815675,
+ "fit_p90": 73624.64406189152,
+ "fit_p99": 96419.07452527454,
+ "cert_wall_s": 2628.111018180847,
+ "eval_wall_s": 3863.368407011032
+}

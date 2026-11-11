@@ -1,0 +1,99 @@
+{
+ "group": "SE3",
+ "dir": "ppo_SE3_ls-1.5",
+ "seed": 1,
+ "variant": "g0.75",
+ "cert": "results/review/pert_r2/cert/SE3__ppo_SE3_ls-1.5__s1__g0.75__final.pkl",
+ "eval": "results/review/pert_r2/eval/SE3__ppo_SE3_ls-1.5__s1__g0.75__final.json",
+ "search": 1,
+ "rng_seed": 1018,
+ "r_b": 0.1,
+ "gamma": 2.748893571891069,
+ "spr": 0.275347226425725,
+ "n_roll": 600,
+ "adv_rounds_cap": 50,
+ "adv_n": 32768,
+ "adv_steps": 1000,
+ "sample_scale": 1,
+ "fns": {
+  "V": {
+   "level_reported": 38.06201694667011,
+   "level": 38.06201694667011,
+   "lowered": false,
+   "adversarial_rounds": [
+    {
+     "rho": 38.06201694667011,
+     "found": 0,
+     "worst_score": -0.002992899233500379,
+     "least_f_found": null
+    }
+   ],
+   "adversarial_converged": true,
+   "region_mu0_reported": 0.561255,
+   "region_mu0": 0.561255,
+   "region_ball_fraction": 0.768665,
+   "false_inclusions_mu0": 0,
+   "false_inclusions_ball": 0,
+   "entry_samples": 33064,
+   "entry_violations": 0,
+   "nb_nonconverged": 0,
+   "wall_s": 1132.7655642032623,
+   "checks_pass": true
+  },
+  "Vd": {
+   "level_reported": 4.63885670855613,
+   "level": 4.637635311337291,
+   "lowered": true,
+   "adversarial_rounds": [
+    {
+     "rho": 4.63885670855613,
+     "found": 1,
+     "worst_score": 0.000810077203441395,
+     "least_f_found": 4.637635315974926
+    },
+    {
+     "rho": 4.637635311337291,
+     "found": 0,
+     "worst_score": -0.0012523959451531397,
+     "least_f_found": null
+    }
+   ],
+   "adversarial_converged": true,
+   "region_mu0_reported": 0.3355,
+   "region_mu0": 0.33537,
+   "region_ball_fraction": 0.231055,
+   "false_inclusions_mu0": 0,
+   "false_inclusions_ball": 0,
+   "entry_samples": 33064,
+   "entry_violations": 0,
+   "nb_nonconverged": 0,
+   "wall_s": 694.9491581916809,
+   "checks_pass": true
+  },
+  "VP": {
+   "level_reported": 4.994251613490582,
+   "level": 4.994251613490582,
+   "lowered": false,
+   "adversarial_rounds": [
+    {
+     "rho": 4.994251613490582,
+     "found": 0,
+     "worst_score": -0.0017186576669709908,
+     "least_f_found": null
+    }
+   ],
+   "adversarial_converged": true,
+   "region_mu0_reported": 0.35197,
+   "region_mu0": 0.35197,
+   "region_ball_fraction": 0.24537,
+   "false_inclusions_mu0": 0,
+   "false_inclusions_ball": 0,
+   "entry_samples": 33064,
+   "entry_violations": 0,
+   "nb_nonconverged": 0,
+   "wall_s": 309.6960632801056,
+   "checks_pass": true
+  }
+ },
+ "wall_s": 2460.598620891571
+}

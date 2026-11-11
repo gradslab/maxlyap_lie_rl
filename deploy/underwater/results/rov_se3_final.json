@@ -1,0 +1,30 @@
+{
+ "seed": 0,
+ "rho": 44.082845133405264,
+ "gamma": 2.748893571891069,
+ "alpha_max": 0.35124073655203636,
+ "episodes": 200,
+ "steps": 40,
+ "dt_outer": 2.0,
+ "kp_pos": 400.0,
+ "kd_pos": 160.0,
+ "control": {
+  "exits": 0,
+  "rises": 0,
+  "rises_above_floor": 0,
+  "worst_rise": 0.0,
+  "final_cost_median": 8.828083018601795e-17,
+  "executed_median": null,
+  "executed_p5": null
+ },
+ "plant": {
+  "exits": 0,
+  "rises": 0,
+  "rises_above_floor": 0,
+  "worst_rise": 0.0,
+  "final_cost_median": 1.7590939888674634e-16,
+  "executed_median": 1.0004008926976804,
+  "executed_p5": 0.9982044037319397,
+  "saturated_substep_fraction": 0.005848875
+ }
+}

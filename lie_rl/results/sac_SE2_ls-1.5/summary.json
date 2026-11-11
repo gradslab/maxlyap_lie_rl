@@ -1,0 +1,38 @@
+[
+  {
+    "algo": "sac",
+    "group": "SE2",
+    "seed": 0,
+    "budget": 128000,
+    "geodesic_ceiling": -1.356852206912912,
+    "eval_return_mean": -1.5983111577098792,
+    "eval_return_std": 1.0870626061230522,
+    "final_angle_median": 0.02050886212810725,
+    "final_trans_median": 0.00762716295139468,
+    "wall_s": 9524.438028812408
+  },
+  {
+    "algo": "sac",
+    "group": "SE2",
+    "seed": 1,
+    "budget": 128000,
+    "geodesic_ceiling": -1.356852206912912,
+    "eval_return_mean": -1.585477252748051,
+    "eval_return_std": 1.099886937706632,
+    "final_angle_median": 0.017792082934729107,
+    "final_trans_median": 0.0053350598842286535,
+    "wall_s": 10621.27725315094
+  },
+  {
+    "algo": "sac",
+    "group": "SE2",
+    "seed": 2,
+    "budget": 128000,
+    "geodesic_ceiling": -1.356852206912912,
+    "eval_return_mean": -1.5311004762298075,
+    "eval_return_std": 1.102239067722004,
+    "final_angle_median": 0.004783712924701798,
+    "final_trans_median": 0.01408796366092209,
+    "wall_s": 10172.08761382103
+  }
+]

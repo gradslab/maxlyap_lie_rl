@@ -1,0 +1,6 @@
+screen1__lane0	results/rx/screen/.lane0_done	JAX_ENABLE_X64=1 $PY scripts/rx_screen.py ../pipeline/screens/screen_jobs.txt 0 4 && touch results/rx/screen/.lane0_done
+screen1__lane1	results/rx/screen/.lane1_done	JAX_ENABLE_X64=1 $PY scripts/rx_screen.py ../pipeline/screens/screen_jobs.txt 1 4 && touch results/rx/screen/.lane1_done
+screen1__lane2	results/rx/screen/.lane2_done	JAX_ENABLE_X64=1 $PY scripts/rx_screen.py ../pipeline/screens/screen_jobs.txt 2 4 && touch results/rx/screen/.lane2_done
+screen1__lane3	results/rx/screen/.lane3_done	JAX_ENABLE_X64=1 $PY scripts/rx_screen.py ../pipeline/screens/screen_jobs.txt 3 4 && touch results/rx/screen/.lane3_done
+screen2	results/rx/screen/.r2_done	JAX_ENABLE_X64=1 $PY scripts/rx_screen.py ../pipeline/screens/screen_jobs_r2.txt && touch results/rx/screen/.r2_done
+screen3	results/rx/screen/.r3_done	JAX_ENABLE_X64=1 $PY scripts/rx_screen.py ../pipeline/screens/screen_jobs_r3.txt && touch results/rx/screen/.r3_done

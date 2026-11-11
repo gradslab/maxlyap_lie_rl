@@ -1,0 +1,79 @@
+{
+ "group": "SE2",
+ "dir": "trpo_SE2_ls-1.5",
+ "seed": 0,
+ "suffix": "_final5",
+ "gamma": 2.748893571891069,
+ "alpha_max": 0.35124073655203636,
+ "eps_ball": 0.1,
+ "offset_norm": 0.012278947803274796,
+ "anchor": 0.3615131212619561,
+ "rho_max_ball": 32.497282498506216,
+ "rho_stage1": 32.497282498506216,
+ "rho_stage2": 32.497282498506216,
+ "rho": 32.497282498506216,
+ "rho_shell": 23.959843993523588,
+ "level_lowered_by_check": false,
+ "level_lowered_by_adversarial": false,
+ "adversarial_rounds": [
+  {
+   "rho": 32.497282498506216,
+   "found": 0,
+   "worst_score": -0.010164688452047023
+  }
+ ],
+ "adversarial_converged": true,
+ "n_samples_Z1": 800000,
+ "n_samples_Z2": 400000,
+ "n_Z1_in_region": 800000,
+ "n_Z2_in_region": 399999,
+ "n_decrease_violations_in_region": 0,
+ "n_containment_violations_in_region": 0,
+ "frac_decrease_violation_ball": 0.0,
+ "roa_true_haar": 1.0,
+ "roa_est_haar": 0.819635,
+ "ball_measure_mu0": 0.819645,
+ "coverage": 0.819635,
+ "false_inclusions": 0,
+ "est_chart_fraction": 0.9999975,
+ "entry_samples": 100000,
+ "entry_violations": 0,
+ "entry_maxV_over_rho": 5.065202482528658e-06,
+ "entry_rollout_nonconverged": 0,
+ "fit_out_median": 0.007170933954703461,
+ "fit_out_p99": 0.07873946065532035,
+ "fit_out_max": 0.6982761244534715,
+ "fixed_points": {
+  "rho_goal": 0.10982412733168204,
+  "index_goal": -1,
+  "n_other_zeros": 0
+ },
+ "dist_radius": 2.748893571891069,
+ "dist_adversarial_rounds": [
+  {
+   "r_d": 2.748893571891069,
+   "found": 0,
+   "worst_score": -0.0649908401746067
+  }
+ ],
+ "dist_adversarial_converged": true,
+ "dist_entry_violations": 0,
+ "dist_violations": 0,
+ "dist_region_measure": 0.819645,
+ "dist_region_ball_fraction": 1.0,
+ "wall_s": 552.7737159729004,
+ "quad_available": true,
+ "quad_spr": 0.10982412733168204,
+ "quad_level": 7.648919982373149,
+ "quad_rounds": [
+  {
+   "level": 7.648919982373149,
+   "found": 0
+  }
+ ],
+ "quad_converged": true,
+ "quad_region_measure": 0.819645,
+ "quad_region_ball_fraction": 0.9999975,
+ "timing_V_per_point_s": 4.6453125032712706e-07,
+ "timing_Vm_per_point_s": 0.0007637293416497414
+}

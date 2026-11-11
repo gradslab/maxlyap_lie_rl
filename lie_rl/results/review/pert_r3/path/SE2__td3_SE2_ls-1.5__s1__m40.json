@@ -1,0 +1,7 @@
+{
+ "path": "carry",
+ "carried_region_mu0": 0.80597,
+ "oracle_region_mu0": 0.819645,
+ "tol": 0.02,
+ "nominal_still_holds": false
+}

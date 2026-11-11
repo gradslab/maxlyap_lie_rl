@@ -1,0 +1,173 @@
+{
+ "status": "exact linear algebra; A by central differences as in anchor.local_quadratic",
+ "rows": [
+  {
+   "group": "SE2",
+   "dir": "ppo_SE2_ls-1.5",
+   "seed": 0,
+   "variant": "m10",
+   "spr": 0.20263361832780236,
+   "lam_max": -0.9529491847320685,
+   "lam_min_Q": 1.0,
+   "ratio_to_lamminQ": -0.9529491847320685,
+   "stein_residual_new": 4.440892098500626e-16,
+   "P_old_vs_P_new_relfro": 0.023250060034054346
+  },
+  {
+   "group": "SE2",
+   "dir": "ppo_SE2_ls-1.5",
+   "seed": 1,
+   "variant": "a2",
+   "spr": 0.11518666305205146,
+   "lam_max": -0.9792547964006635,
+   "lam_min_Q": 1.0,
+   "ratio_to_lamminQ": -0.9792547964006635,
+   "stein_residual_new": 2.220446049250313e-16,
+   "P_old_vs_P_new_relfro": 0.012692231479651768
+  },
+  {
+   "group": "SE2",
+   "dir": "ppo_SE2_ls-1.5",
+   "seed": 1,
+   "variant": "g0.75",
+   "spr": 0.2761861502168106,
+   "lam_max": -0.9243380188368462,
+   "lam_min_Q": 1.0,
+   "ratio_to_lamminQ": -0.9243380188368462,
+   "stein_residual_new": 6.661338147750939e-16,
+   "P_old_vs_P_new_relfro": 0.052750029354877326
+  },
+  {
+   "group": "SE2",
+   "dir": "ppo_SE2_ls-1.5",
+   "seed": 1,
+   "variant": "m10",
+   "spr": 0.13998507778995395,
+   "lam_max": -0.9782910337358657,
+   "lam_min_Q": 1.0,
+   "ratio_to_lamminQ": -0.9782910337358657,
+   "stein_residual_new": 2.220446049250313e-16,
+   "P_old_vs_P_new_relfro": 0.0109490748445278
+  },
+  {
+   "group": "SE2",
+   "dir": "ppo_SE2_ls-1.5",
+   "seed": 1,
+   "variant": "m5",
+   "spr": 0.07131473831883557,
+   "lam_max": -0.9966013678427537,
+   "lam_min_Q": 1.0,
+   "ratio_to_lamminQ": -0.9966013678427537,
+   "stein_residual_new": 2.220446049250313e-16,
+   "P_old_vs_P_new_relfro": 0.0016820982965401743
+  },
+  {
+   "group": "SE2",
+   "dir": "td3_SE2_ls-1.5",
+   "seed": 1,
+   "variant": "m40",
+   "spr": 0.6214299868397358,
+   "lam_max": -0.5293348420130702,
+   "lam_min_Q": 1.0,
+   "ratio_to_lamminQ": -0.5293348420130702,
+   "stein_residual_new": 4.440892098500626e-16,
+   "P_old_vs_P_new_relfro": 0.28988458604070955
+  },
+  {
+   "group": "SE2",
+   "dir": "trpo_SE2_ls-1.5",
+   "seed": 1,
+   "variant": "a1",
+   "spr": 0.2850165953350561,
+   "lam_max": -0.9186433760266707,
+   "lam_min_Q": 1.0,
+   "ratio_to_lamminQ": -0.9186433760266707,
+   "stein_residual_new": 2.220446049250313e-16,
+   "P_old_vs_P_new_relfro": 0.04059980512318251
+  },
+  {
+   "group": "SE2",
+   "dir": "trpo_SE2_ls-1.5",
+   "seed": 1,
+   "variant": "m10",
+   "spr": 0.17075043812908514,
+   "lam_max": -0.9651066644814004,
+   "lam_min_Q": 1.0,
+   "ratio_to_lamminQ": -0.9651066644814004,
+   "stein_residual_new": 4.440892098500626e-16,
+   "P_old_vs_P_new_relfro": 0.017278505265951608
+  },
+  {
+   "group": "SE2",
+   "dir": "trpo_SE2_ls-1.5",
+   "seed": 1,
+   "variant": "m5",
+   "spr": 0.09572118628224954,
+   "lam_max": -0.990307603973364,
+   "lam_min_Q": 1.0,
+   "ratio_to_lamminQ": -0.990307603973364,
+   "stein_residual_new": 6.661338147750939e-16,
+   "P_old_vs_P_new_relfro": 0.00443321380128143
+  },
+  {
+   "group": "SE3",
+   "dir": "ppo_SE3_ls-1.5",
+   "seed": 0,
+   "variant": "a2",
+   "spr": 0.17911674194928445,
+   "lam_max": -0.9796393012719253,
+   "lam_min_Q": 1.0,
+   "ratio_to_lamminQ": -0.9796393012719253,
+   "stein_residual_new": 4.440892098500626e-16,
+   "P_old_vs_P_new_relfro": 0.028791927813626536
+  },
+  {
+   "group": "SE3",
+   "dir": "ppo_SE3_ls-1.5",
+   "seed": 2,
+   "variant": "a2",
+   "spr": 0.22119650710749567,
+   "lam_max": -0.9847142948505104,
+   "lam_min_Q": 1.0,
+   "ratio_to_lamminQ": -0.9847142948505104,
+   "stein_residual_new": 4.440892098500626e-16,
+   "P_old_vs_P_new_relfro": 0.02532362785162044
+  },
+  {
+   "group": "SE3",
+   "dir": "ppo_SE3_ls-1.5",
+   "seed": 2,
+   "variant": "g0.5",
+   "spr": 0.5317850267811554,
+   "lam_max": -0.7165634474467641,
+   "lam_min_Q": 1.0,
+   "ratio_to_lamminQ": -0.7165634474467641,
+   "stein_residual_new": 6.661338147750939e-16,
+   "P_old_vs_P_new_relfro": 0.22305231475632747
+  },
+  {
+   "group": "SE3",
+   "dir": "ppo_SE3_ls-1.5",
+   "seed": 2,
+   "variant": "g0.75",
+   "spr": 0.2976775401717334,
+   "lam_max": -0.9125319992032238,
+   "lam_min_Q": 1.0,
+   "ratio_to_lamminQ": -0.9125319992032238,
+   "stein_residual_new": 6.661338147750939e-16,
+   "P_old_vs_P_new_relfro": 0.04808311369886528
+  },
+  {
+   "group": "SE3",
+   "dir": "ppo_SE3_ls-1.5",
+   "seed": 2,
+   "variant": "m5",
+   "spr": 0.14661672351296376,
+   "lam_max": -0.9794804804262474,
+   "lam_min_Q": 1.0,
+   "ratio_to_lamminQ": -0.9794804804262474,
+   "stein_residual_new": 2.220446049250313e-16,
+   "P_old_vs_P_new_relfro": 0.015201053887800003
+  }
+ ]
+}

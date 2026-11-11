@@ -1,0 +1,16 @@
+{
+ "id": "SE2__trpo_SE2_ls-1.5__s1__m50",
+ "nominal": "SE2__trpo_SE2_ls-1.5__s1__base",
+ "nominal_level": 37.432038862356066,
+ "n": 1000000,
+ "n_in_nominal_region": 972245,
+ "n_in_region_outside_Nb": 972210,
+ "spr": 0.847225930730802,
+ "n_roll": 600,
+ "decrease_violations": 30017,
+ "containment_violations": 1169,
+ "violation_fraction_of_region": 0.03141090916571523,
+ "nominal_region_mu0": 0.819645,
+ "nonconverged_in_nominal_region_mu0": 0.0,
+ "wall_s": 172.55799794197083
+}

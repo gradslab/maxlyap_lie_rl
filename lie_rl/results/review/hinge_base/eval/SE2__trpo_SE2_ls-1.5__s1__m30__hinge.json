@@ -1,0 +1,91 @@
+{
+ "group": "SE2",
+ "dir": "trpo_SE2_ls-1.5",
+ "seed": 1,
+ "variant": "m30",
+ "cert": "results/review/hinge_base/cert/SE2__trpo_SE2_ls-1.5__s1__m30__hinge.pkl",
+ "fns_evaluated": [
+  "V"
+ ],
+ "gamma": 2.748893571891069,
+ "eps_ball": 0.1,
+ "spr": 0.5163582306286285,
+ "passes_stability": true,
+ "n_roll": 600,
+ "adv_rounds_cap": 50,
+ "anchored": true,
+ "anchor": 0.3064347080024663,
+ "true_mu0": 1.0,
+ "ball_mu0": 0.819645,
+ "true_in_ball_mu0": 0.819645,
+ "true_ball_fraction": 0.99362,
+ "nb_samples": 100000,
+ "nb_nonconverged_all": 0,
+ "fns": {
+  "V": {
+   "frac_decrease_violation_ball": 0.0010075528965270677,
+   "level_sampled": 191412.6037509305,
+   "level": 187449.9235496256,
+   "adversarial_rounds": [
+    {
+     "rho": 191412.6037509305,
+     "found": 2074,
+     "worst_score": 0.010501648990449475
+    },
+    {
+     "rho": 188171.7671008895,
+     "found": 54,
+     "worst_score": 0.0023875627506515507
+    },
+    {
+     "rho": 187449.9235496256,
+     "found": 0,
+     "worst_score": -0.00018084150797514909
+    }
+   ],
+   "adversarial_converged": true,
+   "lowered_by_search": true,
+   "region_mu0": 0.414385,
+   "region_ball_fraction": 0.322225,
+   "false_inclusions_mu0": 0,
+   "false_inclusions_ball": 0,
+   "entry_samples": 100000,
+   "entry_violations": 0,
+   "nb_nonconverged": 0,
+   "wall_s": 2543.213308095932
+  }
+ },
+ "unions": {
+  "V|Vd": {
+   "members": [
+    "V"
+   ],
+   "region_mu0": 0.414385,
+   "region_ball_fraction": 0.322225,
+   "false_inclusions_mu0": 0
+  },
+  "V|Vd|VP": {
+   "members": [
+    "V"
+   ],
+   "region_mu0": 0.414385,
+   "region_ball_fraction": 0.322225,
+   "false_inclusions_mu0": 0
+  },
+  "Vd|VP": null,
+  "Vd|VP|Vv": null,
+  "all": {
+   "members": [
+    "V"
+   ],
+   "region_mu0": 0.414385,
+   "region_ball_fraction": 0.322225,
+   "false_inclusions_mu0": 0
+  }
+ },
+ "fit_median": 19053.28117971224,
+ "fit_p90": 35982.72473395534,
+ "fit_p99": 52336.81668681237,
+ "cert_wall_s": 1887.7900297641754,
+ "eval_wall_s": 2913.864017724991
+}

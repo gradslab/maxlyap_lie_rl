@@ -1,0 +1,123 @@
+{
+ "group": "SE3",
+ "dir": "trpo_SE3_ls-1.5",
+ "seed": 2,
+ "variant": "m40",
+ "cert": "results/review/pert36/cert/SE3__trpo_SE3_ls-1.5__s2__m40__final.pkl",
+ "eval": "results/review/pert36/eval/SE3__trpo_SE3_ls-1.5__s2__m40__final.json",
+ "search": 1,
+ "rng_seed": 1019,
+ "r_b": 0.1,
+ "gamma": 2.748893571891069,
+ "spr": 0.6807280977363669,
+ "n_roll": 600,
+ "adv_rounds_cap": 50,
+ "adv_n": 32768,
+ "adv_steps": 1000,
+ "sample_scale": 1,
+ "fns": {
+  "V": {
+   "level_reported": 79.69813203404088,
+   "level": 72.92989446444919,
+   "lowered": true,
+   "adversarial_rounds": [
+    {
+     "rho": 79.69813203404088,
+     "found": 7,
+     "worst_score": 0.006815405995077128,
+     "least_f_found": 72.92989453737908
+    },
+    {
+     "rho": 72.92989446444919,
+     "found": 0,
+     "worst_score": -0.005753691849855969,
+     "least_f_found": null
+    }
+   ],
+   "adversarial_converged": true,
+   "region_mu0_reported": 0.651485,
+   "region_mu0": 0.65147,
+   "region_ball_fraction": 0.999775,
+   "false_inclusions_mu0": 0,
+   "false_inclusions_ball": 0,
+   "entry_samples": 33064,
+   "entry_violations": 0,
+   "nb_nonconverged": 0,
+   "wall_s": 1936.0267078876495,
+   "checks_pass": true
+  },
+  "Vd": {
+   "level_reported": 5.040836839353272,
+   "level": 5.039175626395688,
+   "lowered": true,
+   "adversarial_rounds": [
+    {
+     "rho": 5.040836839353272,
+     "found": 1,
+     "worst_score": 6.171320426862081e-05,
+     "least_f_found": 5.039175631434864
+    },
+    {
+     "rho": 5.039175626395688,
+     "found": 0,
+     "worst_score": -0.00028530155079042885,
+     "least_f_found": null
+    }
+   ],
+   "adversarial_converged": true,
+   "region_mu0_reported": 0.379025,
+   "region_mu0": 0.37884,
+   "region_ball_fraction": 0.297265,
+   "false_inclusions_mu0": 0,
+   "false_inclusions_ball": 0,
+   "entry_samples": 33064,
+   "entry_violations": 0,
+   "nb_nonconverged": 0,
+   "wall_s": 612.584056854248,
+   "checks_pass": true
+  },
+  "VP": {
+   "level_reported": 6.058130030708744,
+   "level": 6.057052757681549,
+   "lowered": true,
+   "adversarial_rounds": [
+    {
+     "rho": 6.058130030708744,
+     "found": 1,
+     "worst_score": 3.450342279975871e-05,
+     "least_f_found": 6.0572820285520805
+    },
+    {
+     "rho": 6.057282022494799,
+     "found": 1,
+     "worst_score": 4.162964988818629e-05,
+     "least_f_found": 6.057099286941168
+    },
+    {
+     "rho": 6.057099280884069,
+     "found": 1,
+     "worst_score": 3.50156492494591e-05,
+     "least_f_found": 6.057052763738602
+    },
+    {
+     "rho": 6.057052757681549,
+     "found": 0,
+     "worst_score": -0.000609125214189099,
+     "least_f_found": null
+    }
+   ],
+   "adversarial_converged": true,
+   "region_mu0_reported": 0.25277,
+   "region_mu0": 0.2527,
+   "region_ball_fraction": 0.127005,
+   "false_inclusions_mu0": 0,
+   "false_inclusions_ball": 0,
+   "entry_samples": 33064,
+   "entry_violations": 0,
+   "nb_nonconverged": 0,
+   "wall_s": 1282.9118359088898,
+   "checks_pass": true
+  }
+ },
+ "wall_s": 4186.5629529953
+}

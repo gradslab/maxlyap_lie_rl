@@ -1,0 +1,15 @@
+{
+ "group": "SO2",
+ "dir": "sac_SO2_ls-1.5",
+ "seed": 2,
+ "variant": "base",
+ "spr": 0.3146636202933564,
+ "N_rollout": 3000,
+ "level": 34.587091217909006,
+ "n_containment_bad": 0,
+ "n_nonconverged": 0,
+ "region_mu0": 0.875575,
+ "true_in_ball_mu0": 0.875575,
+ "ball_mu0": 0.875575,
+ "wall_s": 1629.7520141601562
+}

@@ -1,0 +1,53 @@
+[
+  {
+    "group": "SE2",
+    "seed": 0,
+    "n_total_steps": 400000,
+    "geodesic_ceiling": -1.3542132377624512,
+    "eval_return_mean": -1.8240869045257568,
+    "eval_return_std": 3.0616040229797363,
+    "final_angle_mean": 0.0005340191419236362,
+    "final_angle_median": 0.00048537596012465656,
+    "final_trans_mean": 0.0029925545677542686,
+    "final_trans_median": 0.0015108610969036818,
+    "success_rate": 0.999755859375,
+    "success_rate_loose": 0.999755859375,
+    "logstd_init": -1.5,
+    "frac_angle_gt_half_pi": 0.0,
+    "wall_s": 26.558154821395874
+  },
+  {
+    "group": "SE2",
+    "seed": 1,
+    "n_total_steps": 400000,
+    "geodesic_ceiling": -1.3542132377624512,
+    "eval_return_mean": -1.9537451267242432,
+    "eval_return_std": 2.5464060306549072,
+    "final_angle_mean": 0.004844476468861103,
+    "final_angle_median": 0.00484447693452239,
+    "final_trans_mean": 0.006243179552257061,
+    "final_trans_median": 0.006243179552257061,
+    "success_rate": 1.0,
+    "success_rate_loose": 1.0,
+    "logstd_init": -1.5,
+    "frac_angle_gt_half_pi": 0.0,
+    "wall_s": 23.660756826400757
+  },
+  {
+    "group": "SE2",
+    "seed": 2,
+    "n_total_steps": 400000,
+    "geodesic_ceiling": -1.3542132377624512,
+    "eval_return_mean": -1.603987693786621,
+    "eval_return_std": 1.660681128501892,
+    "final_angle_mean": 0.00020939757814630866,
+    "final_angle_median": 0.00020939725800417364,
+    "final_trans_mean": 0.002104714047163725,
+    "final_trans_median": 0.002104714512825012,
+    "success_rate": 1.0,
+    "success_rate_loose": 1.0,
+    "logstd_init": -1.5,
+    "frac_angle_gt_half_pi": 0.0,
+    "wall_s": 23.487517833709717
+  }
+]

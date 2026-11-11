@@ -1,0 +1,183 @@
+{
+ "group": "SE3",
+ "dir": "ppo_SE3_ls-1.5",
+ "seed": 1,
+ "variant": "m10",
+ "cert": "results/review/pert_r2/cert/SE3__ppo_SE3_ls-1.5__s1__m10__final.pkl",
+ "fns_evaluated": [
+  "V",
+  "Vd",
+  "VP"
+ ],
+ "gamma": 2.748893571891069,
+ "eps_ball": 0.1,
+ "spr": 0.2559205005894015,
+ "passes_stability": true,
+ "n_roll": 600,
+ "adv_rounds_cap": 50,
+ "anchored": true,
+ "anchor": 0.46078887410289965,
+ "true_mu0": 0.999885,
+ "ball_mu0": 0.65149,
+ "true_in_ball_mu0": 0.65149,
+ "true_ball_fraction": 0.99957,
+ "nb_samples": 33064,
+ "nb_nonconverged_all": 0,
+ "fns": {
+  "V": {
+   "frac_decrease_violation_ball": 0.00018,
+   "level_sampled": 38.10130042396487,
+   "level": 23.77676503381958,
+   "adversarial_rounds": [
+    {
+     "rho": 38.10130042396487,
+     "found": 816,
+     "worst_score": 0.8925815759269824
+    },
+    {
+     "rho": 23.77676503381958,
+     "found": 0,
+     "worst_score": -0.009391818829575793
+    }
+   ],
+   "adversarial_converged": true,
+   "lowered_by_search": true,
+   "region_mu0": 0.43215,
+   "region_ball_fraction": 0.46859,
+   "false_inclusions_mu0": 0,
+   "false_inclusions_ball": 0,
+   "entry_samples": 33064,
+   "entry_violations": 0,
+   "nb_nonconverged": 0,
+   "wall_s": 2318.1064970493317
+  },
+  "Vd": {
+   "frac_decrease_violation_ball": 0.0009225,
+   "level_sampled": 4.503673565518285,
+   "level": 4.164354536121001,
+   "adversarial_rounds": [
+    {
+     "rho": 4.503673565518285,
+     "found": 5187,
+     "worst_score": 0.09591644716380188
+    },
+    {
+     "rho": 4.237647673554453,
+     "found": 282,
+     "worst_score": 0.019016901084253135
+    },
+    {
+     "rho": 4.166412748652892,
+     "found": 2,
+     "worst_score": 0.0007894462825026594
+    },
+    {
+     "rho": 4.164354536121001,
+     "found": 0,
+     "worst_score": -0.0007271140898916784
+    }
+   ],
+   "adversarial_converged": true,
+   "lowered_by_search": true,
+   "region_mu0": 0.28526,
+   "region_ball_fraction": 0.167195,
+   "false_inclusions_mu0": 0,
+   "false_inclusions_ball": 0,
+   "entry_samples": 33064,
+   "entry_violations": 0,
+   "nb_nonconverged": 0,
+   "wall_s": 1329.1418590545654
+  },
+  "VP": {
+   "frac_decrease_violation_ball": 0.0008375,
+   "level_sampled": 4.616766975362548,
+   "level": 4.31829469598292,
+   "adversarial_rounds": [
+    {
+     "rho": 4.616766975362548,
+     "found": 3501,
+     "worst_score": 0.0817027920487412
+    },
+    {
+     "rho": 4.385897382106997,
+     "found": 160,
+     "worst_score": 0.01775570135364113
+    },
+    {
+     "rho": 4.319275278350456,
+     "found": 1,
+     "worst_score": 0.00011182174363888464
+    },
+    {
+     "rho": 4.31829469598292,
+     "found": 0,
+     "worst_score": -0.00022754038182970504
+    }
+   ],
+   "adversarial_converged": true,
+   "lowered_by_search": true,
+   "region_mu0": 0.27895,
+   "region_ball_fraction": 0.159825,
+   "false_inclusions_mu0": 0,
+   "false_inclusions_ball": 0,
+   "entry_samples": 33064,
+   "entry_violations": 0,
+   "nb_nonconverged": 0,
+   "wall_s": 1180.3083109855652
+  }
+ },
+ "unions": {
+  "V|Vd": {
+   "members": [
+    "V",
+    "Vd"
+   ],
+   "region_mu0": 0.43215,
+   "region_ball_fraction": 0.469065,
+   "false_inclusions_mu0": 0
+  },
+  "V|Vd|VP": {
+   "members": [
+    "V",
+    "Vd",
+    "VP"
+   ],
+   "region_mu0": 0.43215,
+   "region_ball_fraction": 0.469115,
+   "false_inclusions_mu0": 0
+  },
+  "Vd|VP": {
+   "members": [
+    "Vd",
+    "VP"
+   ],
+   "region_mu0": 0.28656,
+   "region_ball_fraction": 0.168515,
+   "false_inclusions_mu0": 0
+  },
+  "Vd|VP|Vv": {
+   "members": [
+    "Vd",
+    "VP"
+   ],
+   "region_mu0": 0.28656,
+   "region_ball_fraction": 0.168515,
+   "false_inclusions_mu0": 0
+  },
+  "all": {
+   "members": [
+    "V",
+    "Vd",
+    "VP"
+   ],
+   "region_mu0": 0.43215,
+   "region_ball_fraction": 0.469115,
+   "false_inclusions_mu0": 0
+  }
+ },
+ "fit_median": 0.03664949660772405,
+ "fit_p90": 0.1504346671111571,
+ "fit_p99": 0.5022810749164873,
+ "cert_wall_s": 14028.732380867004,
+ "eval_wall_s": 5182.010915756226
+}

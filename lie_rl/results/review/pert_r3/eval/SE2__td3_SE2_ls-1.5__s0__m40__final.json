@@ -1,0 +1,183 @@
+{
+ "group": "SE2",
+ "dir": "td3_SE2_ls-1.5",
+ "seed": 0,
+ "variant": "m40",
+ "cert": "results/review/pert_r3/cert/SE2__td3_SE2_ls-1.5__s0__m40__final.pkl",
+ "fns_evaluated": [
+  "V",
+  "Vd",
+  "VP"
+ ],
+ "gamma": 2.748893571891069,
+ "eps_ball": 0.1,
+ "spr": 0.6348176896280584,
+ "passes_stability": true,
+ "n_roll": 600,
+ "adv_rounds_cap": 50,
+ "anchored": true,
+ "anchor": 0.31233182932248116,
+ "true_mu0": 1.0,
+ "ball_mu0": 0.819645,
+ "true_in_ball_mu0": 0.819645,
+ "true_ball_fraction": 1.0,
+ "nb_samples": 100000,
+ "nb_nonconverged_all": 0,
+ "fns": {
+  "V": {
+   "frac_decrease_violation_ball": 6.000315016538368e-05,
+   "level_sampled": 56.46345381340712,
+   "level": 52.48364155299492,
+   "adversarial_rounds": [
+    {
+     "rho": 56.46345381340712,
+     "found": 6299,
+     "worst_score": 0.02659131071079779
+    },
+    {
+     "rho": 52.91645438093324,
+     "found": 155,
+     "worst_score": 0.0042832594285551195
+    },
+    {
+     "rho": 52.52427247469117,
+     "found": 1,
+     "worst_score": 7.056637570457269e-05
+    },
+    {
+     "rho": 52.48364155299492,
+     "found": 0,
+     "worst_score": -0.0003308804727457648
+    }
+   ],
+   "adversarial_converged": true,
+   "lowered_by_search": true,
+   "region_mu0": 0.819645,
+   "region_ball_fraction": 0.9913,
+   "false_inclusions_mu0": 0,
+   "false_inclusions_ball": 0,
+   "entry_samples": 100000,
+   "entry_violations": 0,
+   "nb_nonconverged": 0,
+   "wall_s": 2583.982859134674
+  },
+  "Vd": {
+   "frac_decrease_violation_ball": 0.001705089517199653,
+   "level_sampled": 1.6877072815847316,
+   "level": 1.558446950736564,
+   "adversarial_rounds": [
+    {
+     "rho": 1.6877072815847316,
+     "found": 26552,
+     "worst_score": 0.011407082304157878
+    },
+    {
+     "rho": 1.558764013571249,
+     "found": 33,
+     "worst_score": 2.8936117397293515e-05
+    },
+    {
+     "rho": 1.558446950736564,
+     "found": 0,
+     "worst_score": -3.9568572811621294e-06
+    }
+   ],
+   "adversarial_converged": true,
+   "lowered_by_search": true,
+   "region_mu0": 0.316775,
+   "region_ball_fraction": 0.094285,
+   "false_inclusions_mu0": 0,
+   "false_inclusions_ball": 0,
+   "entry_samples": 100000,
+   "entry_violations": 0,
+   "nb_nonconverged": 0,
+   "wall_s": 304.6676678657532
+  },
+  "VP": {
+   "frac_decrease_violation_ball": 0.0016375859732635964,
+   "level_sampled": 2.9525657788154747,
+   "level": 2.915549674328732,
+   "adversarial_rounds": [
+    {
+     "rho": 2.9525657788154747,
+     "found": 3024,
+     "worst_score": 0.0027034942441317433
+    },
+    {
+     "rho": 2.915587535245277,
+     "found": 3,
+     "worst_score": 1.2711857997782516e-05
+    },
+    {
+     "rho": 2.915549674328732,
+     "found": 0,
+     "worst_score": -1.5347223692785406e-05
+    }
+   ],
+   "adversarial_converged": true,
+   "lowered_by_search": true,
+   "region_mu0": 0.433275,
+   "region_ball_fraction": 0.140545,
+   "false_inclusions_mu0": 0,
+   "false_inclusions_ball": 0,
+   "entry_samples": 100000,
+   "entry_violations": 0,
+   "nb_nonconverged": 0,
+   "wall_s": 232.04183220863342
+  }
+ },
+ "unions": {
+  "V|Vd": {
+   "members": [
+    "V",
+    "Vd"
+   ],
+   "region_mu0": 0.819645,
+   "region_ball_fraction": 0.9913,
+   "false_inclusions_mu0": 0
+  },
+  "V|Vd|VP": {
+   "members": [
+    "V",
+    "Vd",
+    "VP"
+   ],
+   "region_mu0": 0.819645,
+   "region_ball_fraction": 0.9913,
+   "false_inclusions_mu0": 0
+  },
+  "Vd|VP": {
+   "members": [
+    "Vd",
+    "VP"
+   ],
+   "region_mu0": 0.433275,
+   "region_ball_fraction": 0.140545,
+   "false_inclusions_mu0": 0
+  },
+  "Vd|VP|Vv": {
+   "members": [
+    "Vd",
+    "VP"
+   ],
+   "region_mu0": 0.433275,
+   "region_ball_fraction": 0.140545,
+   "false_inclusions_mu0": 0
+  },
+  "all": {
+   "members": [
+    "V",
+    "Vd",
+    "VP"
+   ],
+   "region_mu0": 0.819645,
+   "region_ball_fraction": 0.9913,
+   "false_inclusions_mu0": 0
+  }
+ },
+ "fit_median": 0.030071073594495918,
+ "fit_p90": 0.1497723777481513,
+ "fit_p99": 0.5098097280822366,
+ "cert_wall_s": 9216.111062765121,
+ "eval_wall_s": 3412.3445172309875
+}

@@ -1,0 +1,93 @@
+{
+ "group": "SO2",
+ "dir": "trpo_SO2_ls-1.5",
+ "seed": 1,
+ "variant": "base",
+ "cert": "results/final/cert/SO2__trpo_SO2_ls-1.5__s1__base.pkl",
+ "eval": "results/final/eval/SO2__trpo_SO2_ls-1.5__s1__base.json",
+ "search": 1,
+ "rng_seed": 1018,
+ "r_b": 0.1,
+ "gamma": 2.748893571891069,
+ "spr": 0.022852249160994844,
+ "n_roll": 600,
+ "adv_rounds_cap": 50,
+ "adv_n": 32768,
+ "adv_steps": 1000,
+ "sample_scale": 1,
+ "fns": {
+  "V": {
+   "level_reported": 34.09733059541489,
+   "level": 34.09733059541489,
+   "lowered": false,
+   "adversarial_rounds": [
+    {
+     "rho": 34.09733059541489,
+     "found": 0,
+     "worst_score": -0.010003991879941332,
+     "least_f_found": null
+    }
+   ],
+   "adversarial_converged": true,
+   "region_mu0_reported": 0.875575,
+   "region_mu0": 0.875575,
+   "region_ball_fraction": 1.0,
+   "false_inclusions_mu0": 0,
+   "false_inclusions_ball": 0,
+   "entry_samples": 100000,
+   "entry_violations": 0,
+   "nb_nonconverged": 0,
+   "wall_s": 720.3160452842712,
+   "checks_pass": true
+  },
+  "Vd": {
+   "level_reported": 7.556371763644347,
+   "level": 7.556371763644347,
+   "lowered": false,
+   "adversarial_rounds": [
+    {
+     "rho": 7.556371763644347,
+     "found": 0,
+     "worst_score": -0.004994223565160893,
+     "least_f_found": null
+    }
+   ],
+   "adversarial_converged": true,
+   "region_mu0_reported": 0.875575,
+   "region_mu0": 0.875575,
+   "region_ball_fraction": 1.0,
+   "false_inclusions_mu0": 0,
+   "false_inclusions_ball": 0,
+   "entry_samples": 100000,
+   "entry_violations": 0,
+   "nb_nonconverged": 0,
+   "wall_s": 135.64507794380188,
+   "checks_pass": true
+  },
+  "VP": {
+   "level_reported": 7.560319953937761,
+   "level": 7.560319953937761,
+   "lowered": false,
+   "adversarial_rounds": [
+    {
+     "rho": 7.560319953937761,
+     "found": 0,
+     "worst_score": -0.0049968254345605706,
+     "least_f_found": null
+    }
+   ],
+   "adversarial_converged": true,
+   "region_mu0_reported": 0.875575,
+   "region_mu0": 0.875575,
+   "region_ball_fraction": 1.0,
+   "false_inclusions_mu0": 0,
+   "false_inclusions_ball": 0,
+   "entry_samples": 100000,
+   "entry_violations": 0,
+   "nb_nonconverged": 0,
+   "wall_s": 137.39747500419617,
+   "checks_pass": true
+  }
+ },
+ "wall_s": 1323.8086919784546
+}

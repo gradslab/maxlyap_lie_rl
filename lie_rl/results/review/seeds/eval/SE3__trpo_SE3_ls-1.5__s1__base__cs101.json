@@ -1,0 +1,106 @@
+{
+ "group": "SE3",
+ "dir": "trpo_SE3_ls-1.5",
+ "seed": 1,
+ "variant": "base",
+ "cert": "results/review/seeds/cert/SE3__trpo_SE3_ls-1.5__s1__base__cs101.pkl",
+ "fns_evaluated": [
+  "V"
+ ],
+ "gamma": 2.748893571891069,
+ "eps_ball": 0.1,
+ "spr": 0.42592371165977866,
+ "passes_stability": true,
+ "n_roll": 600,
+ "adv_rounds_cap": 50,
+ "anchored": true,
+ "anchor": 0.35077126729531755,
+ "true_mu0": 1.0,
+ "ball_mu0": 0.65149,
+ "true_in_ball_mu0": 0.65149,
+ "true_ball_fraction": 1.0,
+ "nb_samples": 33064,
+ "nb_nonconverged_all": 0,
+ "fns": {
+  "V": {
+   "frac_decrease_violation_ball": 0.0,
+   "level_sampled": 47.300648911153395,
+   "level": 41.1675182447465,
+   "adversarial_rounds": [
+    {
+     "rho": 47.300648911153395,
+     "found": 71,
+     "worst_score": 0.6912945837640407
+    },
+    {
+     "rho": 41.6324207555056,
+     "found": 23,
+     "worst_score": 0.21469753938297487
+    },
+    {
+     "rho": 41.43349367613961,
+     "found": 3,
+     "worst_score": 0.026499340969856178
+    },
+    {
+     "rho": 41.39538093017282,
+     "found": 35,
+     "worst_score": 0.142011850485396
+    },
+    {
+     "rho": 41.2492423097582,
+     "found": 5,
+     "worst_score": 0.045448072829614716
+    },
+    {
+     "rho": 41.1675182447465,
+     "found": 0,
+     "worst_score": -0.0028521331893074375
+    }
+   ],
+   "adversarial_converged": true,
+   "lowered_by_search": true,
+   "region_mu0": 0.651425,
+   "region_ball_fraction": 0.99979,
+   "false_inclusions_mu0": 0,
+   "false_inclusions_ball": 0,
+   "entry_samples": 33064,
+   "entry_violations": 0,
+   "nb_nonconverged": 0,
+   "wall_s": 6820.4385306835175
+  }
+ },
+ "unions": {
+  "V|Vd": {
+   "members": [
+    "V"
+   ],
+   "region_mu0": 0.651425,
+   "region_ball_fraction": 0.99979,
+   "false_inclusions_mu0": 0
+  },
+  "V|Vd|VP": {
+   "members": [
+    "V"
+   ],
+   "region_mu0": 0.651425,
+   "region_ball_fraction": 0.99979,
+   "false_inclusions_mu0": 0
+  },
+  "Vd|VP": null,
+  "Vd|VP|Vv": null,
+  "all": {
+   "members": [
+    "V"
+   ],
+   "region_mu0": 0.651425,
+   "region_ball_fraction": 0.99979,
+   "false_inclusions_mu0": 0
+  }
+ },
+ "fit_median": 0.01044463003212888,
+ "fit_p90": 0.02809517598219362,
+ "fit_p99": 0.05490006538055487,
+ "cert_wall_s": 16213.132148504257,
+ "eval_wall_s": 7129.115129709244
+}

@@ -1,0 +1,8 @@
+{
+ "group": "SE3",
+ "dir": "sac_SE3_ls-1.5",
+ "seed": 2,
+ "spr": 4.63668766163555,
+ "offset_norm": 0.26530564894792785,
+ "passes": false
+}

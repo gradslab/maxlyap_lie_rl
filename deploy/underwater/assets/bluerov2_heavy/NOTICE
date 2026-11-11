@@ -1,0 +1,18 @@
+Blue Robotics simulation model packages (BlueROV2, BlueBoat)
+Copyright 2026 Honu Robotics
+
+Licensed under the Apache License, Version 2.0 (see LICENSE).
+
+This repository redistributes third-party mesh assets, reused as temporary
+placeholders until original art replaces them:
+
+- bluerobotics_parts/models/bluerov2_heavy_chassis/bluerov2_heavy.dae
+  From Project DAVE (https://github.com/IOES-Lab/dave, ros2 branch).
+  License: Apache-2.0.
+
+- bluerobotics_parts/models/ping360/ping360.dae
+  From CentraleNantesROV/bluerov2
+  (https://github.com/CentraleNantesROV/bluerov2). License: Apache-2.0.
+
+The remaining bluerobotics_parts meshes are original Honu Robotics art
+(artist deliveries); the primitive placeholder parts ship no assets.

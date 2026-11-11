@@ -1,0 +1,8 @@
+{
+ "group": "SE2",
+ "dir": "trpo_SE2_ls-1.5",
+ "seed": 1,
+ "spr": 0.08527619355996793,
+ "offset_norm": 0.02092206748097106,
+ "passes": true
+}

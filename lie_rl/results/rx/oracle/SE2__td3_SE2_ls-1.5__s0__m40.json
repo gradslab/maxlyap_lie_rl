@@ -1,0 +1,15 @@
+{
+ "group": "SE2",
+ "dir": "td3_SE2_ls-1.5",
+ "seed": 0,
+ "variant": "m40",
+ "spr": 0.6348176896280584,
+ "N_rollout": 3000,
+ "level": 38.1871896103503,
+ "n_containment_bad": 11,
+ "n_nonconverged": 0,
+ "region_mu0": 0.819645,
+ "true_in_ball_mu0": 0.819645,
+ "ball_mu0": 0.819645,
+ "wall_s": 1095.9276411533356
+}

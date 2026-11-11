@@ -1,0 +1,46 @@
+{
+ "group": "SE2",
+ "dir": "ppo_SE2_ls-1.5",
+ "seed": 1,
+ "variant": "a1",
+ "cert": "results/review/hinge_base/cert/SE2__ppo_SE2_ls-1.5__s1__a1__hinge.pkl",
+ "eval": "results/review/hinge_base/eval/SE2__ppo_SE2_ls-1.5__s1__a1__hinge.json",
+ "search": 1,
+ "rng_seed": 1018,
+ "r_b": 0.1,
+ "gamma": 2.748893571891069,
+ "spr": 0.3132507996106111,
+ "n_roll": 600,
+ "adv_rounds_cap": 50,
+ "adv_n": 32768,
+ "adv_steps": 1000,
+ "sample_scale": 1,
+ "fns": {
+  "V": {
+   "level_reported": 778145.3582758949,
+   "level": 778145.3582758949,
+   "lowered": false,
+   "known_points": null,
+   "adversarial_rounds": [
+    {
+     "rho": 778145.3582758949,
+     "found": 0,
+     "worst_score": -0.0007642688311060297,
+     "least_f_found": null
+    }
+   ],
+   "adversarial_converged": true,
+   "region_mu0_reported": 0.713725,
+   "region_mu0": 0.713725,
+   "region_ball_fraction": 0.638635,
+   "false_inclusions_mu0": 0,
+   "false_inclusions_ball": 0,
+   "entry_samples": 100000,
+   "entry_violations": 0,
+   "nb_nonconverged": 0,
+   "wall_s": 1017.558923959732,
+   "checks_pass": true
+  }
+ },
+ "wall_s": 1394.2708921432495
+}

@@ -1,0 +1,2 @@
+cubesat	../deploy/spacecraft/results/sc_deploy_final.json	cd ../deploy && JAX_ENABLE_X64=1 $PYD spacecraft/sc_deploy_study_final.py 900 --episodes 200 --steps 40 --dt-outer 15.7 --trace results/paper/traces/cubesat_final.npz
+bluerov2	../deploy/underwater/results/rov_se3_final.json	cd ../deploy && JAX_ENABLE_X64=1 $PYD underwater/rov_se3_deploy_final.py --seed 0 --episodes 200 --steps 40 --dt-outer 2.0 --kp-pos 400 --kd-pos 160 --trace results/paper/traces/rov_se3_final.npz

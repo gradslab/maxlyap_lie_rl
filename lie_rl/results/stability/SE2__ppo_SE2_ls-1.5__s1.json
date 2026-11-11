@@ -1,0 +1,8 @@
+{
+ "group": "SE2",
+ "dir": "ppo_SE2_ls-1.5",
+ "seed": 1,
+ "spr": 0.08054493394120754,
+ "offset_norm": 0.021801421548807397,
+ "passes": true
+}

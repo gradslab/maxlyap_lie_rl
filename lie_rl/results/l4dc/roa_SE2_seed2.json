@@ -1,0 +1,77 @@
+{
+ "group": "SE2",
+ "dir": "ppo_SE2_ls-1.5",
+ "seed": 2,
+ "suffix": "_final5",
+ "gamma": 2.748893571891069,
+ "alpha_max": 0.35124073655203636,
+ "eps_ball": 0.1,
+ "offset_norm": 0.006079585033658229,
+ "anchor": 0.3265183168155255,
+ "rho_max_ball": 47.20923730602496,
+ "rho_stage1": 47.20923730602496,
+ "rho_stage2": 47.20923730602496,
+ "rho": 47.20923730602496,
+ "rho_shell": 24.727482304451723,
+ "level_lowered_by_check": false,
+ "level_lowered_by_adversarial": false,
+ "adversarial_rounds": [
+  {
+   "rho": 47.20923730602496,
+   "found": 0,
+   "worst_score": -0.010507544746914862
+  }
+ ],
+ "n_samples_Z1": 800000,
+ "n_samples_Z2": 400000,
+ "n_Z1_in_region": 800000,
+ "n_Z2_in_region": 400000,
+ "n_decrease_violations_in_region": 0,
+ "n_containment_violations_in_region": 0,
+ "frac_decrease_violation_ball": 0.0,
+ "roa_true_haar": 1.0,
+ "roa_est_haar": 0.819645,
+ "ball_measure_mu0": 0.819645,
+ "coverage": 0.819645,
+ "false_inclusions": 0,
+ "est_chart_fraction": 1.0,
+ "entry_samples": 100000,
+ "entry_violations": 0,
+ "entry_maxV_over_rho": 1.790361304076866e-05,
+ "entry_rollout_nonconverged": 0,
+ "fit_out_median": 0.010625809647076313,
+ "fit_out_p99": 0.09232991295144634,
+ "fit_out_max": 0.534242714038394,
+ "fixed_points": {
+  "rho_goal": 0.1412798462844722,
+  "index_goal": -1,
+  "n_other_zeros": 0
+ },
+ "dist_radius": 2.748893571891069,
+ "dist_adversarial_rounds": [
+  {
+   "r_d": 2.748893571891069,
+   "found": 0,
+   "worst_score": -0.05717597844211645
+  }
+ ],
+ "dist_entry_violations": 0,
+ "dist_violations": 0,
+ "dist_region_measure": 0.819645,
+ "dist_region_ball_fraction": 1.0,
+ "wall_s": 744.7059090137482,
+ "quad_available": true,
+ "quad_spr": 0.1412798462844722,
+ "quad_level": 7.9181960257576005,
+ "quad_rounds": [
+  {
+   "level": 7.9181960257576005,
+   "found": 0
+  }
+ ],
+ "quad_converged": true,
+ "quad_region_measure": 0.819645,
+ "quad_region_ball_fraction": 0.9999925,
+ "timing_V_per_point_s": 5.826166496262885e-07,
+ "timing_Vm_per_point_s": 0.0008465192625000782
+}

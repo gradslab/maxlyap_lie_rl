@@ -1,0 +1,15 @@
+{
+ "group": "SE2",
+ "dir": "ppo_SE2_ls-1.5",
+ "seed": 0,
+ "variant": "m30",
+ "spr": 0.5432768962801547,
+ "N_rollout": 3000,
+ "level": 61.075315611020045,
+ "n_containment_bad": 166,
+ "n_nonconverged": 0,
+ "region_mu0": 0.81736,
+ "true_in_ball_mu0": 0.819645,
+ "ball_mu0": 0.819645,
+ "wall_s": 2194.7993330955505
+}

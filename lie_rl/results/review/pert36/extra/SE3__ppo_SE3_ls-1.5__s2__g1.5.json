@@ -1,0 +1,58 @@
+{
+ "group": "SE3",
+ "dir": "ppo_SE3_ls-1.5",
+ "seed": 2,
+ "variant": "g1.5",
+ "cert": "results/review/pert36/cert/SE3__ppo_SE3_ls-1.5__s2__g1.5__final.pkl",
+ "eval": "results/review/pert36/eval/SE3__ppo_SE3_ls-1.5__s2__g1.5__final.json",
+ "level": 44.39061865105809,
+ "anchored": true,
+ "region_mu0_eval": 0.65143,
+ "heldout": {
+  "n": 1000000,
+  "key": 20261017,
+  "law": "uniform in the ball",
+  "n_in_region": 995831,
+  "n_in_region_outside_Nb": 995831,
+  "decrease_violations": 0,
+  "containment_violations": 0,
+  "beta": 1e-06,
+  "bound_ball_fraction": 1.3815510557964274e-05,
+  "worst_relative_increase": -0.04962477363537689
+ },
+ "spr": {
+  "values": {
+   "0.0001": 0.6181393384468526,
+   "1e-05": 0.6181394173975286,
+   "1e-06": 0.618139418223017,
+   "1e-07": 0.6181394181973051
+  },
+  "used": 0.618139418223017,
+  "max_abs_deviation_from_used": 7.977616434118318e-08,
+  "eval_json_spr": 0.618139418223017
+ },
+ "fit": {
+  "600": {
+   "median": 0.02428976444240162,
+   "p90": 0.07935061168236124,
+   "p99": 0.2164131423961207,
+   "n": 20000,
+   "n_nonfinite": 0
+  },
+  "3000": {
+   "median": 0.02428976444240162,
+   "p90": 0.07935061168236124,
+   "p99": 0.2164131423961207,
+   "n": 20000,
+   "n_nonfinite": 0
+  }
+ },
+ "fit_eval_json_median": 0.02428976444240162,
+ "timing": {
+  "V_s_per_point": 2.85254430770874e-06,
+  "Vm600_s_per_point": 0.0012147458076477052,
+  "Vm3000_s_per_point": 0.006184020781517029,
+  "threads": "2"
+ },
+ "wall_s": 324.6762330532074
+}

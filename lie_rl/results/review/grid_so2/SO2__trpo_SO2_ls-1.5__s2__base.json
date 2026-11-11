@@ -1,0 +1,20 @@
+{
+ "id": "SO2__trpo_SO2_ls-1.5__s2__base",
+ "level": 34.19695677734763,
+ "n_grid": 20000001,
+ "spacing": 2.748893571891069e-07,
+ "n_in_region": 19664284,
+ "containment_violations": 5,
+ "decrease_violations": 0,
+ "violating_z": [
+  2.74889247233364,
+  2.7488927472229974,
+  2.748893022112354,
+  2.7488932970017115,
+  2.748893571891069
+ ],
+ "lowered_level": 34.19691874089389,
+ "region_mu0": 0.861385,
+ "region_mu0_lowered": 0.861385,
+ "region_mu0_eval": 0.861385
+}

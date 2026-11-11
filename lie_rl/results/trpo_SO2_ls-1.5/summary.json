@@ -1,0 +1,38 @@
+[
+  {
+    "algo": "trpo",
+    "group": "SO2",
+    "seed": 0,
+    "budget": 400000,
+    "geodesic_ceiling": -1.4186511039733887,
+    "eval_return_mean": -1.4910649061203003,
+    "eval_return_std": 1.4295320510864258,
+    "final_angle_median": 0.00069340382469818,
+    "final_trans_median": 0.0,
+    "wall_s": 18.770859718322754
+  },
+  {
+    "algo": "trpo",
+    "group": "SO2",
+    "seed": 1,
+    "budget": 400000,
+    "geodesic_ceiling": -1.4186511039733887,
+    "eval_return_mean": -1.4426864385604858,
+    "eval_return_std": 1.3543647527694702,
+    "final_angle_median": 0.001584011479280889,
+    "final_trans_median": 0.0,
+    "wall_s": 19.107424020767212
+  },
+  {
+    "algo": "trpo",
+    "group": "SO2",
+    "seed": 2,
+    "budget": 400000,
+    "geodesic_ceiling": -1.4186511039733887,
+    "eval_return_mean": -1.6191245317459106,
+    "eval_return_std": 1.5756115913391113,
+    "final_angle_median": 0.005650058388710022,
+    "final_trans_median": 0.0,
+    "wall_s": 18.519704818725586
+  }
+]

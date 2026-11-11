@@ -1,0 +1,56 @@
+<!--
+  Free-floating rigid body = spacecraft attitude plant.
+
+  J omega_dot = tau - omega x J omega   (Euler)   is what MuJoCo integrates natively for a free body;
+  we add nothing on top. Gravity is zero (orbit), there is no contact, and the body is actuated by
+  three orthogonal torque motors standing in for a reaction-wheel triad.
+
+  *** PARAMETER PROVENANCE (option 2, chosen by Hamza 2026-07-31) ***
+
+  GEOMETRY AND MASS -- the 3U ENVELOPE is the CubeSat Design Specification's (Cal Poly): 10 x 10 x 34 cm.
+  The 4.0 kg is OURS, not the standard's: CDS Rev 14.1 Table 1 lists the typical maximum for a 3U as
+  6.00 kg (4.00 kg is its 2U row). 4.0 kg is a light bus inside that envelope and is what this model
+  simulates. CORRECTED 2026-08-25 after the mass was checked against Rev 14.1 directly; the earlier
+  comment claimed 4.0 kg was the standard's own 3U figure, and it is not.
+
+  INERTIA -- computed from that geometry as a UNIFORM RECTANGULAR PRISM:
+      Jx = Jy = (1/12) m (b^2 + c^2) = 0.041867
+      Jz       = (1/12) m (a^2 + b^2) = 0.006667      [kg m^2]
+  This is a STATED MODELLING ASSUMPTION, not a measured spacecraft. Real 3U buses have Jx != Jy
+  because components are not uniformly distributed; the inertia-mismatch stress arm perturbs this.
+
+  REACTION-WHEEL TORQUE -- 1 mN.m, which is what ctrlrange below actually applies (+/-0.001 N.m).
+  CONFIRMED against the datasheet in the repo, RL-RW-0.01-Data-Sheet.pdf (2026-08-24): "TORQUE
+  +/-1 mNm at 0.01 Nms". The earlier "10 mN.m" in this comment was a UNIT CONFUSION: 0.01 Nms is the
+  wheel's angular-MOMENTUM storage (and the source of the "RW-0.01" name), not its torque. The model
+  was always right; only this comment was wrong. The FLAGGED request to check the datasheet is now
+  discharged.
+
+  WHY THESE NUMBERS MATTER AT ALL: only through the slew time. t_slew = 2 sqrt(alpha_max J / tau_max)
+  = 7.85 s on the worst axis, which is what sets dt_outer (= 2 x t_slew = 15.7 s, as run_all.sh passes).
+  Nothing else in the study depends on them.
+  NOTE ON THE INERTIA: the hand derivation above gives Jx = Jy = 0.041867, but this model SIMULATES
+  diaginertia="0.049 0.049 0.008" below, and 0.049 is the operative value. t_slew = 7.85 s follows from
+  0.049; the stale 7.25 s (and dt_outer 14.5 s) elsewhere in the log came from 0.041867, and the
+  superseded 2.29 s came from the 10x-too-large torque. Corrected 2026-08-24.
+-->
+<mujoco model="spacecraft_attitude">
+  <option timestep="0.002" integrator="RK4" gravity="0 0 0" viscosity="0" density="0"/>
+  <compiler angle="radian"/>
+
+  <worldbody>
+    <body name="sc" pos="0 0 0">
+      <freejoint name="root"/>
+      <!-- mass is irrelevant to attitude (no external force); inertia is what matters -->
+      <inertial pos="0 0 0" mass="4.0" diaginertia="0.049 0.049 0.008"/>
+      <geom name="bus" type="box" size="0.05 0.05 0.17" rgba="0.6 0.6 0.65 1" contype="0" conaffinity="0"/>
+    </body>
+  </worldbody>
+
+  <actuator>
+    <!-- pure body-frame torques about x, y, z. ctrlrange = reaction-wheel torque authority. -->
+    <motor name="tx" joint="root" gear="0 0 0 1 0 0" ctrlrange="-0.001 0.001" ctrllimited="true"/>
+    <motor name="ty" joint="root" gear="0 0 0 0 1 0" ctrlrange="-0.001 0.001" ctrllimited="true"/>
+    <motor name="tz" joint="root" gear="0 0 0 0 0 1" ctrlrange="-0.001 0.001" ctrllimited="true"/>
+  </actuator>
+</mujoco>

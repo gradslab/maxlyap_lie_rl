@@ -1,0 +1,15 @@
+{
+ "group": "SO3",
+ "dir": "ppo_SO3_ls-1.5",
+ "seed": 2,
+ "variant": "base",
+ "spr": 0.08802532148283815,
+ "N_rollout": 3000,
+ "level": 41.82084965416587,
+ "n_containment_bad": 0,
+ "n_nonconverged": 0,
+ "region_mu0": 0.75371,
+ "true_in_ball_mu0": 0.75372,
+ "ball_mu0": 0.75372,
+ "wall_s": 1569.0483000278473
+}

@@ -1,0 +1,38 @@
+[
+  {
+    "algo": "td3",
+    "group": "SO3",
+    "seed": 0,
+    "budget": 128000,
+    "geodesic_ceiling": -2.32639347655744,
+    "eval_return_mean": -9.18496264851467,
+    "eval_return_std": 1.4606360500199183,
+    "final_angle_median": 0.4782571108772251,
+    "final_trans_median": 0.0,
+    "wall_s": 751.2260739803314
+  },
+  {
+    "algo": "td3",
+    "group": "SO3",
+    "seed": 1,
+    "budget": 128000,
+    "geodesic_ceiling": -2.32639347655744,
+    "eval_return_mean": -3.4773050596360364,
+    "eval_return_std": 1.4230350376167291,
+    "final_angle_median": 0.05801232830354956,
+    "final_trans_median": 0.0,
+    "wall_s": 730.6328372955322
+  },
+  {
+    "algo": "td3",
+    "group": "SO3",
+    "seed": 2,
+    "budget": 128000,
+    "geodesic_ceiling": -2.32639347655744,
+    "eval_return_mean": -7.974954636864242,
+    "eval_return_std": 2.657757495646039,
+    "final_angle_median": 0.33663231764924895,
+    "final_trans_median": 0.0,
+    "wall_s": 727.2040235996246
+  }
+]

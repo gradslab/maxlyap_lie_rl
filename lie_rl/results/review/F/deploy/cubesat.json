@@ -1,0 +1,69 @@
+{
+ "vehicle": "CubeSat",
+ "seed": 900,
+ "rho": 44.39928752987082,
+ "episodes": 200,
+ "steps": 40,
+ "dt_outer": 15.7,
+ "Kp": [
+  0.003183098861837907,
+  0.003183098861837907,
+  0.0031830988618379076
+ ],
+ "arms": {
+  "nominal": {
+   "exits": 0,
+   "converged": 200,
+   "episodes": 200,
+   "largest_V_increase": 1.4114017756203947e-22,
+   "omega_max": 0.07161611201945085,
+   "carried_out_median": 0.9357765875679638,
+   "carried_out_p5": 0.913852536905012,
+   "final_angle_median": 7.630597965926596e-15,
+   "final_angle_max": 7.707879672601453e-15
+  },
+  "rate25": {
+   "exits": 0,
+   "converged": 200,
+   "episodes": 200,
+   "largest_V_increase": 2.115945893020468e-22,
+   "omega_max": 0.07161288156845194,
+   "carried_out_median": 0.9357372731703988,
+   "carried_out_p5": 0.9139033927734638,
+   "final_angle_median": 7.631653490034753e-15,
+   "final_angle_max": 7.753993947546842e-15,
+   "initial_rate_radius": 0.017904028004862713,
+   "dt_outer": 15.7,
+   "steps": 40
+  },
+  "rate50": {
+   "exits": 0,
+   "converged": 200,
+   "episodes": 200,
+   "largest_V_increase": 1.7653717335678109e-22,
+   "omega_max": 0.07199945308034665,
+   "carried_out_median": 0.9359069229779513,
+   "carried_out_p5": 0.9138015898272799,
+   "final_angle_median": 7.6217823240173e-15,
+   "final_angle_max": 7.731710082458793e-15,
+   "initial_rate_radius": 0.03580805600972543,
+   "dt_outer": 15.7,
+   "steps": 40
+  },
+  "half": {
+   "exits": 0,
+   "converged": 200,
+   "episodes": 200,
+   "largest_V_increase": 2.0679897925641173e-06,
+   "omega_max": 0.07173577509706826,
+   "carried_out_median": 0.7316155340308775,
+   "carried_out_p5": 0.6590346176582899,
+   "final_angle_median": 7.617179931707385e-15,
+   "final_angle_max": 7.736515721092107e-15,
+   "initial_rate_radius": 0.0,
+   "dt_outer": 7.85,
+   "steps": 80
+  }
+ },
+ "wall_s": 24303.01786017418
+}

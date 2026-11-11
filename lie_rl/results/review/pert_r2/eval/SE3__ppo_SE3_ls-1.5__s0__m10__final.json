@@ -1,0 +1,183 @@
+{
+ "group": "SE3",
+ "dir": "ppo_SE3_ls-1.5",
+ "seed": 0,
+ "variant": "m10",
+ "cert": "results/review/pert_r2/cert/SE3__ppo_SE3_ls-1.5__s0__m10__final.pkl",
+ "fns_evaluated": [
+  "V",
+  "Vd",
+  "VP"
+ ],
+ "gamma": 2.748893571891069,
+ "eps_ball": 0.1,
+ "spr": 0.2387680308041746,
+ "passes_stability": true,
+ "n_roll": 600,
+ "adv_rounds_cap": 50,
+ "anchored": true,
+ "anchor": 0.37462264120311856,
+ "true_mu0": 0.999875,
+ "ball_mu0": 0.65149,
+ "true_in_ball_mu0": 0.65149,
+ "true_ball_fraction": 1.0,
+ "nb_samples": 33064,
+ "nb_nonconverged_all": 0,
+ "fns": {
+  "V": {
+   "frac_decrease_violation_ball": 1.5e-05,
+   "level_sampled": 56.73324300666261,
+   "level": 46.87052264712622,
+   "adversarial_rounds": [
+    {
+     "rho": 56.73324300666261,
+     "found": 310,
+     "worst_score": 1.5452544681640887
+    },
+    {
+     "rho": 47.3030405613893,
+     "found": 42,
+     "worst_score": 0.8404882613094671
+    },
+    {
+     "rho": 46.87052264712622,
+     "found": 0,
+     "worst_score": -0.009458426620265145
+    }
+   ],
+   "adversarial_converged": true,
+   "lowered_by_search": true,
+   "region_mu0": 0.649735,
+   "region_ball_fraction": 0.995905,
+   "false_inclusions_mu0": 0,
+   "false_inclusions_ball": 0,
+   "entry_samples": 33064,
+   "entry_violations": 0,
+   "nb_nonconverged": 0,
+   "wall_s": 3344.8770718574524
+  },
+  "Vd": {
+   "frac_decrease_violation_ball": 3.75e-05,
+   "level_sampled": 6.094399036269211,
+   "level": 5.073001060020555,
+   "adversarial_rounds": [
+    {
+     "rho": 6.094399036269211,
+     "found": 27926,
+     "worst_score": 0.12110058503979104
+    },
+    {
+     "rho": 5.098378188666971,
+     "found": 81,
+     "worst_score": 0.002977222786587852
+    },
+    {
+     "rho": 5.076091694067183,
+     "found": 2,
+     "worst_score": 0.00020885270259363153
+    },
+    {
+     "rho": 5.073001060020555,
+     "found": 0,
+     "worst_score": -0.00022059265820040252
+    }
+   ],
+   "adversarial_converged": true,
+   "lowered_by_search": true,
+   "region_mu0": 0.382425,
+   "region_ball_fraction": 0.303325,
+   "false_inclusions_mu0": 0,
+   "false_inclusions_ball": 0,
+   "entry_samples": 33064,
+   "entry_violations": 0,
+   "nb_nonconverged": 0,
+   "wall_s": 1170.8215248584747
+  },
+  "VP": {
+   "frac_decrease_violation_ball": 4.5e-05,
+   "level_sampled": 6.616546106060845,
+   "level": 5.286921864315635,
+   "adversarial_rounds": [
+    {
+     "rho": 6.616546106060845,
+     "found": 35933,
+     "worst_score": 0.21918427844165045
+    },
+    {
+     "rho": 5.352620130912591,
+     "found": 548,
+     "worst_score": 0.007957050247322961
+    },
+    {
+     "rho": 5.286921864315635,
+     "found": 0,
+     "worst_score": -0.00025302585800535127
+    }
+   ],
+   "adversarial_converged": true,
+   "lowered_by_search": true,
+   "region_mu0": 0.38063,
+   "region_ball_fraction": 0.30529,
+   "false_inclusions_mu0": 0,
+   "false_inclusions_ball": 0,
+   "entry_samples": 33064,
+   "entry_violations": 0,
+   "nb_nonconverged": 0,
+   "wall_s": 916.5434958934784
+  }
+ },
+ "unions": {
+  "V|Vd": {
+   "members": [
+    "V",
+    "Vd"
+   ],
+   "region_mu0": 0.649735,
+   "region_ball_fraction": 0.995905,
+   "false_inclusions_mu0": 0
+  },
+  "V|Vd|VP": {
+   "members": [
+    "V",
+    "Vd",
+    "VP"
+   ],
+   "region_mu0": 0.649735,
+   "region_ball_fraction": 0.995905,
+   "false_inclusions_mu0": 0
+  },
+  "Vd|VP": {
+   "members": [
+    "Vd",
+    "VP"
+   ],
+   "region_mu0": 0.38438,
+   "region_ball_fraction": 0.30964,
+   "false_inclusions_mu0": 0
+  },
+  "Vd|VP|Vv": {
+   "members": [
+    "Vd",
+    "VP"
+   ],
+   "region_mu0": 0.38438,
+   "region_ball_fraction": 0.30964,
+   "false_inclusions_mu0": 0
+  },
+  "all": {
+   "members": [
+    "V",
+    "Vd",
+    "VP"
+   ],
+   "region_mu0": 0.649735,
+   "region_ball_fraction": 0.995905,
+   "false_inclusions_mu0": 0
+  }
+ },
+ "fit_median": 0.025063361853831442,
+ "fit_p90": 0.08975035310722021,
+ "fit_p99": 0.2474058480308596,
+ "cert_wall_s": 14038.47734117508,
+ "eval_wall_s": 5854.068840265274
+}

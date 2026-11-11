@@ -1,0 +1,189 @@
+{
+ "group": "SO2",
+ "dir": "trpo_SO2_ls-1.5",
+ "seed": 2,
+ "cert": "results/final/cert/SO2__trpo_SO2_ls-1.5__s2__base.pkl",
+ "eval": "results/final/eval/SO2__trpo_SO2_ls-1.5__s2__base.json",
+ "gamma": 2.748893571891069,
+ "r_b": 0.1,
+ "alpha_max": 0.3141592653589793,
+ "r_a": 0.3,
+ "status": "interval arithmetic in float64 with rounding-error bounds folded into the radii (not directed rounding)",
+ "level_reported": 34.19695677734763,
+ "cells": 17010,
+ "smallest_cell": 5.120213142362218e-09,
+ "depth_history": [
+  {
+   "depth": 0,
+   "cells": 16384,
+   "failing": 23,
+   "dec": 0,
+   "cont": 23,
+   "entry": 0
+  },
+  {
+   "depth": 1,
+   "cells": 46,
+   "failing": 23,
+   "dec": 0,
+   "cont": 23,
+   "entry": 0
+  },
+  {
+   "depth": 2,
+   "cells": 46,
+   "failing": 24,
+   "dec": 0,
+   "cont": 24,
+   "entry": 0
+  },
+  {
+   "depth": 3,
+   "cells": 48,
+   "failing": 24,
+   "dec": 0,
+   "cont": 24,
+   "entry": 0
+  },
+  {
+   "depth": 4,
+   "cells": 48,
+   "failing": 24,
+   "dec": 0,
+   "cont": 24,
+   "entry": 0
+  },
+  {
+   "depth": 5,
+   "cells": 48,
+   "failing": 24,
+   "dec": 0,
+   "cont": 24,
+   "entry": 0
+  },
+  {
+   "depth": 6,
+   "cells": 48,
+   "failing": 24,
+   "dec": 0,
+   "cont": 24,
+   "entry": 0
+  },
+  {
+   "depth": 7,
+   "cells": 48,
+   "failing": 24,
+   "dec": 0,
+   "cont": 24,
+   "entry": 0
+  },
+  {
+   "depth": 8,
+   "cells": 48,
+   "failing": 24,
+   "dec": 0,
+   "cont": 24,
+   "entry": 0
+  },
+  {
+   "depth": 9,
+   "cells": 48,
+   "failing": 25,
+   "dec": 0,
+   "cont": 25,
+   "entry": 0
+  },
+  {
+   "depth": 10,
+   "cells": 50,
+   "failing": 27,
+   "dec": 0,
+   "cont": 27,
+   "entry": 0
+  },
+  {
+   "depth": 11,
+   "cells": 54,
+   "failing": 31,
+   "dec": 0,
+   "cont": 31,
+   "entry": 0
+  },
+  {
+   "depth": 12,
+   "cells": 62,
+   "failing": 39,
+   "dec": 0,
+   "cont": 39,
+   "entry": 0
+  },
+  {
+   "depth": 13,
+   "cells": 78,
+   "failing": 55,
+   "dec": 0,
+   "cont": 55,
+   "entry": 0
+  },
+  {
+   "depth": 14,
+   "cells": 110,
+   "failing": 86,
+   "dec": 0,
+   "cont": 86,
+   "entry": 0
+  },
+  {
+   "depth": 15,
+   "cells": 172,
+   "failing": 149,
+   "dec": 0,
+   "cont": 149,
+   "entry": 0
+  },
+  {
+   "depth": 16,
+   "cells": 298,
+   "failing": 275,
+   "dec": 0,
+   "cont": 275,
+   "entry": 0
+  }
+ ],
+ "proved_at_reported_level": false,
+ "unproved_at_reported_level": {
+  "decrease": [],
+  "containment": [
+   [
+    2.748892163832418,
+    2.748893571891069
+   ]
+  ],
+  "entry": []
+ },
+ "level_proved": 34.19691530438248,
+ "level_proved_over_reported": 0.9999987872322844,
+ "cells_failing_at_level_proved": false,
+ "region_mu0_reported": 0.861385,
+ "region_mu0_proved_lower": 0.8603120000334457,
+ "region_mu0_proved_upper": 0.8603120017141919,
+ "min_decrease_margin": 0.016962528685859013,
+ "local_delta": 0.07072541780250705,
+ "local_sup_abs_dF": 0.11258477160153148,
+ "local_contraction_proved": true,
+ "local_ratio_eps": 0.07072541780250705,
+ "local_ratio_sup_abs_dF_on_eps": 0.11776492820956526,
+ "local_ratio_proved": true,
+ "local_ratio_max_bound": 0.10333055611877272,
+ "local_ratio_cells": 8192,
+ "local_step_proved": true,
+ "bias_interval": [
+  -0.01653628838225575,
+  -0.01653628838009675
+ ],
+ "bias_stored": -0.01653628838117636,
+ "containment_margin": 0.31415926535895,
+ "local_note": "mu(I) enters as an interval enclosing its exact value, so F(0) = 0 holds exactly for the corrected policy u = mu - mu(I)",
+ "proved": true,
+ "wall_s": 4.893434286117554
+}

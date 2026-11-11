@@ -1,0 +1,9 @@
+{
+ "path": "warm",
+ "carried_region_mu0": 0.53201,
+ "oracle_region_mu0": 0.65149,
+ "tol": 0.02,
+ "nominal_still_holds": false,
+ "kept": "warm",
+ "warm_region_mu0": 0.65071
+}

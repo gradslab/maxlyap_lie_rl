@@ -1,0 +1,96 @@
+{
+ "group": "SE3",
+ "dir": "ppo_SE3_ls-1.5",
+ "seed": 1,
+ "variant": "g1.5",
+ "cert": "results/review/ablation/cert/SE3__ppo_SE3_ls-1.5__s1__g1.5__noanchor.pkl",
+ "fns_evaluated": [
+  "V"
+ ],
+ "gamma": 2.748893571891069,
+ "eps_ball": 0.1,
+ "spr": 0.7714789427423902,
+ "passes_stability": true,
+ "n_roll": 600,
+ "adv_rounds_cap": 50,
+ "anchored": false,
+ "anchor": 0.3982515796938979,
+ "true_mu0": 0.999865,
+ "ball_mu0": 0.65149,
+ "true_in_ball_mu0": 0.65149,
+ "true_ball_fraction": 0.99987,
+ "nb_samples": 33064,
+ "nb_nonconverged_all": 0,
+ "fns": {
+  "V": {
+   "frac_decrease_violation_ball": 0.00013,
+   "level_sampled": 56.78962884220888,
+   "level": 26.279172322314988,
+   "adversarial_rounds": [
+    {
+     "rho": 56.78962884220888,
+     "found": 1947,
+     "worst_score": 3.5567140862077977
+    },
+    {
+     "rho": 36.39986437935359,
+     "found": 29,
+     "worst_score": 0.2918019279127009
+    },
+    {
+     "rho": 26.621348712255905,
+     "found": 1,
+     "worst_score": 0.0007286607280945212
+    },
+    {
+     "rho": 26.279172322314988,
+     "found": 0,
+     "worst_score": -0.004528926487211071
+    }
+   ],
+   "adversarial_converged": true,
+   "lowered_by_search": true,
+   "region_mu0": 0.49343,
+   "region_ball_fraction": 0.62098,
+   "false_inclusions_mu0": 0,
+   "false_inclusions_ball": 0,
+   "entry_samples": 33064,
+   "entry_violations": 0,
+   "nb_nonconverged": 0,
+   "wall_s": 8380.122608184814
+  }
+ },
+ "unions": {
+  "V|Vd": {
+   "members": [
+    "V"
+   ],
+   "region_mu0": 0.49343,
+   "region_ball_fraction": 0.62098,
+   "false_inclusions_mu0": 0
+  },
+  "V|Vd|VP": {
+   "members": [
+    "V"
+   ],
+   "region_mu0": 0.49343,
+   "region_ball_fraction": 0.62098,
+   "false_inclusions_mu0": 0
+  },
+  "Vd|VP": null,
+  "Vd|VP|Vv": null,
+  "all": {
+   "members": [
+    "V"
+   ],
+   "region_mu0": 0.49343,
+   "region_ball_fraction": 0.62098,
+   "false_inclusions_mu0": 0
+  }
+ },
+ "fit_median": 0.03950342838102383,
+ "fit_p90": 0.14804538872714473,
+ "fit_p99": 0.5402962196456851,
+ "cert_wall_s": 27509.176331996918,
+ "eval_wall_s": 9064.11565899849
+}

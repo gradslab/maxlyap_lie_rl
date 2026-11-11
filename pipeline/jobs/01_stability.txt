@@ -1,0 +1,2 @@
+stability	results/stability/SE3__td3_SE3_ls-1.5__s2.json	JAX_ENABLE_X64=1 $PY scripts/stability_test.py
+policy_eval	results/l4dc/policy_eval_common.json	JAX_ENABLE_X64=1 $PY scripts/l4dc_policy_eval.py

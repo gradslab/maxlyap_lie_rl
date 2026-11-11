@@ -1,0 +1,77 @@
+{
+ "group": "SE2",
+ "dir": "td3_SE2_ls-1.5",
+ "seed": 2,
+ "suffix": "_final5",
+ "gamma": 2.748893571891069,
+ "alpha_max": 0.35124073655203636,
+ "eps_ball": 0.1,
+ "offset_norm": 0.06182569983445537,
+ "anchor": 0.359085448949582,
+ "rho_max_ball": 34.54297149802353,
+ "rho_stage1": 34.54297149802353,
+ "rho_stage2": 34.54297149802353,
+ "rho": 34.54297149802353,
+ "rho_shell": 23.514922848757625,
+ "level_lowered_by_check": false,
+ "level_lowered_by_adversarial": false,
+ "adversarial_rounds": [
+  {
+   "rho": 34.54297149802353,
+   "found": 0,
+   "worst_score": -0.010830078192746647
+  }
+ ],
+ "n_samples_Z1": 800000,
+ "n_samples_Z2": 400000,
+ "n_Z1_in_region": 800000,
+ "n_Z2_in_region": 400000,
+ "n_decrease_violations_in_region": 0,
+ "n_containment_violations_in_region": 0,
+ "frac_decrease_violation_ball": 0.0,
+ "roa_true_haar": 1.0,
+ "roa_est_haar": 0.819645,
+ "ball_measure_mu0": 0.819645,
+ "coverage": 0.819645,
+ "false_inclusions": 0,
+ "est_chart_fraction": 1.0,
+ "entry_samples": 100000,
+ "entry_violations": 0,
+ "entry_maxV_over_rho": 2.5087425366430737e-05,
+ "entry_rollout_nonconverged": 0,
+ "fit_out_median": 0.010064260116072067,
+ "fit_out_p99": 0.08845471989791778,
+ "fit_out_max": 0.3840645698329967,
+ "fixed_points": {
+  "rho_goal": 0.08947393321619344,
+  "index_goal": -1,
+  "n_other_zeros": 0
+ },
+ "dist_radius": 2.748893571891069,
+ "dist_adversarial_rounds": [
+  {
+   "r_d": 2.748893571891069,
+   "found": 0,
+   "worst_score": -0.0567714870943133
+  }
+ ],
+ "dist_entry_violations": 0,
+ "dist_violations": 0,
+ "dist_region_measure": 0.819645,
+ "dist_region_ball_fraction": 1.0,
+ "wall_s": 721.6249618530273,
+ "quad_available": true,
+ "quad_spr": 0.08947393321619344,
+ "quad_level": 7.664187747449987,
+ "quad_rounds": [
+  {
+   "level": 7.664187747449987,
+   "found": 0
+  }
+ ],
+ "quad_converged": true,
+ "quad_region_measure": 0.819645,
+ "quad_region_ball_fraction": 1.0,
+ "timing_V_per_point_s": 3.7461454994627273e-07,
+ "timing_Vm_per_point_s": 0.0007555584187502973
+}

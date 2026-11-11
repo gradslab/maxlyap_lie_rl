@@ -1,0 +1,82 @@
+{
+ "group": "SE2",
+ "dir": "trpo_SE2_ls-1.5",
+ "seed": 2,
+ "suffix": "_final5",
+ "gamma": 2.748893571891069,
+ "alpha_max": 0.35124073655203636,
+ "eps_ball": 0.1,
+ "offset_norm": 0.023021061032569356,
+ "anchor": 0.3952102569286273,
+ "rho_max_ball": 42.72995865221017,
+ "rho_stage1": 42.72995865221017,
+ "rho_stage2": 42.72995865221017,
+ "rho": 42.72995865221017,
+ "rho_shell": 24.053269147472452,
+ "level_lowered_by_check": false,
+ "level_lowered_by_adversarial": false,
+ "adversarial_rounds": [
+  {
+   "rho": 42.72995865221017,
+   "found": 0,
+   "worst_score": -0.01046940666736548
+  }
+ ],
+ "adversarial_converged": true,
+ "n_samples_Z1": 800000,
+ "n_samples_Z2": 400000,
+ "n_Z1_in_region": 800000,
+ "n_Z2_in_region": 400000,
+ "n_decrease_violations_in_region": 0,
+ "n_containment_violations_in_region": 0,
+ "frac_decrease_violation_ball": 0.0,
+ "roa_true_haar": 1.0,
+ "roa_est_haar": 0.819645,
+ "ball_measure_mu0": 0.819645,
+ "coverage": 0.819645,
+ "false_inclusions": 0,
+ "est_chart_fraction": 1.0,
+ "entry_samples": 100000,
+ "entry_violations": 0,
+ "entry_maxV_over_rho": 1.3370869011478006e-05,
+ "entry_rollout_nonconverged": 0,
+ "fit_out_median": 0.009447821944342063,
+ "fit_out_p99": 0.09337985678697472,
+ "fit_out_max": 0.5383896635204766,
+ "fixed_points": {
+  "rho_goal": 0.16852067383156352,
+  "index_goal": -1,
+  "n_other_zeros": 1,
+  "nearest_other": 3.136427804204118,
+  "rho_other": 4.147621944153049,
+  "index_other": 1
+ },
+ "dist_radius": 2.748893571891069,
+ "dist_adversarial_rounds": [
+  {
+   "r_d": 2.748893571891069,
+   "found": 0,
+   "worst_score": -0.028269468060061698
+  }
+ ],
+ "dist_adversarial_converged": true,
+ "dist_entry_violations": 0,
+ "dist_violations": 0,
+ "dist_region_measure": 0.819645,
+ "dist_region_ball_fraction": 1.0,
+ "wall_s": 331.1706848144531,
+ "quad_available": true,
+ "quad_spr": 0.16852067383156352,
+ "quad_level": 7.832177368816927,
+ "quad_rounds": [
+  {
+   "level": 7.832177368816927,
+   "found": 0
+  }
+ ],
+ "quad_converged": true,
+ "quad_region_measure": 0.819645,
+ "quad_region_ball_fraction": 1.0,
+ "timing_V_per_point_s": 5.915270994591992e-07,
+ "timing_Vm_per_point_s": 0.00042479733540021696
+}

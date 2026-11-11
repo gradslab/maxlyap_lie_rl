@@ -1,0 +1,15 @@
+{
+ "group": "SO3",
+ "dir": "trpo_SO3_ls-1.5",
+ "seed": 0,
+ "variant": "base",
+ "spr": 0.08497788445735409,
+ "N_rollout": 3000,
+ "level": 39.4540274570556,
+ "n_containment_bad": 0,
+ "n_nonconverged": 0,
+ "region_mu0": 0.75372,
+ "true_in_ball_mu0": 0.75372,
+ "ball_mu0": 0.75372,
+ "wall_s": 1746.5833032131195
+}

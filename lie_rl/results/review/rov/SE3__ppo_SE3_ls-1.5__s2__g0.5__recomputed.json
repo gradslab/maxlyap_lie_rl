@@ -1,0 +1,34 @@
+{
+ "seed": 2,
+ "variant": "g0.5",
+ "which_cert": "recomputed",
+ "cert": "results/final/cert/SE3__ppo_SE3_ls-1.5__s2__base.pkl",
+ "eval": "results/review/pert_r2/eval/SE3__ppo_SE3_ls-1.5__s2__g0.5__final.json",
+ "rho": 37.363929682785546,
+ "gamma": 2.748893571891069,
+ "alpha_max": 0.35124073655203636,
+ "episodes": 200,
+ "steps": 40,
+ "dt_outer": 2.0,
+ "kp_pos": 400.0,
+ "kd_pos": 160.0,
+ "control": {
+  "exits": 0,
+  "rises": 0,
+  "rises_above_floor": 0,
+  "worst_rise": 0.0,
+  "final_cost_median": 1.1535007447236251e-08,
+  "executed_median": null,
+  "executed_p5": null
+ },
+ "plant": {
+  "exits": 0,
+  "rises": 0,
+  "rises_above_floor": 0,
+  "worst_rise": 0.0,
+  "final_cost_median": 2.202688741097843e-08,
+  "executed_median": 1.0018080777335887,
+  "executed_p5": 0.9992829813162671,
+  "saturated_substep_fraction": 0.002956375
+ }
+}

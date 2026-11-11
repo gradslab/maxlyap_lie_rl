@@ -1,0 +1,46 @@
+{
+ "group": "SE2",
+ "dir": "ppo_SE2_ls-1.5",
+ "seed": 1,
+ "variant": "g1.25",
+ "cert": "results/final/cert/SE2__ppo_SE2_ls-1.5__s1__g1.25.pkl",
+ "eval": "results/review/eval_VPm/SE2__ppo_SE2_ls-1.5__s1__g1.25.json",
+ "search": 1,
+ "rng_seed": 1018,
+ "r_b": 0.1,
+ "gamma": 2.748893571891069,
+ "spr": 0.35068116742650973,
+ "n_roll": 600,
+ "adv_rounds_cap": 50,
+ "adv_n": 32768,
+ "adv_steps": 1000,
+ "sample_scale": 1,
+ "fns": {
+  "VPm": {
+   "level_reported": 3.841565110325806,
+   "level": 3.841565110325806,
+   "lowered": false,
+   "known_points": null,
+   "adversarial_rounds": [
+    {
+     "rho": 3.841565110325806,
+     "found": 0,
+     "worst_score": -6.006950492931651e-05,
+     "least_f_found": null
+    }
+   ],
+   "adversarial_converged": true,
+   "region_mu0_reported": 0.377745,
+   "region_mu0": 0.377745,
+   "region_ball_fraction": 0.227235,
+   "false_inclusions_mu0": 0,
+   "false_inclusions_ball": 0,
+   "entry_samples": 100000,
+   "entry_violations": 0,
+   "nb_nonconverged": 0,
+   "wall_s": 190.59396886825562,
+   "checks_pass": true
+  }
+ },
+ "wall_s": 446.96074295043945
+}

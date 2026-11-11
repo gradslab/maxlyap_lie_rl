@@ -1,0 +1,15 @@
+{
+ "group": "SO3",
+ "dir": "sac_SO3_ls-1.5",
+ "seed": 2,
+ "variant": "base",
+ "spr": 0.07932010047900916,
+ "N_rollout": 3000,
+ "level": 35.86016116227428,
+ "n_containment_bad": 0,
+ "n_nonconverged": 0,
+ "region_mu0": 0.75372,
+ "true_in_ball_mu0": 0.75372,
+ "ball_mu0": 0.75372,
+ "wall_s": 1650.1488168239594
+}

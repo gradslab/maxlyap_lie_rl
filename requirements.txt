@@ -1,0 +1,8 @@
+jax==0.7.0
+jaxlib==0.7.0
+numpy==2.5.1
+optax==0.2.8
+scipy==1.18.0
+matplotlib==3.11.0
+pillow==12.3.0
+pymupdf==1.28.0

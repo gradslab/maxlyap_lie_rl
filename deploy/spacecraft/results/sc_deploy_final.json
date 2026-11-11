@@ -1,0 +1,53 @@
+{
+  "branch": "SC-1 isolated; EMPIRICAL out-of-model study (G3), NOT a certification claim",
+  "seed": 900,
+  "tag": "ppo",
+  "episodes": 200,
+  "steps": 40,
+  "dt_outer": 15.7,
+  "band": null,
+  "band_note": "uniform in D_rho",
+  "rho_sound": 44.39928752987082,
+  "r_origin": 0.005,
+  "inertia": [
+    0.049,
+    0.049,
+    0.008
+  ],
+  "tau_max": 0.001,
+  "theorem_scope": "The certificate proves invariance of D_rho for the KINEMATIC map only. nu/nu* = 1.3e7 here, so the theorem makes NO prediction about this plant; exits are not certificate failures and are not scored as such.",
+  "control_kinematic": {
+    "exits": 0,
+    "exit_fraction": 0.0,
+    "reached_origin_core": 200,
+    "worst_V_rise": 7.693950485697105e-33,
+    "PASSED": true,
+    "note": "MUST be zero exits; this validates the harness"
+  },
+  "plant": {
+    "executed_fraction": {
+      "median": 0.9357765875679638,
+      "min": 0.8765652444150909,
+      "max": 1.007852343008014,
+      "n": 1769
+    }
+  },
+  "plant_mujoco": {
+    "exits": 0,
+    "exit_fraction": 0.0,
+    "reached_origin_core": 200,
+    "core_fraction": 1.0,
+    "steps_with_V_rise": 1963,
+    "steps_total": 8000,
+    "V_rise_fraction": 0.245375,
+    "worst_V_rise": 1.4114017756203947e-22,
+    "final_theta": {
+      "max": 7.707879672601453e-15,
+      "p99": 7.70612694058311e-15,
+      "median": 7.630597965926596e-15,
+      "min": 7.519135025696529e-15
+    }
+  },
+  "rate_handling": "omega starts at 0 and PERSISTS across outer steps (the real case)",
+  "parameter_provenance": "3U CubeSat per the CubeSat Design Specification (10x10x34 cm, 4.0 kg); inertia is a STATED uniform-rectangular-prism assumption (derives 0.0419/0.0067, simulated 0.049/0.008, and the inertia stress arm spans 0.35x-2.8x so it contains the derivation at 0.85x); reaction-wheel torque 1 mN.m CONFIRMED 2026-08-24 against RL-RW-0.01-Data-Sheet.pdf in the repo ('TORQUE +/-1 mNm at 0.01 Nms'). The earlier PLACEHOLDER blocker is discharged: 0.01 Nms is the wheel's stored MOMENTUM, not its torque."
+}

@@ -1,0 +1,9 @@
+.venv/
+.venv-deploy/
+__pycache__/
+*.pyc
+.DS_Store
+paper/out/
+lie_rl/results/pipeline/
+lie_rl/results/check/
+lie_rl/results/review/F/FINAL_LEVELS.json

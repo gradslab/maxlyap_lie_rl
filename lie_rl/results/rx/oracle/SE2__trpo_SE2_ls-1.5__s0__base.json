@@ -1,0 +1,15 @@
+{
+ "group": "SE2",
+ "dir": "trpo_SE2_ls-1.5",
+ "seed": 0,
+ "variant": "base",
+ "spr": 0.10982412733168204,
+ "N_rollout": 3000,
+ "level": 32.5358562069641,
+ "n_containment_bad": 0,
+ "n_nonconverged": 0,
+ "region_mu0": 0.81964,
+ "true_in_ball_mu0": 0.819645,
+ "ball_mu0": 0.819645,
+ "wall_s": 1915.0277829170227
+}

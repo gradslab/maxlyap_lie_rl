@@ -1,0 +1,83 @@
+{"group": "SE3", "dir": "ppo_SE3_ls-1.5", "seed": 1, "variant": "a1", "spr": 0.24956763185216993, "N_rollout": 3000, "level": 77.41298164761045, "n_containment_bad": 37, "n_nonconverged": 180, "region_mu0": 0.65147, "true_in_ball_mu0": 0.65149, "ball_mu0": 0.65149, "wall_s": 2062.689700126648}
+{"id": "SE3__ppo_SE3_ls-1.5__s1__a1", "nominal": "SE3__ppo_SE3_ls-1.5__s1__base", "nominal_level": 31.668342298157956, "n": 1000000, "n_in_nominal_region": 841532, "n_in_region_outside_Nb": 841532, "spr": 0.24956763185216993, "n_roll": 600, "decrease_violations": 79, "containment_violations": 0, "violation_fraction_of_region": 9.387640636363204e-05, "nominal_region_mu0": 0.60485, "nonconverged_in_nominal_region_mu0": 0.0, "wall_s": 185.43943977355957}
+V {"frac_decrease_violation_ball": 0.0058525, "level_sampled": 11.564692065592297, "level": 5.9613162740233285, "adversarial_converged": true, "lowered_by_search": true, "region_mu0": 0.07489, "region_ball_fraction": 0.02435, "false_inclusions_mu0": 0, "false_inclusions_ball": 0, "entry_samples": 33064, "entry_violations": 0, "nb_nonconverged": 0, "wall_s": 3124.4457581043243}
+Vd {"frac_decrease_violation_ball": 0.00198, "level_sampled": 4.035100097115005, "level": 3.5797260315225183, "adversarial_converged": true, "lowered_by_search": true, "region_mu0": 0.22479, "region_ball_fraction": 0.1066, "false_inclusions_mu0": 0, "false_inclusions_ball": 0, "entry_samples": 33064, "entry_violations": 0, "nb_nonconverged": 0, "wall_s": 880.1090888977051}
+VP {"frac_decrease_violation_ball": 0.00208, "level_sampled": 4.281818171882927, "level": 3.8328120077743417, "adversarial_converged": true, "lowered_by_search": true, "region_mu0": 0.230785, "region_ball_fraction": 0.10993, "false_inclusions_mu0": 0, "false_inclusions_ball": 0, "entry_samples": 33064, "entry_violations": 0, "nb_nonconverged": 0, "wall_s": 829.9961059093475}
+wrote results/review/pert_r2/eval_carry/SE3__ppo_SE3_ls-1.5__s1__a1.json true_in_ball 0.65149 unions {"V|Vd": {"members": ["V", "Vd"], "region_mu0": 0.22479, "region_ball_fraction": 0.106645, "false_inclusions_mu0": 0}, "V|Vd|VP": {"members": ["V", "Vd", "VP"], "region_mu0": 0.23158, "region_ball_fraction": 0.11111, "false_inclusions_mu0": 0}, "Vd|VP": {"members": ["Vd", "VP"], "region_mu0": 0.23158, "region_ball_fraction": 0.11107, "false_inclusions_mu0": 0}, "Vd|VP|Vv": {"members": ["Vd", "VP"], "region_mu0": 0.23158, "region_ball_fraction": 0.11107, "false_inclusions_mu0": 0}, "all": {"members": ["V", "Vd", "VP"], "region_mu0": 0.23158, "region_ball_fraction": 0.11111, "false_inclusions_mu0": 0}} 5232s
+=== warm start SE3 ppo_SE3_ls-1.5 seed 1 variant a1 from SE3__ppo_SE3_ls-1.5__s1__base: iters 1000
+    sampled decrease outside N_b: 99.998%   ==> wrote results/review/pert_r2/cert/SE3__ppo_SE3_ls-1.5__s1__a1__final__trained.pkl (472s)
+{"level": 20.759935023050907, "level_sampled": 49.06932898973267, "search_lowered": true, "vmax": 317.57105968856035, "region": 0.31322, "n_dec": 10, "n_cont": 57, "n_dec_below_level_sampled": 4, "round": 0, "wall_s": 875.5298359394073}
+{"level": 0.3750281759270891, "level_sampled": 53.87890046511053, "search_lowered": true, "vmax": 380.23855874959264, "region": 0.0001, "n_dec": 25, "n_cont": 62, "n_dec_below_level_sampled": 11, "round": 1, "wall_s": 2727.735387802124}
+{"level": 6.712110522752567, "level_sampled": 54.138811612169185, "search_lowered": true, "vmax": 411.1278943441039, "region": 0.0744, "n_dec": 11, "n_cont": 63, "n_dec_below_level_sampled": 3, "round": 2, "wall_s": 5086.869402885437}
+    it   139  non-finite loss, step skipped (1 so far)
+    it   140  non-finite loss, step skipped (2 so far)
+    it   141  non-finite loss, step skipped (3 so far)
+    it   142  non-finite loss, step skipped (4 so far)
+    it   143  non-finite loss, step skipped (5 so far)
+    it   238  non-finite loss, step skipped (100 so far)
+    it   338  non-finite loss, step skipped (200 so far)
+    it   438  non-finite loss, step skipped (300 so far)
+    it   538  non-finite loss, step skipped (400 so far)
+    it   638  non-finite loss, step skipped (500 so far)
+    it   738  non-finite loss, step skipped (600 so far)
+    it   838  non-finite loss, step skipped (700 so far)
+    it   938  non-finite loss, step skipped (800 so far)
+{"level": 33.11645546045008, "level_sampled": 42.05130166154506, "search_lowered": true, "vmax": 196.92956437547042, "region": 0.54652, "n_dec": 1, "n_cont": 57, "n_dec_below_level_sampled": 0, "round": 3, "wall_s": 7258.64347076416}
+    it     0  non-finite loss, step skipped (1 so far)
+    it     1  non-finite loss, step skipped (2 so far)
+    it     2  non-finite loss, step skipped (3 so far)
+    it     3  non-finite loss, step skipped (4 so far)
+    it     4  non-finite loss, step skipped (5 so far)
+    it    99  non-finite loss, step skipped (100 so far)
+    it   199  non-finite loss, step skipped (200 so far)
+    it   299  non-finite loss, step skipped (300 so far)
+    it   399  non-finite loss, step skipped (400 so far)
+    it   499  non-finite loss, step skipped (500 so far)
+    it   599  non-finite loss, step skipped (600 so far)
+    it   699  non-finite loss, step skipped (700 so far)
+    it   799  non-finite loss, step skipped (800 so far)
+    it   899  non-finite loss, step skipped (900 so far)
+    it   999  non-finite loss, step skipped (1000 so far)
+{"level": 34.0226665221869, "level_sampled": 51.529302074214385, "search_lowered": true, "vmax": 173.05758282210297, "region": 0.56004, "n_dec": 10, "n_cont": 78, "n_dec_below_level_sampled": 3, "round": 4, "wall_s": 9060.334218025208}
+    it     0  non-finite loss, step skipped (1 so far)
+    it     1  non-finite loss, step skipped (2 so far)
+    it     2  non-finite loss, step skipped (3 so far)
+    it     3  non-finite loss, step skipped (4 so far)
+    it     4  non-finite loss, step skipped (5 so far)
+    it    99  non-finite loss, step skipped (100 so far)
+    it   199  non-finite loss, step skipped (200 so far)
+    it   299  non-finite loss, step skipped (300 so far)
+    it   399  non-finite loss, step skipped (400 so far)
+    it   499  non-finite loss, step skipped (500 so far)
+    it   599  non-finite loss, step skipped (600 so far)
+    it   699  non-finite loss, step skipped (700 so far)
+    it   799  non-finite loss, step skipped (800 so far)
+    it   899  non-finite loss, step skipped (900 so far)
+    it   999  non-finite loss, step skipped (1000 so far)
+{"level": 33.071039715535264, "level_sampled": 50.23887943349277, "search_lowered": true, "vmax": 198.34664567444065, "region": 0.54572, "n_dec": 4, "n_cont": 67, "n_dec_below_level_sampled": 1, "round": 5, "wall_s": 11218.899417877197}
+    it     0  non-finite loss, step skipped (1 so far)
+    it     1  non-finite loss, step skipped (2 so far)
+    it     2  non-finite loss, step skipped (3 so far)
+    it     3  non-finite loss, step skipped (4 so far)
+    it     4  non-finite loss, step skipped (5 so far)
+    it    99  non-finite loss, step skipped (100 so far)
+    it   199  non-finite loss, step skipped (200 so far)
+    it   299  non-finite loss, step skipped (300 so far)
+    it   399  non-finite loss, step skipped (400 so far)
+    it   499  non-finite loss, step skipped (500 so far)
+    it   599  non-finite loss, step skipped (600 so far)
+    it   699  non-finite loss, step skipped (700 so far)
+    it   799  non-finite loss, step skipped (800 so far)
+    it   899  non-finite loss, step skipped (900 so far)
+    it   999  non-finite loss, step skipped (1000 so far)
+{"level": 34.26582784525276, "level_sampled": 45.84765431510522, "search_lowered": true, "vmax": 194.7787629308349, "region": 0.56418, "n_dec": 7, "n_cont": 75, "n_dec_below_level_sampled": 3, "round": 6, "wall_s": 13593.7488219738}
+best round 6 estimated region 0.56418 wrote results/review/pert_r2/cert/SE3__ppo_SE3_ls-1.5__s1__a1__final.pkl (13594s)
+V {"frac_decrease_violation_ball": 0.0003025, "level_sampled": 33.42763919474069, "level": 31.24287922881409, "adversarial_converged": true, "lowered_by_search": true, "region_mu0": 0.513225, "region_ball_fraction": 0.67621, "false_inclusions_mu0": 0, "false_inclusions_ball": 0, "entry_samples": 33064, "entry_violations": 0, "nb_nonconverged": 0, "wall_s": 3555.0205612182617}
+Vd {"frac_decrease_violation_ball": 0.00198, "level_sampled": 4.035100097115005, "level": 3.5797260315225183, "adversarial_converged": true, "lowered_by_search": true, "region_mu0": 0.22479, "region_ball_fraction": 0.1066, "false_inclusions_mu0": 0, "false_inclusions_ball": 0, "entry_samples": 33064, "entry_violations": 0, "nb_nonconverged": 0, "wall_s": 906.7107381820679}
+VP {"frac_decrease_violation_ball": 0.00208, "level_sampled": 4.281818171882927, "level": 3.8328120077743417, "adversarial_converged": true, "lowered_by_search": true, "region_mu0": 0.230785, "region_ball_fraction": 0.10993, "false_inclusions_mu0": 0, "false_inclusions_ball": 0, "entry_samples": 33064, "entry_violations": 0, "nb_nonconverged": 0, "wall_s": 975.6733469963074}
+wrote results/review/pert_r2/eval_warm/SE3__ppo_SE3_ls-1.5__s1__a1.json true_in_ball 0.65149 unions {"V|Vd": {"members": ["V", "Vd"], "region_mu0": 0.513225, "region_ball_fraction": 0.67621, "false_inclusions_mu0": 0}, "V|Vd|VP": {"members": ["V", "Vd", "VP"], "region_mu0": 0.513225, "region_ball_fraction": 0.67621, "false_inclusions_mu0": 0}, "Vd|VP": {"members": ["Vd", "VP"], "region_mu0": 0.23158, "region_ball_fraction": 0.11107, "false_inclusions_mu0": 0}, "Vd|VP|Vv": {"members": ["Vd", "VP"], "region_mu0": 0.23158, "region_ball_fraction": 0.11107, "false_inclusions_mu0": 0}, "all": {"members": ["V", "Vd", "VP"], "region_mu0": 0.513225, "region_ball_fraction": 0.67621, "false_inclusions_mu0": 0}} 5850s
+heldout {"n": 1000000, "key": 20261017, "law": "uniform in the ball", "n_in_region": 675643, "n_in_region_outside_Nb": 675643, "decrease_violations": 0, "containment_violations": 0, "beta": 1e-06, "bound_ball_fraction": 1.3815510557964274e-05, "worst_relative_increase": -0.02516492078240497}
+spr {"values": {"0.0001": 0.24956765977655476, "1e-05": 0.24956763216530103, "1e-06": 0.24956763185216993, "1e-07": 0.24956763181688985}, "used": 0.24956763185216993, "max_abs_deviation_from_used": 2.792438483223414e-08, "eval_json_spr": 0.24956763185216993}
+fit {"600": {"median": 0.03962651061099998, "p90": 0.14737023936523383, "p99": 0.3586584330291296, "n": 20000, "n_nonfinite": 0}, "3000": {"median": 0.03962651061099998, "p90": 0.14737023936523383, "p99": 0.3586584330291296, "n": 20000, "n_nonfinite": 0}}
+timing {"V_s_per_point": 4.028097629547119e-06, "Vm600_s_per_point": 0.0012039544105529785, "Vm3000_s_per_point": 0.006048105788230896, "threads": "2"}
+wrote results/review/pert_r2/extra/SE3__ppo_SE3_ls-1.5__s1__a1.json 340s

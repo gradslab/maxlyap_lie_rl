@@ -1,0 +1,91 @@
+{
+ "group": "SE3",
+ "dir": "ppo_SE3_ls-1.5",
+ "seed": 2,
+ "variant": "a2",
+ "cert": "results/review/hinge_base/cert/SE3__ppo_SE3_ls-1.5__s2__a2__hinge.pkl",
+ "fns_evaluated": [
+  "V"
+ ],
+ "gamma": 2.748893571891069,
+ "eps_ball": 0.1,
+ "spr": 0.22119650710749567,
+ "passes_stability": true,
+ "n_roll": 600,
+ "adv_rounds_cap": 50,
+ "anchored": true,
+ "anchor": 0.31075891906440894,
+ "true_mu0": 1.0,
+ "ball_mu0": 0.65149,
+ "true_in_ball_mu0": 0.65149,
+ "true_ball_fraction": 1.0,
+ "nb_samples": 33064,
+ "nb_nonconverged_all": 0,
+ "fns": {
+  "V": {
+   "frac_decrease_violation_ball": 7.5e-06,
+   "level_sampled": 639632.0928332317,
+   "level": 576861.597762119,
+   "adversarial_rounds": [
+    {
+     "rho": 639632.0928332317,
+     "found": 90,
+     "worst_score": 0.04329555997968759
+    },
+    {
+     "rho": 594713.8812787529,
+     "found": 27,
+     "worst_score": 0.03583142107651982
+    },
+    {
+     "rho": 576861.597762119,
+     "found": 0,
+     "worst_score": -0.0003986082827904802
+    }
+   ],
+   "adversarial_converged": true,
+   "lowered_by_search": true,
+   "region_mu0": 0.633885,
+   "region_ball_fraction": 0.958225,
+   "false_inclusions_mu0": 0,
+   "false_inclusions_ball": 0,
+   "entry_samples": 33064,
+   "entry_violations": 0,
+   "nb_nonconverged": 0,
+   "wall_s": 3102.815489053726
+  }
+ },
+ "unions": {
+  "V|Vd": {
+   "members": [
+    "V"
+   ],
+   "region_mu0": 0.633885,
+   "region_ball_fraction": 0.958225,
+   "false_inclusions_mu0": 0
+  },
+  "V|Vd|VP": {
+   "members": [
+    "V"
+   ],
+   "region_mu0": 0.633885,
+   "region_ball_fraction": 0.958225,
+   "false_inclusions_mu0": 0
+  },
+  "Vd|VP": null,
+  "Vd|VP|Vv": null,
+  "all": {
+   "members": [
+    "V"
+   ],
+   "region_mu0": 0.633885,
+   "region_ball_fraction": 0.958225,
+   "false_inclusions_mu0": 0
+  }
+ },
+ "fit_median": 15143.101409240597,
+ "fit_p90": 20848.47845972339,
+ "fit_p99": 27591.48231907141,
+ "cert_wall_s": 2833.524832010269,
+ "eval_wall_s": 3427.831281900406
+}

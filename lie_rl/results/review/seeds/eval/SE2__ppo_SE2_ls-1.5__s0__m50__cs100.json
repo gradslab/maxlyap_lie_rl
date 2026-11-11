@@ -1,0 +1,91 @@
+{
+ "group": "SE2",
+ "dir": "ppo_SE2_ls-1.5",
+ "seed": 0,
+ "variant": "m50",
+ "cert": "results/review/seeds/cert/SE2__ppo_SE2_ls-1.5__s0__m50__cs100.pkl",
+ "fns_evaluated": [
+  "V"
+ ],
+ "gamma": 2.748893571891069,
+ "eps_ball": 0.1,
+ "spr": 0.8741379957896447,
+ "passes_stability": true,
+ "n_roll": 600,
+ "adv_rounds_cap": 50,
+ "anchored": true,
+ "anchor": 0.330337069485108,
+ "true_mu0": 0.99369,
+ "ball_mu0": 0.819645,
+ "true_in_ball_mu0": 0.819625,
+ "true_ball_fraction": 0.981435,
+ "nb_samples": 100000,
+ "nb_nonconverged_all": 0,
+ "fns": {
+  "V": {
+   "frac_decrease_violation_ball": 0.004680245712899927,
+   "level_sampled": 68.51235823361033,
+   "level": 67.82585008536422,
+   "adversarial_rounds": [
+    {
+     "rho": 68.51235823361033,
+     "found": 7,
+     "worst_score": 0.003259052728293632
+    },
+    {
+     "rho": 68.1147383545329,
+     "found": 4,
+     "worst_score": 0.0015239390154477839
+    },
+    {
+     "rho": 67.82585008536422,
+     "found": 0,
+     "worst_score": -0.001663769052803854
+    }
+   ],
+   "adversarial_converged": true,
+   "lowered_by_search": true,
+   "region_mu0": 0.803685,
+   "region_ball_fraction": 0.852645,
+   "false_inclusions_mu0": 0,
+   "false_inclusions_ball": 0,
+   "entry_samples": 100000,
+   "entry_violations": 0,
+   "nb_nonconverged": 0,
+   "wall_s": 3023.2030827999115
+  }
+ },
+ "unions": {
+  "V|Vd": {
+   "members": [
+    "V"
+   ],
+   "region_mu0": 0.803685,
+   "region_ball_fraction": 0.852645,
+   "false_inclusions_mu0": 0
+  },
+  "V|Vd|VP": {
+   "members": [
+    "V"
+   ],
+   "region_mu0": 0.803685,
+   "region_ball_fraction": 0.852645,
+   "false_inclusions_mu0": 0
+  },
+  "Vd|VP": null,
+  "Vd|VP|Vv": null,
+  "all": {
+   "members": [
+    "V"
+   ],
+   "region_mu0": 0.803685,
+   "region_ball_fraction": 0.852645,
+   "false_inclusions_mu0": 0
+  }
+ },
+ "fit_median": 0.08624092455223348,
+ "fit_p90": 0.5738957323429127,
+ "fit_p99": 1.1603994597806846,
+ "cert_wall_s": 12273.66810631752,
+ "eval_wall_s": 3411.329754114151
+}

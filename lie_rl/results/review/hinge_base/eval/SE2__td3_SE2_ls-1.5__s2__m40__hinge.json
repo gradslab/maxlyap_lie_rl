@@ -1,0 +1,91 @@
+{
+ "group": "SE2",
+ "dir": "td3_SE2_ls-1.5",
+ "seed": 2,
+ "variant": "m40",
+ "cert": "results/review/hinge_base/cert/SE2__td3_SE2_ls-1.5__s2__m40__hinge.pkl",
+ "fns_evaluated": [
+  "V"
+ ],
+ "gamma": 2.748893571891069,
+ "eps_ball": 0.1,
+ "spr": 0.671985249521556,
+ "passes_stability": true,
+ "n_roll": 600,
+ "adv_rounds_cap": 50,
+ "anchored": true,
+ "anchor": 0.30488562111310996,
+ "true_mu0": 1.0,
+ "ball_mu0": 0.819645,
+ "true_in_ball_mu0": 0.819645,
+ "true_ball_fraction": 1.0,
+ "nb_samples": 100000,
+ "nb_nonconverged_all": 0,
+ "fns": {
+  "V": {
+   "frac_decrease_violation_ball": 0.00020251063180816992,
+   "level_sampled": 1203312.7622223168,
+   "level": 1180200.422412518,
+   "adversarial_rounds": [
+    {
+     "rho": 1203312.7622223168,
+     "found": 3961,
+     "worst_score": 0.03556735217187601
+    },
+    {
+     "rho": 1180423.7154727892,
+     "found": 4,
+     "worst_score": 0.0003618319390654712
+    },
+    {
+     "rho": 1180200.422412518,
+     "found": 0,
+     "worst_score": -0.00020688695481663189
+    }
+   ],
+   "adversarial_converged": true,
+   "lowered_by_search": true,
+   "region_mu0": 0.808205,
+   "region_ball_fraction": 0.781635,
+   "false_inclusions_mu0": 0,
+   "false_inclusions_ball": 0,
+   "entry_samples": 100000,
+   "entry_violations": 0,
+   "nb_nonconverged": 0,
+   "wall_s": 2477.975609779358
+  }
+ },
+ "unions": {
+  "V|Vd": {
+   "members": [
+    "V"
+   ],
+   "region_mu0": 0.808205,
+   "region_ball_fraction": 0.781635,
+   "false_inclusions_mu0": 0
+  },
+  "V|Vd|VP": {
+   "members": [
+    "V"
+   ],
+   "region_mu0": 0.808205,
+   "region_ball_fraction": 0.781635,
+   "false_inclusions_mu0": 0
+  },
+  "Vd|VP": null,
+  "Vd|VP|Vv": null,
+  "all": {
+   "members": [
+    "V"
+   ],
+   "region_mu0": 0.808205,
+   "region_ball_fraction": 0.781635,
+   "false_inclusions_mu0": 0
+  }
+ },
+ "fit_median": 49414.512949620505,
+ "fit_p90": 72115.27889559373,
+ "fit_p99": 94953.8333967931,
+ "cert_wall_s": 1864.0221109390259,
+ "eval_wall_s": 2827.5389959812164
+}

@@ -1,0 +1,56 @@
+{
+ "group": "SO2",
+ "dir": "ppo_SO2_ls-1.5",
+ "seed": 1,
+ "cert": "results/final/cert/SO2__ppo_SO2_ls-1.5__s1__base.pkl",
+ "eval": "results/final/eval/SO2__ppo_SO2_ls-1.5__s1__base.json",
+ "gamma": 2.748893571891069,
+ "r_b": 0.1,
+ "alpha_max": 0.3141592653589793,
+ "r_a": 0.3,
+ "status": "interval arithmetic in float64 with rounding-error bounds folded into the radii (not directed rounding)",
+ "level_reported": 34.37137875260581,
+ "cells": 16384,
+ "smallest_cell": 0.00033555829734943643,
+ "depth_history": [
+  {
+   "depth": 0,
+   "cells": 16384,
+   "failing": 0,
+   "dec": 0,
+   "cont": 0,
+   "entry": 0
+  }
+ ],
+ "proved_at_reported_level": true,
+ "unproved_at_reported_level": {
+  "decrease": [],
+  "containment": [],
+  "entry": []
+ },
+ "level_proved": 34.37137875260581,
+ "level_proved_over_reported": 1.0,
+ "cells_failing_at_level_proved": false,
+ "region_mu0_reported": 0.875575,
+ "region_mu0_proved_lower": 0.8749987230912667,
+ "region_mu0_proved_upper": 0.8749987232949935,
+ "min_decrease_margin": 0.010083832595381145,
+ "local_delta": 0.07072541780250705,
+ "local_sup_abs_dF": 0.0979646151059461,
+ "local_contraction_proved": true,
+ "local_ratio_eps": 0.07072541780250705,
+ "local_ratio_sup_abs_dF_on_eps": 0.10192643645713352,
+ "local_ratio_proved": true,
+ "local_ratio_max_bound": 0.09342835846125634,
+ "local_ratio_cells": 8192,
+ "local_step_proved": true,
+ "bias_interval": [
+  -0.004432507566739579,
+  -0.004432507566113177
+ ],
+ "bias_stored": -0.0044325075664263785,
+ "containment_margin": 0.3069020534072533,
+ "local_note": "mu(I) enters as an interval enclosing its exact value, so F(0) = 0 holds exactly for the corrected policy u = mu - mu(I)",
+ "proved": true,
+ "wall_s": 5.2838757038116455
+}

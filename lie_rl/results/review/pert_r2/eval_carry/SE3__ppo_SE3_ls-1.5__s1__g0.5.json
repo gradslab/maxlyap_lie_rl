@@ -1,0 +1,183 @@
+{
+ "group": "SE3",
+ "dir": "ppo_SE3_ls-1.5",
+ "seed": 1,
+ "variant": "g0.5",
+ "cert": "results/final/cert/SE3__ppo_SE3_ls-1.5__s1__base.pkl",
+ "fns_evaluated": [
+  "V",
+  "Vd",
+  "VP"
+ ],
+ "gamma": 2.748893571891069,
+ "eps_ball": 0.1,
+ "spr": 0.5168981509504837,
+ "passes_stability": true,
+ "n_roll": 600,
+ "adv_rounds_cap": 50,
+ "anchored": true,
+ "anchor": 0.40975082599558005,
+ "true_mu0": 0.999905,
+ "ball_mu0": 0.65149,
+ "true_in_ball_mu0": 0.65149,
+ "true_ball_fraction": 0.999845,
+ "nb_samples": 33064,
+ "nb_nonconverged_all": 0,
+ "fns": {
+  "V": {
+   "frac_decrease_violation_ball": 0.00011,
+   "level_sampled": 55.54180299128482,
+   "level": 0.18375611576655404,
+   "adversarial_rounds": [
+    {
+     "rho": 55.54180299128482,
+     "found": 12610,
+     "worst_score": 4.362451047006893
+    },
+    {
+     "rho": 0.19046634391653103,
+     "found": 20,
+     "worst_score": 0.010308858803754789
+    },
+    {
+     "rho": 0.18440826379405867,
+     "found": 1,
+     "worst_score": 0.0014775216984834472
+    },
+    {
+     "rho": 0.18375611576655404,
+     "found": 0,
+     "worst_score": -0.0010272732392687944
+    }
+   ],
+   "adversarial_converged": true,
+   "lowered_by_search": true,
+   "region_mu0": 2e-05,
+   "region_ball_fraction": 1e-05,
+   "false_inclusions_mu0": 0,
+   "false_inclusions_ball": 0,
+   "entry_samples": 33064,
+   "entry_violations": 0,
+   "nb_nonconverged": 0,
+   "wall_s": 4431.341222047806
+  },
+  "Vd": {
+   "frac_decrease_violation_ball": 0.0004525,
+   "level_sampled": 5.098980274134302,
+   "level": 4.682929720201369,
+   "adversarial_rounds": [
+    {
+     "rho": 5.098980274134302,
+     "found": 7995,
+     "worst_score": 0.0565166262514758
+    },
+    {
+     "rho": 4.709237835933983,
+     "found": 10,
+     "worst_score": 0.003985910923697489
+    },
+    {
+     "rho": 4.682929720201369,
+     "found": 0,
+     "worst_score": -0.0013984855102675553
+    }
+   ],
+   "adversarial_converged": true,
+   "lowered_by_search": true,
+   "region_mu0": 0.34044,
+   "region_ball_fraction": 0.23813,
+   "false_inclusions_mu0": 0,
+   "false_inclusions_ball": 0,
+   "entry_samples": 33064,
+   "entry_violations": 0,
+   "nb_nonconverged": 0,
+   "wall_s": 858.0738770961761
+  },
+  "VP": {
+   "frac_decrease_violation_ball": 0.000505,
+   "level_sampled": 6.912922617983195,
+   "level": 6.333412696050013,
+   "adversarial_rounds": [
+    {
+     "rho": 6.912922617983195,
+     "found": 8084,
+     "worst_score": 0.08052386559934277
+    },
+    {
+     "rho": 6.488396888643598,
+     "found": 325,
+     "worst_score": 0.02023241142363652
+    },
+    {
+     "rho": 6.333412696050013,
+     "found": 0,
+     "worst_score": -0.0008683232132975505
+    }
+   ],
+   "adversarial_converged": true,
+   "lowered_by_search": true,
+   "region_mu0": 0.37211,
+   "region_ball_fraction": 0.26963,
+   "false_inclusions_mu0": 0,
+   "false_inclusions_ball": 0,
+   "entry_samples": 33064,
+   "entry_violations": 0,
+   "nb_nonconverged": 0,
+   "wall_s": 850.6646800041199
+  }
+ },
+ "unions": {
+  "V|Vd": {
+   "members": [
+    "V",
+    "Vd"
+   ],
+   "region_mu0": 0.34044,
+   "region_ball_fraction": 0.23813,
+   "false_inclusions_mu0": 0
+  },
+  "V|Vd|VP": {
+   "members": [
+    "V",
+    "Vd",
+    "VP"
+   ],
+   "region_mu0": 0.37211,
+   "region_ball_fraction": 0.270175,
+   "false_inclusions_mu0": 0
+  },
+  "Vd|VP": {
+   "members": [
+    "Vd",
+    "VP"
+   ],
+   "region_mu0": 0.37211,
+   "region_ball_fraction": 0.270175,
+   "false_inclusions_mu0": 0
+  },
+  "Vd|VP|Vv": {
+   "members": [
+    "Vd",
+    "VP"
+   ],
+   "region_mu0": 0.37211,
+   "region_ball_fraction": 0.270175,
+   "false_inclusions_mu0": 0
+  },
+  "all": {
+   "members": [
+    "V",
+    "Vd",
+    "VP"
+   ],
+   "region_mu0": 0.37211,
+   "region_ball_fraction": 0.270175,
+   "false_inclusions_mu0": 0
+  }
+ },
+ "fit_median": 0.456942787792442,
+ "fit_p90": 0.5139609157903744,
+ "fit_p99": 0.6126978490358665,
+ "cert_wall_s": 17977.901565790176,
+ "eval_wall_s": 6516.270835876465
+}

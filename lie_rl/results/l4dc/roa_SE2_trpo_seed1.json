@@ -1,0 +1,108 @@
+{
+ "group": "SE2",
+ "dir": "trpo_SE2_ls-1.5",
+ "seed": 1,
+ "suffix": "_final5",
+ "gamma": 2.748893571891069,
+ "alpha_max": 0.35124073655203636,
+ "eps_ball": 0.1,
+ "offset_norm": 0.02092206748097106,
+ "anchor": 0.38819699284901804,
+ "rho_max_ball": 119.4926928889823,
+ "rho_stage1": 46.11311653622784,
+ "rho_stage2": 46.11311653622784,
+ "rho": 43.00548224301863,
+ "rho_shell": 22.639053080922473,
+ "level_lowered_by_check": false,
+ "level_lowered_by_adversarial": true,
+ "adversarial_rounds": [
+  {
+   "rho": 46.11311653622784,
+   "found": 194,
+   "worst_score": 0.008614950496763196
+  },
+  {
+   "rho": 43.15739494493731,
+   "found": 2,
+   "worst_score": 0.0007166478760116668
+  },
+  {
+   "rho": 43.060087400767685,
+   "found": 1,
+   "worst_score": 0.00042998179111108925
+  },
+  {
+   "rho": 43.00548224301863,
+   "found": 0,
+   "worst_score": -0.0002720274505509934
+  }
+ ],
+ "adversarial_converged": true,
+ "n_samples_Z1": 800000,
+ "n_samples_Z2": 400000,
+ "n_Z1_in_region": 791798,
+ "n_Z2_in_region": 394004,
+ "n_decrease_violations_in_region": 0,
+ "n_containment_violations_in_region": 0,
+ "frac_decrease_violation_ball": 0.0,
+ "roa_true_haar": 1.0,
+ "roa_est_haar": 0.819645,
+ "ball_measure_mu0": 0.819645,
+ "coverage": 0.819645,
+ "false_inclusions": 0,
+ "est_chart_fraction": 0.985235,
+ "entry_samples": 100000,
+ "entry_violations": 0,
+ "entry_maxV_over_rho": 3.523416433952076e-06,
+ "entry_rollout_nonconverged": 0,
+ "fit_out_median": 0.020648459877475926,
+ "fit_out_p99": 0.5106517081262633,
+ "fit_out_max": 2.4076837191978355,
+ "fixed_points": {
+  "rho_goal": 0.08527619355996793,
+  "index_goal": -1,
+  "n_other_zeros": 0
+ },
+ "dist_radius": 2.5601619378162868,
+ "dist_adversarial_rounds": [
+  {
+   "r_d": 2.566805636075793,
+   "found": 2746,
+   "worst_score": 0.0015336621327315392
+  },
+  {
+   "r_d": 2.5602698974762776,
+   "found": 1,
+   "worst_score": 1.9699179673704492e-05
+  },
+  {
+   "r_d": 2.5601619378162868,
+   "found": 0,
+   "worst_score": -2.1663720720432877e-05
+  }
+ ],
+ "dist_adversarial_converged": true,
+ "dist_entry_violations": 0,
+ "dist_violations": 617,
+ "dist_region_measure": 0.7597,
+ "dist_region_ball_fraction": 0.8078459138530313,
+ "wall_s": 1090.3661959171295,
+ "quad_available": true,
+ "quad_spr": 0.08527619355996793,
+ "quad_level": 6.569407635783715,
+ "quad_rounds": [
+  {
+   "level": 6.604682719747223,
+   "found": 4826
+  },
+  {
+   "level": 6.569407635783715,
+   "found": 0
+  }
+ ],
+ "quad_converged": true,
+ "quad_region_measure": 0.756115,
+ "quad_region_ball_fraction": 0.8054625,
+ "timing_V_per_point_s": 4.0344375011045486e-07,
+ "timing_Vm_per_point_s": 0.0005273059687504429
+}

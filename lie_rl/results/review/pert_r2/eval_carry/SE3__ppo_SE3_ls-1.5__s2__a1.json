@@ -1,0 +1,183 @@
+{
+ "group": "SE3",
+ "dir": "ppo_SE3_ls-1.5",
+ "seed": 2,
+ "variant": "a1",
+ "cert": "results/final/cert/SE3__ppo_SE3_ls-1.5__s2__base.pkl",
+ "fns_evaluated": [
+  "V",
+  "Vd",
+  "VP"
+ ],
+ "gamma": 2.748893571891069,
+ "eps_ball": 0.1,
+ "spr": 0.23665175819565412,
+ "passes_stability": true,
+ "n_roll": 600,
+ "adv_rounds_cap": 50,
+ "anchored": true,
+ "anchor": 0.3817826321082391,
+ "true_mu0": 0.99999,
+ "ball_mu0": 0.65149,
+ "true_in_ball_mu0": 0.65149,
+ "true_ball_fraction": 1.0,
+ "nb_samples": 33064,
+ "nb_nonconverged_all": 0,
+ "fns": {
+  "V": {
+   "frac_decrease_violation_ball": 2.5e-05,
+   "level_sampled": 36.39868588522519,
+   "level": 27.931606636083085,
+   "adversarial_rounds": [
+    {
+     "rho": 36.39868588522519,
+     "found": 1013,
+     "worst_score": 0.6078713992714384
+    },
+    {
+     "rho": 28.90379893950698,
+     "found": 125,
+     "worst_score": 0.07935348579312418
+    },
+    {
+     "rho": 28.12131575154797,
+     "found": 6,
+     "worst_score": 0.012968395861079784
+    },
+    {
+     "rho": 27.931606636083085,
+     "found": 0,
+     "worst_score": -0.00622470067992964
+    }
+   ],
+   "adversarial_converged": true,
+   "lowered_by_search": true,
+   "region_mu0": 0.53201,
+   "region_ball_fraction": 0.74386,
+   "false_inclusions_mu0": 0,
+   "false_inclusions_ball": 0,
+   "entry_samples": 33064,
+   "entry_violations": 0,
+   "nb_nonconverged": 0,
+   "wall_s": 4509.5862600803375
+  },
+  "Vd": {
+   "frac_decrease_violation_ball": 0.000155,
+   "level_sampled": 5.881319552584243,
+   "level": 5.0647621713470725,
+   "adversarial_rounds": [
+    {
+     "rho": 5.881319552584243,
+     "found": 17706,
+     "worst_score": 0.11852747386373341
+    },
+    {
+     "rho": 5.166337694949627,
+     "found": 550,
+     "worst_score": 0.012957240218424815
+    },
+    {
+     "rho": 5.0647621713470725,
+     "found": 0,
+     "worst_score": -0.0007162951055663669
+    }
+   ],
+   "adversarial_converged": true,
+   "lowered_by_search": true,
+   "region_mu0": 0.381615,
+   "region_ball_fraction": 0.301675,
+   "false_inclusions_mu0": 0,
+   "false_inclusions_ball": 0,
+   "entry_samples": 33064,
+   "entry_violations": 0,
+   "nb_nonconverged": 0,
+   "wall_s": 686.5820159912109
+  },
+  "VP": {
+   "frac_decrease_violation_ball": 0.000165,
+   "level_sampled": 5.78598575873191,
+   "level": 5.232216001317424,
+   "adversarial_rounds": [
+    {
+     "rho": 5.78598575873191,
+     "found": 11724,
+     "worst_score": 0.07410882481759185
+    },
+    {
+     "rho": 5.3814350186394835,
+     "found": 1509,
+     "worst_score": 0.020035600882175153
+    },
+    {
+     "rho": 5.232216001317424,
+     "found": 0,
+     "worst_score": -0.0004022389265765369
+    }
+   ],
+   "adversarial_converged": true,
+   "lowered_by_search": true,
+   "region_mu0": 0.377565,
+   "region_ball_fraction": 0.294035,
+   "false_inclusions_mu0": 0,
+   "false_inclusions_ball": 0,
+   "entry_samples": 33064,
+   "entry_violations": 0,
+   "nb_nonconverged": 0,
+   "wall_s": 776.3082098960876
+  }
+ },
+ "unions": {
+  "V|Vd": {
+   "members": [
+    "V",
+    "Vd"
+   ],
+   "region_mu0": 0.53201,
+   "region_ball_fraction": 0.744005,
+   "false_inclusions_mu0": 0
+  },
+  "V|Vd|VP": {
+   "members": [
+    "V",
+    "Vd",
+    "VP"
+   ],
+   "region_mu0": 0.53201,
+   "region_ball_fraction": 0.74401,
+   "false_inclusions_mu0": 0
+  },
+  "Vd|VP": {
+   "members": [
+    "Vd",
+    "VP"
+   ],
+   "region_mu0": 0.3832,
+   "region_ball_fraction": 0.303755,
+   "false_inclusions_mu0": 0
+  },
+  "Vd|VP|Vv": {
+   "members": [
+    "Vd",
+    "VP"
+   ],
+   "region_mu0": 0.3832,
+   "region_ball_fraction": 0.303755,
+   "false_inclusions_mu0": 0
+  },
+  "all": {
+   "members": [
+    "V",
+    "Vd",
+    "VP"
+   ],
+   "region_mu0": 0.53201,
+   "region_ball_fraction": 0.74401,
+   "false_inclusions_mu0": 0
+  }
+ },
+ "fit_median": 0.13260174274245717,
+ "fit_p90": 0.22608509027296614,
+ "fit_p99": 0.30727350018201427,
+ "cert_wall_s": 14562.017696142197,
+ "eval_wall_s": 6353.798533201218
+}

@@ -1,0 +1,91 @@
+{
+ "group": "SE2",
+ "dir": "ppo_SE2_ls-1.5",
+ "seed": 0,
+ "variant": "m15",
+ "cert": "results/review/hinge_base/cert/SE2__ppo_SE2_ls-1.5__s0__m15__hinge.pkl",
+ "fns_evaluated": [
+  "V"
+ ],
+ "gamma": 2.748893571891069,
+ "eps_ball": 0.1,
+ "spr": 0.28404135879675557,
+ "passes_stability": true,
+ "n_roll": 600,
+ "adv_rounds_cap": 50,
+ "anchored": true,
+ "anchor": 0.302038479677869,
+ "true_mu0": 1.0,
+ "ball_mu0": 0.819645,
+ "true_in_ball_mu0": 0.819645,
+ "true_ball_fraction": 1.0,
+ "nb_samples": 100000,
+ "nb_nonconverged_all": 0,
+ "fns": {
+  "V": {
+   "frac_decrease_violation_ball": 7.50039377067296e-05,
+   "level_sampled": 22788373.1391301,
+   "level": 22529381.345262285,
+   "adversarial_rounds": [
+    {
+     "rho": 22788373.1391301,
+     "found": 41,
+     "worst_score": 0.004479997428027183
+    },
+    {
+     "rho": 22576828.103476465,
+     "found": 4,
+     "worst_score": 0.0010700436431765326
+    },
+    {
+     "rho": 22529381.345262285,
+     "found": 0,
+     "worst_score": -9.774730758183026e-05
+    }
+   ],
+   "adversarial_converged": true,
+   "lowered_by_search": true,
+   "region_mu0": 0.81964,
+   "region_ball_fraction": 0.99303,
+   "false_inclusions_mu0": 0,
+   "false_inclusions_ball": 0,
+   "entry_samples": 100000,
+   "entry_violations": 0,
+   "nb_nonconverged": 0,
+   "wall_s": 3207.434117078781
+  }
+ },
+ "unions": {
+  "V|Vd": {
+   "members": [
+    "V"
+   ],
+   "region_mu0": 0.81964,
+   "region_ball_fraction": 0.99303,
+   "false_inclusions_mu0": 0
+  },
+  "V|Vd|VP": {
+   "members": [
+    "V"
+   ],
+   "region_mu0": 0.81964,
+   "region_ball_fraction": 0.99303,
+   "false_inclusions_mu0": 0
+  },
+  "Vd|VP": null,
+  "Vd|VP|Vv": null,
+  "all": {
+   "members": [
+    "V"
+   ],
+   "region_mu0": 0.81964,
+   "region_ball_fraction": 0.99303,
+   "false_inclusions_mu0": 0
+  }
+ },
+ "fit_median": 314114.53087524726,
+ "fit_p90": 653643.2081184244,
+ "fit_p99": 1157030.0002965727,
+ "cert_wall_s": 1914.9108049869537,
+ "eval_wall_s": 3472.6912457942963
+}

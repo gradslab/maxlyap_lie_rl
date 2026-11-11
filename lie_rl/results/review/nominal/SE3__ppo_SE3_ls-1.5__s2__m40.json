@@ -1,0 +1,16 @@
+{
+ "id": "SE3__ppo_SE3_ls-1.5__s2__m40",
+ "nominal": "SE3__ppo_SE3_ls-1.5__s2__base",
+ "nominal_level": 43.9173510631879,
+ "n": 1000000,
+ "n_in_nominal_region": 995580,
+ "n_in_region_outside_Nb": 995580,
+ "spr": 0.743784584880029,
+ "n_roll": 600,
+ "decrease_violations": 2377,
+ "containment_violations": 401,
+ "violation_fraction_of_region": 0.00257638763333936,
+ "nominal_region_mu0": 0.651455,
+ "nonconverged_in_nominal_region_mu0": 0.0,
+ "wall_s": 190.42092490196228
+}

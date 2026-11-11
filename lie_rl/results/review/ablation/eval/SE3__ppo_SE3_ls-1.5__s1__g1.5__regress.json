@@ -1,0 +1,86 @@
+{
+ "group": "SE3",
+ "dir": "ppo_SE3_ls-1.5",
+ "seed": 1,
+ "variant": "g1.5",
+ "cert": "results/review/ablation/cert/SE3__ppo_SE3_ls-1.5__s1__g1.5__regress.pkl",
+ "fns_evaluated": [
+  "V"
+ ],
+ "gamma": 2.748893571891069,
+ "eps_ball": 0.1,
+ "spr": 0.7714789427423902,
+ "passes_stability": true,
+ "n_roll": 600,
+ "adv_rounds_cap": 50,
+ "anchored": true,
+ "anchor": 0.32079851471160264,
+ "true_mu0": 0.999865,
+ "ball_mu0": 0.65149,
+ "true_in_ball_mu0": 0.65149,
+ "true_ball_fraction": 0.99987,
+ "nb_samples": 33064,
+ "nb_nonconverged_all": 0,
+ "fns": {
+  "V": {
+   "frac_decrease_violation_ball": 0.000125,
+   "level_sampled": 27.154167159644075,
+   "level": 5.887150481304582,
+   "adversarial_rounds": [
+    {
+     "rho": 27.154167159644075,
+     "found": 2425,
+     "worst_score": 4.685472459813415
+    },
+    {
+     "rho": 5.887150481304582,
+     "found": 0,
+     "worst_score": -0.008330982345415948
+    }
+   ],
+   "adversarial_converged": true,
+   "lowered_by_search": true,
+   "region_mu0": 0.079965,
+   "region_ball_fraction": 0.024175,
+   "false_inclusions_mu0": 0,
+   "false_inclusions_ball": 0,
+   "entry_samples": 33064,
+   "entry_violations": 0,
+   "nb_nonconverged": 0,
+   "wall_s": 2258.960965871811
+  }
+ },
+ "unions": {
+  "V|Vd": {
+   "members": [
+    "V"
+   ],
+   "region_mu0": 0.079965,
+   "region_ball_fraction": 0.024175,
+   "false_inclusions_mu0": 0
+  },
+  "V|Vd|VP": {
+   "members": [
+    "V"
+   ],
+   "region_mu0": 0.079965,
+   "region_ball_fraction": 0.024175,
+   "false_inclusions_mu0": 0
+  },
+  "Vd|VP": null,
+  "Vd|VP|Vv": null,
+  "all": {
+   "members": [
+    "V"
+   ],
+   "region_mu0": 0.079965,
+   "region_ball_fraction": 0.024175,
+   "false_inclusions_mu0": 0
+  }
+ },
+ "fit_median": 0.06593723635595405,
+ "fit_p90": 0.20009785276037217,
+ "fit_p99": 22.714497394247637,
+ "cert_wall_s": 21153.689071416855,
+ "eval_wall_s": 2645.73774600029
+}

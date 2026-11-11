@@ -1,0 +1,15 @@
+{
+ "group": "SE2",
+ "dir": "sac_SE2_ls-1.5",
+ "seed": 1,
+ "variant": "base",
+ "spr": 0.3345905958700628,
+ "N_rollout": 3000,
+ "level": 32.00517017569444,
+ "n_containment_bad": 0,
+ "n_nonconverged": 0,
+ "region_mu0": 0.81961,
+ "true_in_ball_mu0": 0.819645,
+ "ball_mu0": 0.819645,
+ "wall_s": 1944.5557751655579
+}

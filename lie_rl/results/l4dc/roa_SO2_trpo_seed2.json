@@ -1,0 +1,90 @@
+{
+ "group": "SO2",
+ "dir": "trpo_SO2_ls-1.5",
+ "seed": 2,
+ "suffix": "_final5",
+ "gamma": 2.748893571891069,
+ "alpha_max": 0.3141592653589793,
+ "eps_ball": 0.1,
+ "offset_norm": 0.01653628838117636,
+ "anchor": 0.24455683932410616,
+ "rho_max_ball": 35.475486442624806,
+ "rho_stage1": 33.95924119810009,
+ "rho_stage2": 33.9590325621586,
+ "rho": 33.9590325621586,
+ "rho_shell": 24.925228032382076,
+ "level_lowered_by_check": true,
+ "level_lowered_by_adversarial": false,
+ "adversarial_rounds": [
+  {
+   "rho": 33.9590325621586,
+   "found": 0,
+   "worst_score": -0.01424546414541292
+  }
+ ],
+ "adversarial_converged": true,
+ "n_samples_Z1": 800000,
+ "n_samples_Z2": 400000,
+ "n_Z1_in_region": 784299,
+ "n_Z2_in_region": 392332,
+ "n_decrease_violations_in_region": 0,
+ "n_containment_violations_in_region": 0,
+ "frac_decrease_violation_ball": 5.90171085465754e-05,
+ "roa_true_haar": 1.0,
+ "roa_est_haar": 0.859225,
+ "ball_measure_mu0": 0.875575,
+ "coverage": 0.859225,
+ "false_inclusions": 0,
+ "est_chart_fraction": 0.98064,
+ "entry_samples": 100000,
+ "entry_violations": 0,
+ "entry_maxV_over_rho": 1.5592323667075227e-05,
+ "entry_rollout_nonconverged": 0,
+ "fit_out_median": 0.03278245936417624,
+ "fit_out_p99": 3.20616467881864,
+ "fit_out_max": 10.041609564760389,
+ "fixed_points": {
+  "rho_goal": 0.08302177528920929,
+  "index_goal": -1,
+  "roots": [
+   1.570796326766377e-05,
+   2.696130523274028
+  ],
+  "nearest_other": 2.696130523274028,
+  "rho_other": 15.138923655122483,
+  "index_other": 1
+ },
+ "dist_radius": 2.696143107957346,
+ "dist_adversarial_rounds": [
+  {
+   "r_d": 2.696151540939123,
+   "found": 843,
+   "worst_score": 0.00011914895041176266
+  },
+  {
+   "r_d": 2.696143107957346,
+   "found": 0,
+   "worst_score": -9.956435098601446e-08
+  }
+ ],
+ "dist_adversarial_converged": true,
+ "dist_entry_violations": 0,
+ "dist_violations": 11511,
+ "dist_region_measure": 0.85904,
+ "dist_region_ball_fraction": 0.9808102923761308,
+ "wall_s": 156.52960205078125,
+ "quad_available": true,
+ "quad_spr": 0.08302177528920929,
+ "quad_level": 7.319684910245516,
+ "quad_rounds": [
+  {
+   "level": 7.319684910245516,
+   "found": 0
+  }
+ ],
+ "quad_converged": true,
+ "quad_region_measure": 0.85904,
+ "quad_region_ball_fraction": 0.981015,
+ "timing_V_per_point_s": 1.4006665005581453e-07,
+ "timing_Vm_per_point_s": 0.00017813669794995805
+}

@@ -1,0 +1,56 @@
+{
+  "T1_quaternion_convention": {
+    "roundtrip_max_abs": 0.0,
+    "rotmat_max_abs": 5.273559366969494e-16,
+    "passed": true
+  },
+  "T2_omega_frame": {
+    "err_if_body": 1.2719202621569013e-16,
+    "err_if_world": 0.052079386934206044,
+    "frame_determined": "body",
+    "margin_ratio": 409454810051462.5,
+    "passed": true
+  },
+  "T3_zero_torque_agreement": {
+    "per_axis_geodesic_err": [
+      4.3907355583451185e-16,
+      1.3472894910096223e-16,
+      7.089587974642787e-16
+    ],
+    "max_err": 7.089587974642787e-16,
+    "passed": true
+  },
+  "T4_invariants": {
+    "steps": 20000,
+    "sim_time_s": 40.0,
+    "rel_drift_angular_momentum": 5.480969046553655e-15,
+    "rel_drift_kinetic_energy": 1.0792997195340994e-14,
+    "quat_norm_drift": 1.1102230246251565e-15,
+    "passed": true
+  },
+  "T5_closed_form": {
+    "lambda_analytic": -0.2510204081632653,
+    "phase_err_rad": 1.9984014443252818e-15,
+    "transverse_mag_rel_err": 0.0,
+    "passed": true
+  },
+  "T6_numpy_fast_path": {
+    "max_abs_diff": {
+      "exp_quat": 0.0,
+      "log_quat": 0.0,
+      "quat_mul": 0.0,
+      "quat_conj": 0.0,
+      "error_vector": 0.0
+    },
+    "worst": 0.0,
+    "passed": true
+  },
+  "ALL_PASSED": true,
+  "inertia": [
+    0.049,
+    0.049,
+    0.008
+  ],
+  "tau_max": 0.001,
+  "branch": "SC-1 (isolated); empirical out-of-model study, NOT a verification claim"
+}

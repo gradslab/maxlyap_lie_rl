@@ -1,0 +1,96 @@
+{
+ "group": "SE3",
+ "dir": "ppo_SE3_ls-1.5",
+ "seed": 1,
+ "variant": "a1",
+ "cert": "results/review/hinge_base/cert/SE3__ppo_SE3_ls-1.5__s1__a1__hinge.pkl",
+ "fns_evaluated": [
+  "V"
+ ],
+ "gamma": 2.748893571891069,
+ "eps_ball": 0.1,
+ "spr": 0.24956763185216993,
+ "passes_stability": true,
+ "n_roll": 600,
+ "adv_rounds_cap": 50,
+ "anchored": true,
+ "anchor": 0.3035361347974228,
+ "true_mu0": 0.999685,
+ "ball_mu0": 0.65149,
+ "true_in_ball_mu0": 0.65149,
+ "true_ball_fraction": 0.998655,
+ "nb_samples": 33064,
+ "nb_nonconverged_all": 0,
+ "fns": {
+  "V": {
+   "frac_decrease_violation_ball": 0.0003025,
+   "level_sampled": 1079403.1831104744,
+   "level": 827442.9108834831,
+   "adversarial_rounds": [
+    {
+     "rho": 1079403.1831104744,
+     "found": 778,
+     "worst_score": 0.07478040324903423
+    },
+    {
+     "rho": 899338.415321146,
+     "found": 50,
+     "worst_score": 0.02807643355404643
+    },
+    {
+     "rho": 849667.2730922457,
+     "found": 4,
+     "worst_score": 0.005035145659028739
+    },
+    {
+     "rho": 827442.9108834831,
+     "found": 0,
+     "worst_score": -0.010588412505344813
+    }
+   ],
+   "adversarial_converged": true,
+   "lowered_by_search": true,
+   "region_mu0": 0.07484,
+   "region_ball_fraction": 0.0459,
+   "false_inclusions_mu0": 0,
+   "false_inclusions_ball": 0,
+   "entry_samples": 33064,
+   "entry_violations": 0,
+   "nb_nonconverged": 0,
+   "wall_s": 3636.6379630565643
+  }
+ },
+ "unions": {
+  "V|Vd": {
+   "members": [
+    "V"
+   ],
+   "region_mu0": 0.07484,
+   "region_ball_fraction": 0.0459,
+   "false_inclusions_mu0": 0
+  },
+  "V|Vd|VP": {
+   "members": [
+    "V"
+   ],
+   "region_mu0": 0.07484,
+   "region_ball_fraction": 0.0459,
+   "false_inclusions_mu0": 0
+  },
+  "Vd|VP": null,
+  "Vd|VP|Vv": null,
+  "all": {
+   "members": [
+    "V"
+   ],
+   "region_mu0": 0.07484,
+   "region_ball_fraction": 0.0459,
+   "false_inclusions_mu0": 0
+  }
+ },
+ "fit_median": 90451.18754390953,
+ "fit_p90": 135177.33840669336,
+ "fit_p99": 173471.13977021037,
+ "cert_wall_s": 2491.284970998764,
+ "eval_wall_s": 3966.7545261383057
+}

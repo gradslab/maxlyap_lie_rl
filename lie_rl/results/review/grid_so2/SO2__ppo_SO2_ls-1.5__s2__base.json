@@ -1,0 +1,14 @@
+{
+ "id": "SO2__ppo_SO2_ls-1.5__s2__base",
+ "level": 35.632663335622645,
+ "n_grid": 20000001,
+ "spacing": 2.748893571891069e-07,
+ "n_in_region": 19999945,
+ "containment_violations": 0,
+ "decrease_violations": 0,
+ "violating_z": [],
+ "lowered_level": 35.632663335622645,
+ "region_mu0": 0.87557,
+ "region_mu0_lowered": 0.87557,
+ "region_mu0_eval": 0.87557
+}

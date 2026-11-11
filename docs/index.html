@@ -1,0 +1,282 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Maximal Lyapunov Functions for RL Controllers on Lie Groups</title>
+<meta name="description" content="Estimate where a trained reinforcement learning controller on a matrix Lie group still reaches its goal, and recompute it after an actuator error without retraining.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+<!-- ============================== HERO ============================== -->
+<header class="hero" id="top">
+  <div class="hero-media">
+    <div class="pane pane-space">
+      <video id="vid-space" autoplay muted loop playsinline poster="assets/media/cubesat_hero.jpg">
+        <source src="assets/media/cubesat_hero.mp4" type="video/mp4">
+      </video>
+      <span class="pane-tag">3U CubeSat · attitude on SO(3)</span>
+    </div>
+    <div class="pane pane-ocean">
+      <video id="vid-ocean" autoplay muted loop playsinline poster="assets/media/rov_hero.jpg">
+        <source src="assets/media/rov_hero.mp4" type="video/mp4">
+      </video>
+      <span class="pane-tag">BlueROV2 · pose on SE(3)</span>
+    </div>
+    <div class="hero-shade"></div>
+  </div>
+
+  <div class="hero-content">
+    <p class="eyebrow">Under review</p>
+    <h1>From where does a trained RL controller <span class="grad">still reach its goal</span>?</h1>
+    <p class="hero-title">Learning Maximal Lyapunov Functions for Deep Reinforcement Learning-based Controllers on Matrix Lie Groups</p>
+    <p class="authors"><a href="https://htariq1426.github.io/" target="_blank" rel="noopener">Hamza Tariq<sup>1</sup></a><a href="https://scholar.google.com/citations?user=IaXx5KkAAAAJ" target="_blank" rel="noopener">Matthieu Barreau<sup>2</sup></a><a href="https://scholar.google.com/citations?user=kru-czoAAAAJ" target="_blank" rel="noopener">Adeel Akhtar<sup>1</sup></a></p>
+    <p class="affil"><sup>1</sup>New Jersey Institute of Technology, Newark, NJ, USA &nbsp;·&nbsp; <sup>2</sup>Digital Futures and KTH Royal Institute of Technology, Stockholm, Sweden</p>
+    <div class="btns">
+      <a class="btn btn-paper" href="#" title="available after review"><svg viewBox="0 0 24 24"><path d="M6 2h9l5 5v15H6z" fill="none" stroke="currentColor" stroke-width="2"/><path d="M14 2v6h6" fill="none" stroke="currentColor" stroke-width="2"/></svg>Paper</a>
+      <a class="btn btn-code" href="https://github.com/gradslab/maxlyap_lie_rl" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M12 .5C5.7.5.5 5.7.5 12c0 5.1 3.3 9.4 7.9 10.9.6.1.8-.3.8-.6v-2c-3.2.7-3.9-1.5-3.9-1.5-.5-1.3-1.3-1.7-1.3-1.7-1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.8-1.6-2.6-.3-5.3-1.3-5.3-5.7 0-1.3.5-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C17 4.7 18 5 18 5c.7 1.6.2 2.8.1 3.1.8.8 1.2 1.9 1.2 3.1 0 4.4-2.7 5.4-5.3 5.7.4.4.8 1.1.8 2.2v3.2c0 .3.2.7.8.6A11.5 11.5 0 0 0 23.5 12C23.5 5.7 18.3.5 12 .5z" fill="currentColor"/></svg>Code</a>
+      <button class="btn btn-bib" data-scroll="#cite"><svg viewBox="0 0 24 24"><path d="M5 3h14v18l-7-4-7 4z" fill="none" stroke="currentColor" stroke-width="2"/></svg>BibTeX</button>
+    </div>
+  </div>
+  <a class="scroll-cue" href="#problem" aria-label="scroll down"><span></span></a>
+</header>
+
+<!-- ============================== TL;DR ============================== -->
+<section class="tldr">
+  <div class="wrap">
+    <p><b>In short.</b> We train deep RL controllers that steer a rotation or a rigid-body pose to any goal by working directly on the geometry of the group, so one trained policy serves every goal. For such a controller we then learn the cost it accumulates on its way to the goal and read off a set of starting states from which it reaches the goal. When an actuator turns out to be weaker, stronger or misaligned, we recompute that set for the <em>same</em> controller in hours, without retraining it.</p>
+  </div>
+</section>
+
+<!-- ============================== PROBLEM ============================== -->
+<section id="problem" class="section">
+  <div class="wrap">
+    <h2 class="kicker">The problem</h2>
+    <h3 class="headline">Learned controllers work. Nobody can say <span class="hl-orange">from where</span>.</h3>
+    <div class="cards three">
+      <article class="card c-orange">
+        <div class="card-icon">◎</div>
+        <h4>No region of attraction</h4>
+        <p>Training an RL policy maximises a return. It does not tell you which initial states the closed loop actually brings to the goal.</p>
+      </article>
+      <article class="card c-violet">
+        <div class="card-icon">⟲</div>
+        <h4>Hardware drifts</h4>
+        <p>A reaction wheel is mounted a few degrees off, a thruster delivers 25&nbsp;percent less than commanded. The same policy now runs a different closed loop.</p>
+      </article>
+      <article class="card c-teal">
+        <div class="card-icon">≈</div>
+        <h4>Simulation only samples</h4>
+        <p>Rolling the policy out shows convergence at the states you tried. A region checked before the fault can still look fine on samples while its Lyapunov conditions fail.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============================== LIE GROUP RL ============================== -->
+<section id="lie" class="section tint">
+  <div class="wrap">
+    <h2 class="kicker">Part one · the controller</h2>
+    <h3 class="headline">Deep RL that steers on the <span class="hl-violet">group itself</span>.</h3>
+    <div class="lie-grid">
+      <div class="lie-text">
+        <p>Orientations and poses do not live in a vector space: they form matrix Lie groups such as SO(3) and SE(3). Treating them as vectors brings singularities and double covers, and a policy that takes the state and the goal separately must learn every goal anew.</p>
+        <ul class="ticks">
+          <li><b>Observe the error, not the state.</b> The policy sees only the error <span class="m" data-tex="\tilde g = \bar g^{-1} g"></span> between the current element and the goal.</li>
+          <li><b>Act in the tangent space.</b> It commands a bounded body velocity <span class="m" data-tex="\tau"></span>, applied through the exponential map, <span class="m" data-tex="g^{+} = g\,\mathrm{Exp}(\tau)"></span>, so every step stays on the group.</li>
+          <li><b>One closed loop for every goal.</b> By left invariance the error evolves the same way whatever the goal, so the policy is trained once and one region of attraction serves all goals.</li>
+          <li><b>Any matrix Lie group, any algorithm.</b> The same formulation is trained with PPO, TRPO, SAC and TD3 on SO(2), SO(3), SE(2) and SE(3).</li>
+        </ul>
+      </div>
+      <div class="lie-demo">
+        <div class="lie-canvases">
+          <figure><canvas id="world" width="420" height="420"></canvas><figcaption>world frame · four goals</figcaption></figure>
+          <figure><canvas id="errf" width="420" height="420"></canvas><figcaption>error frame · one trajectory</figcaption></figure>
+        </div>
+        <div class="lie-ctrl">
+          <button class="btn btn-mini" id="lieRun">replay</button>
+          <button class="btn btn-mini ghost" id="lieShuffle">new goals</button>
+          <span class="note">Four planar rigid bodies on SE(2), each with its own goal but the same error. In the world they take four different paths; in error coordinates the paths coincide. Illustration with a simple geometric policy, not a trained network.</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================== PLAYGROUND ============================== -->
+<section id="play" class="section dark">
+  <div class="wrap">
+    <h2 class="kicker">Build intuition</h2>
+    <h3 class="headline">Bend the actuator. Watch the region of attraction move.</h3>
+    <p class="lead">A two-dimensional toy closed loop with a saturated controller. The colour is the cost the controller accumulates before it reaches the goal: finite exactly on the region of attraction, infinite outside. That accumulated cost is a <b>maximal Lyapunov function</b>. Change the actuator and compare the region you certified before (dashed) with the one that holds now. Click anywhere to launch a trajectory.</p>
+    <div class="play">
+      <div class="canvas-box">
+        <canvas id="roa" width="560" height="560" aria-label="toy region of attraction"></canvas>
+        <div class="legend">
+          <span><i class="sw sw-cost"></i>accumulated cost (log scale)</span>
+          <span><i class="sw sw-now"></i>region now</span>
+          <span><i class="sw sw-old"></i>region before the fault</span>
+          <span><i class="sw sw-bad"></i>old region, now fails to converge</span>
+        </div>
+      </div>
+      <div class="controls">
+        <label>Actuator gain <output id="gOut">1.00</output>
+          <input type="range" id="gain" min="0.4" max="1.6" step="0.01" value="1">
+        </label>
+        <label>Misalignment <output id="mOut">0°</output>
+          <input type="range" id="mis" min="-45" max="45" step="1" value="0">
+        </label>
+        <div class="toggles">
+          <label class="chk"><input type="checkbox" id="showOld" checked> show region before the fault</label>
+          <label class="chk"><input type="checkbox" id="showCost" checked> show accumulated cost</label>
+        </div>
+        <div class="readout">
+          <div><span id="areaNow">–</span><small>area of the region now</small></div>
+          <div><span id="areaBad" class="bad">–</span><small>of the old region now fails to converge</small></div>
+        </div>
+        <button class="btn btn-ghost" id="reset">reset</button>
+        <p class="note">Illustration only: a planar system chosen for clarity, not one of the systems in the paper.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================== METHOD ============================== -->
+<section id="method" class="section">
+  <div class="wrap">
+    <h2 class="kicker">Part two · the region</h2>
+    <h3 class="headline">Let the policy's <span class="hl-violet">own cost</span> be the certificate.</h3>
+    <div class="steps">
+      <div class="step">
+        <div class="step-n">1</div>
+        <h4>Start from the error loop</h4>
+        <p>Part one gives a single closed loop on the error. Subtracting the network output at the goal makes the goal a fixed point, and a test on the linearisation keeps the loops where it is locally exponentially stable.</p>
+        <div class="eq" data-tex="u(\tilde g) = \alpha\,\mathrm{sat}\big(\mu(\tilde g) - \mu(I)\big),\qquad \rho(A) \le 0.99"></div>
+      </div>
+      <div class="step">
+        <div class="step-n">2</div>
+        <h4>Learn the accumulated cost from single steps</h4>
+        <p>The undiscounted sum of squared distances to the goal is a maximal Lyapunov function. It obeys a one-step equation, so a network learns it from single transitions: no long rollouts, no partial differential equation. Near the goal, the exact quadratic term from the linearisation takes over.</p>
+        <div class="eq" data-tex="W(z) = \ell(z)^2 + W\big(F(z)\big),\qquad \Omega_\rho = \{V \le \rho\}"></div>
+      </div>
+      <div class="step">
+        <div class="step-n">3</div>
+        <h4>Recompute after a fault, keep the policy</h4>
+        <p>When a gain error or misalignment is identified, the closed loop changes but the policy does not. The function and its level are recomputed for the new loop within hours, and tell you whether the deployed controller still covers the states you care about.</p>
+        <div class="eq" data-tex="u \mapsto u_{\text{fault}},\quad V \mapsto V_{\text{new}},\quad \rho \mapsto \rho_{\text{new}}"></div>
+      </div>
+    </div>
+    <div class="honest">
+      <b>What is guaranteed.</b> Conditions under which a sublevel set lies inside the region of attraction are proved for every matrix Lie group. On SO(2) the reported regions are verified by interval arithmetic; on SO(3), SE(2) and SE(3) they are checked on samples and by an adversarial search.
+    </div>
+  </div>
+</section>
+
+<!-- ============================== RESULTS ============================== -->
+<section id="results" class="section tint">
+  <div class="wrap">
+    <h2 class="kicker">Results</h2>
+    <h3 class="headline">Larger regions, on every closed loop with an actuator error.</h3>
+    <div class="stats">
+      <div class="stat"><span class="num" data-to="39">0</span><small>trained policies, 4 RL algorithms, 4 Lie groups</small></div>
+      <div class="stat"><span class="num" data-to="55">0</span><small>of 55 faulty closed loops: larger than both quadratic baselines</small></div>
+      <div class="stat"><span class="num" data-to="49">0</span><small>of 55: larger than a neural Lyapunov baseline</small></div>
+      <div class="stat"><span class="num" data-to="99.9" data-dec="1">0</span><small>percent of the reference region recovered (median)</small></div>
+    </div>
+
+    <div class="explorer">
+      <div class="explorer-head">
+        <div>
+          <h4>Explore all 55 closed loops with an actuator error</h4>
+          <p>Each column is one trained policy with one actuator error. Height: the region's share of the reference region computed from the accumulated cost by simulation.</p>
+        </div>
+        <div class="filters">
+          <div class="seg" id="fGroup"><button data-v="all" class="on">all</button><button data-v="SE(2)">SE(2)</button><button data-v="SE(3)">SE(3)</button></div>
+          <div class="seg" id="fErr"><button data-v="all" class="on">all errors</button><button data-v="gain">gain</button><button data-v="per-axis">per-axis</button><button data-v="misalignment">misalignment</button></div>
+        </div>
+      </div>
+      <div class="series-toggles" id="series"></div>
+      <div id="chart" class="chart"></div>
+      <div id="tip" class="tip"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================== DEPLOYMENT ============================== -->
+<section id="deploy" class="section dark">
+  <div class="wrap">
+    <h2 class="kicker">From kinematics to vehicles</h2>
+    <h3 class="headline">Two vehicles, one question: does anything leave the region?</h3>
+    <p class="lead">The regions assume each commanded step is carried out exactly. So we run the trained policies on simulated vehicles in MuJoCo, through low-level controllers that track each step, from initial errors drawn inside the estimated regions.</p>
+    <div class="deploy">
+      <figure class="dcard">
+        <video autoplay muted loop playsinline poster="assets/media/cubesat_hero.jpg"><source src="assets/media/cubesat_hud.mp4" type="video/mp4"></video>
+        <figcaption>
+          <h4>3U CubeSat, attitude on SO(3)</h4>
+          <ul class="facts"><li><b>0 / 200</b> episodes leave the region</li><li>also with initial body rates and a halved period</li></ul>
+        </figcaption>
+      </figure>
+      <figure class="dcard">
+        <video autoplay muted loop playsinline poster="assets/media/rov_hero.jpg"><source src="assets/media/rov_hud.mp4" type="video/mp4"></video>
+        <figcaption>
+          <h4>BlueROV2, pose on SE(3)</h4>
+          <ul class="facts"><li><b>0 / 200</b> episodes leave the region</li><li><b>28</b> actuator-error loops: none leaves the recomputed region; one leaves the old region at 40°</li></ul>
+        </figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ============================== WHO ============================== -->
+<section id="who" class="section">
+  <div class="wrap">
+    <h2 class="kicker">Why it matters</h2>
+    <h3 class="headline">A region of attraction that follows the hardware.</h3>
+    <div class="cards three">
+      <article class="card c-orange"><h4>Space</h4><p>A calibration pass shows a reaction wheel tilted by a few degrees. Recompute the attitude envelope of the learned controller on the ground and decide whether to upload a new policy.</p></article>
+      <article class="card c-teal"><h4>Subsea</h4><p>A thruster loses effectiveness. Know from which poses the vehicle still docks, before sending it back down.</p></article>
+      <article class="card c-violet"><h4>Research</h4><p>A maximal Lyapunov function learned from one-step data, on any matrix Lie group, for a policy trained by any RL algorithm.</p></article>
+    </div>
+  </div>
+</section>
+
+<!-- ============================== REPRODUCE ============================== -->
+<section id="reproduce" class="section tint">
+  <div class="wrap">
+    <h2 class="kicker">Reproduce</h2>
+    <h3 class="headline">Every table and figure from one script.</h3>
+    <pre class="code"><code>git clone https://github.com/gradslab/maxlyap_lie_rl.git &amp;&amp; cd maxlyap_lie_rl
+bash reproduce.sh setup      # two virtual environments
+bash reproduce.sh tables     # every table, figure and number of the paper, checked against the paper
+bash reproduce.sh all        # everything from scratch: policies, functions, searches, vehicles</code></pre>
+  </div>
+</section>
+
+<!-- ============================== CITE ============================== -->
+<section id="cite" class="section">
+  <div class="wrap">
+    <h2 class="kicker">Cite</h2>
+    <div class="bib">
+      <button class="btn btn-ghost copy" id="copyBib">copy</button>
+<pre id="bibtex">@unpublished{tariq2026maximal,
+  title  = {Learning Maximal {L}yapunov Functions for Deep Reinforcement
+            Learning-based Controllers on Matrix {L}ie Groups},
+  author = {Hamza Tariq and Matthieu Barreau and Adeel Akhtar},
+  note   = {Under review},
+  year   = {2026}
+}</pre>
+    </div>
+  </div>
+</section>
+
+<footer class="foot"><div class="wrap">MuJoCo renders of the policies used in the paper. CubeSat model: NASA 3D Resources (MiRaTA); vehicle: BlueROV2.</div></footer>
+
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script defer src="assets/app.js"></script>
+</body>
+</html>

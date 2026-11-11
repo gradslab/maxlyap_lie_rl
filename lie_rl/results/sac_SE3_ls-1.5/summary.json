@@ -1,0 +1,38 @@
+[
+  {
+    "algo": "sac",
+    "group": "SE3",
+    "seed": 0,
+    "budget": 128000,
+    "geodesic_ceiling": -2.1362347453023864,
+    "eval_return_mean": -4.573138624099897,
+    "eval_return_std": 1.0627676570720608,
+    "final_angle_median": 0.1476828286919611,
+    "final_trans_median": 0.09747994074651839,
+    "wall_s": 10243.899879932404
+  },
+  {
+    "algo": "sac",
+    "group": "SE3",
+    "seed": 1,
+    "budget": 128000,
+    "geodesic_ceiling": -2.1362347453023864,
+    "eval_return_mean": -4.528250725148414,
+    "eval_return_std": 1.0593601929894905,
+    "final_angle_median": 0.15490264250534802,
+    "final_trans_median": 0.0848157398992041,
+    "wall_s": 12071.518171072006
+  },
+  {
+    "algo": "sac",
+    "group": "SE3",
+    "seed": 2,
+    "budget": 128000,
+    "geodesic_ceiling": -2.1362347453023864,
+    "eval_return_mean": -4.530431645810568,
+    "eval_return_std": 1.0735970541647941,
+    "final_angle_median": 0.14491191540472426,
+    "final_trans_median": 0.10188952363711822,
+    "wall_s": 10247.765574932098
+  }
+]

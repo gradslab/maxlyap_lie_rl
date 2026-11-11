@@ -1,0 +1,16 @@
+{
+ "id": "SE2__td3_SE2_ls-1.5__s0__m40",
+ "nominal": "SE2__td3_SE2_ls-1.5__s0__base",
+ "nominal_level": 35.12647132881946,
+ "n": 1000000,
+ "n_in_nominal_region": 1000000,
+ "n_in_region_outside_Nb": 999965,
+ "spr": 0.6348176896280584,
+ "n_roll": 600,
+ "decrease_violations": 0,
+ "containment_violations": 72,
+ "violation_fraction_of_region": 7.200252008820309e-05,
+ "nominal_region_mu0": 0.819645,
+ "nonconverged_in_nominal_region_mu0": 0.0,
+ "wall_s": 104.01099514961243
+}
